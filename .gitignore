@@ -1,0 +1,27 @@
+# ==============================================================================
+# BẢO MẬT DỰ ÁN & CÁCH LY MÔI TRƯỜNG AI (SECURITY & ENVIRONMENT ISOLATION)
+# ==============================================================================
+
+# Loại trừ toàn bộ hồ sơ dự án khách hàng & dữ liệu nội bộ
+PROJECT/
+RESEARCH/
+
+# Loại trừ môi trường cấu hình AI & IDE nội bộ
+.AGENTS/
+.vscode/
+
+# Python caches & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.venv
+env/
+venv/
+
+# Windows & OS thumbnail caches
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
