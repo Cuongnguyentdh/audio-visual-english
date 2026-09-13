@@ -159,6 +159,103 @@
       color: var(--accent-cyan);
     }
 
+    
+    /* ==========================================================================
+       VIDEO REEL PLAYER STYLING (CINEMA 16:9 OFFLINE CANVAS)
+       ========================================================================== */
+    .video-modal-card {
+      background: #0f1422;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      border-radius: var(--radius-lg);
+      max-width: 980px;
+      width: 95%;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(6, 182, 212, 0.2);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .video-modal-header {
+      padding: 0.85rem 1.25rem;
+      background: rgba(17, 24, 39, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .video-screen-wrapper {
+      position: relative;
+      width: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    #videoReelCanvas {
+      width: 100%;
+      height: auto;
+      max-height: 520px;
+      display: block;
+      background: #05070d;
+    }
+
+    .video-overlay-controls {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.35);
+      opacity: 0;
+      transition: opacity 0.25s;
+      pointer-events: none;
+    }
+
+    .video-screen-wrapper:hover .video-overlay-controls,
+    .video-screen-wrapper.paused .video-overlay-controls {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .video-big-play-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: rgba(6, 182, 212, 0.9);
+      border: 2px solid #fff;
+      color: #fff;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 0 25px rgba(6, 182, 212, 0.6);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .video-big-play-btn:hover {
+      transform: scale(1.1);
+      background: var(--accent-cyan);
+    }
+
+    .video-controls-bar {
+      padding: 0.75rem 1.25rem;
+      background: rgba(17, 22, 34, 0.95);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
     /* Navigation Tabs */
     .tab-nav {
       display: flex;
@@ -1665,6 +1762,9 @@
           <button class="btn-action" style="padding: 0.35rem 0.85rem; font-size: 0.78rem;" onclick="jumpToTopicDialogue()" title="Chuyển sang Tab 3 để luyện đối thoại kịch bản này">
             <span>💬</span> Luyện Đối Thoại (Tab 3)
           </button>
+          <button class="btn-action" style="padding: 0.35rem 0.85rem; font-size: 0.78rem; background: linear-gradient(135deg, #ec4899, #8b5cf6); box-shadow: 0 2px 10px rgba(236, 72, 153, 0.35);" onclick="openVideoReelPlayer()" title="Mở video ngắn kèm mẫu câu và đồng hồ đếm ngược luyện nói">
+            <span>🎬</span> Video Luyện Nói
+          </button>
           <button class="btn-secondary" id="btnTogglePattern" style="padding: 0.35rem 0.75rem; font-size: 0.78rem;" onclick="toggleTopicPattern()" title="Ẩn/Hiện khung câu trọng tâm">
             <span>👁️</span> Ẩn Khung Câu
           </button>
@@ -1860,6 +1960,9 @@
           <div style="display: flex; gap: 0.8rem; align-items: center; border-top: 1px solid var(--border-color); padding-top: 1rem; flex-wrap: wrap;">
             <button class="btn-action" onclick="playCurrentDialogueAudio()">
               <span>🔊</span> Nghe Toàn Bộ Hội Thoại
+            </button>
+            <button class="btn-secondary" style="color: #f43f5e; border-color: rgba(244, 63, 94, 0.4); background: rgba(244, 63, 94, 0.1);" onclick="openVideoReelPlayer()" title="Mở video ngắn trực quan cho kịch bản hội thoại này">
+              <span>🎬</span> Xem Video & Luyện Nói
             </button>
             <button class="btn-secondary" onclick="resetDialogueRoleplay()">
               <span>🔄</span> Luyện Lại Từ Đầu
@@ -4786,6 +4889,479 @@
       soundClick();
     }
 
+    
+    /* ==========================================================================
+       VIDEO REEL PLAYER ENGINE (OFFLINE CANVAS RENDERER & MEDIA RECORDER)
+       ========================================================================== */
+    let videoCanvas = null;
+    let videoCtx = null;
+    let videoAnimId = null;
+    let isVideoPlaying = false;
+    let videoCurrentSceneIdx = 0;
+    let videoCurrentTopic = null;
+    let videoCurrentDialogue = null;
+    let videoState = 'IDLE'; // 'IDLE', 'SPEAKING_AUDIO', 'SPEAKING_PAUSE', 'FINISHED'
+    let videoPauseCountdown = 0;
+    let videoPauseTotal = 4;
+    let videoPauseInterval = null;
+    let videoBgImage = new Image();
+    let videoBgLoaded = false;
+    let videoKenBurnsTime = 0;
+
+    // MediaRecorder for video download
+    let mediaRecorder = null;
+    let recordedChunks = [];
+    let isRecordingVideo = false;
+
+    // Preload Topic 9 image
+    videoBgImage.src = 'assets/floor_trunking_av.jpg';
+    videoBgImage.onload = () => { videoBgLoaded = true; };
+    videoBgImage.onerror = () => { videoBgLoaded = false; };
+
+    function openVideoReelPlayer() {
+      soundClick();
+      const modal = document.getElementById('modalVideoReel');
+      if (!modal) return;
+      modal.classList.add('open');
+
+      videoCanvas = document.getElementById('videoReelCanvas');
+      if (videoCanvas) {
+        videoCtx = videoCanvas.getContext('2d');
+      }
+
+      // Identify active topic and dialogue
+      videoCurrentTopic = TOPICS_BANK[currentTopicIndex] || TOPICS_BANK[0];
+      const diaIdx = DIALOGUES_DATA.findIndex(d => d.id === videoCurrentTopic.dialogueId);
+      videoCurrentDialogue = diaIdx !== -1 ? DIALOGUES_DATA[diaIdx] : DIALOGUES_DATA[0];
+
+      // Update Modal Header
+      const titleEl = document.getElementById('videoModalTitle');
+      const subEl = document.getElementById('videoModalSubtitle');
+      if (titleEl) titleEl.textContent = videoCurrentTopic.title;
+      if (subEl) subEl.textContent = `Bối cảnh: ${videoCurrentTopic.desc}`;
+
+      // Reset to Scene 0
+      videoCurrentSceneIdx = 0;
+      videoState = 'IDLE';
+      isVideoPlaying = false;
+      updatePlayBtnUI();
+
+      // Start animation loop
+      if (!videoAnimId) {
+        videoAnimLoop();
+      }
+
+      // Auto start playback after short delay
+      setTimeout(() => {
+        startVideoReel();
+      }, 400);
+    }
+
+    function closeVideoReelPlayer(e) {
+      if (e && e.target !== document.getElementById('modalVideoReel')) return;
+      stopVideoReel();
+      const modal = document.getElementById('modalVideoReel');
+      if (modal) modal.classList.remove('open');
+      if (videoAnimId) {
+        cancelAnimationFrame(videoAnimId);
+        videoAnimId = null;
+      }
+      soundClick();
+    }
+
+    function togglePlayVideoReel() {
+      if (isVideoPlaying) {
+        pauseVideoReel();
+      } else {
+        startVideoReel();
+      }
+    }
+
+    function startVideoReel() {
+      isVideoPlaying = true;
+      updatePlayBtnUI();
+      playCurrentVideoScene();
+    }
+
+    function pauseVideoReel() {
+      isVideoPlaying = false;
+      window.speechSynthesis.cancel();
+      if (videoPauseInterval) {
+        clearInterval(videoPauseInterval);
+        videoPauseInterval = null;
+      }
+      updatePlayBtnUI();
+    }
+
+    function stopVideoReel() {
+      pauseVideoReel();
+      if (isRecordingVideo && mediaRecorder && mediaRecorder.state !== 'inactive') {
+        mediaRecorder.stop();
+        isRecordingVideo = false;
+      }
+    }
+
+    function restartVideoReel() {
+      videoCurrentSceneIdx = 0;
+      startVideoReel();
+    }
+
+    function nextVideoScene() {
+      if (!videoCurrentDialogue || !videoCurrentDialogue.messages) return;
+      if (videoCurrentSceneIdx < videoCurrentDialogue.messages.length - 1) {
+        videoCurrentSceneIdx++;
+        playCurrentVideoScene();
+      } else {
+        videoState = 'FINISHED';
+        pauseVideoReel();
+      }
+    }
+
+    function prevVideoScene() {
+      if (videoCurrentSceneIdx > 0) {
+        videoCurrentSceneIdx--;
+        playCurrentVideoScene();
+      }
+    }
+
+    function repeatCurrentScene() {
+      playCurrentVideoScene();
+    }
+
+    function updatePlayBtnUI() {
+      const btn = document.getElementById('btnPlayPauseVideo');
+      const bigBtn = document.getElementById('btnBigPlay');
+      const wrapper = document.querySelector('.video-screen-wrapper');
+
+      if (btn) {
+        btn.innerHTML = isVideoPlaying ? '<span>⏸</span> Tạm Dừng' : '<span>▶</span> Phát Video';
+      }
+      if (bigBtn) {
+        bigBtn.textContent = isVideoPlaying ? '⏸' : '▶';
+      }
+      if (wrapper) {
+        if (isVideoPlaying) wrapper.classList.remove('paused');
+        else wrapper.classList.add('paused');
+      }
+    }
+
+    function updateVideoSpeakingMode() {
+      const select = document.getElementById('videoSpeakingModeSelect');
+      if (!select) return;
+      if (select.value === 'pause4s') videoPauseTotal = 4;
+      else if (select.value === 'pause6s') videoPauseTotal = 6;
+      else videoPauseTotal = 0;
+    }
+
+    function playCurrentVideoScene() {
+      if (!videoCurrentDialogue || !videoCurrentDialogue.messages) return;
+      const msgs = videoCurrentDialogue.messages;
+      if (videoCurrentSceneIdx >= msgs.length) {
+        videoState = 'FINISHED';
+        pauseVideoReel();
+        return;
+      }
+
+      const scene = msgs[videoCurrentSceneIdx];
+      const indicator = document.getElementById('videoSceneIndicator');
+      if (indicator) {
+        indicator.textContent = `Cảnh ${videoCurrentSceneIdx + 1}/${msgs.length}`;
+      }
+
+      // State: Speaking
+      videoState = 'SPEAKING_AUDIO';
+      window.speechSynthesis.cancel();
+      if (videoPauseInterval) {
+        clearInterval(videoPauseInterval);
+        videoPauseInterval = null;
+      }
+
+      const utterance = new SpeechSynthesisUtterance(scene.en);
+      utterance.rate = 0.95;
+      utterance.lang = 'en-US';
+
+      // Pick voice if selected
+      const voiceSelect = document.getElementById('voiceSelect');
+      if (voiceSelect && voiceSelect.value) {
+        const voices = window.speechSynthesis.getVoices();
+        const chosen = voices.find(v => v.lang.includes(voiceSelect.value));
+        if (chosen) utterance.voice = chosen;
+      }
+
+      utterance.onend = () => {
+        if (!isVideoPlaying) return;
+
+        // If speaking pause is enabled and this is a learner turn or key sentence
+        if (videoPauseTotal > 0) {
+          videoState = 'SPEAKING_PAUSE';
+          videoPauseCountdown = videoPauseTotal;
+
+          videoPauseInterval = setInterval(() => {
+            videoPauseCountdown -= 0.1;
+            if (videoPauseCountdown <= 0) {
+              clearInterval(videoPauseInterval);
+              videoPauseInterval = null;
+              // Advance to next scene
+              nextVideoScene();
+            }
+          }, 100);
+        } else {
+          setTimeout(() => {
+            if (isVideoPlaying) nextVideoScene();
+          }, 600);
+        }
+      };
+
+      utterance.onerror = () => {
+        if (isVideoPlaying) {
+          setTimeout(() => nextVideoScene(), 1500);
+        }
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
+
+    // Canvas Animation Loop
+    function videoAnimLoop() {
+      renderVideoCanvas();
+      videoKenBurnsTime += 0.01;
+      videoAnimId = requestAnimationFrame(videoAnimLoop);
+    }
+
+    function renderVideoCanvas() {
+      if (!videoCtx || !videoCanvas) return;
+      const w = videoCanvas.width;
+      const h = videoCanvas.height;
+
+      videoCtx.clearRect(0, 0, w, h);
+
+      // 1. Draw Background (Photo or High-Tech Gradient)
+      if (videoBgLoaded && (currentTopicIndex === 8 || videoCurrentTopic?.id === 9)) {
+        // Subtle Ken Burns zoom
+        const scale = 1.05 + 0.03 * Math.sin(videoKenBurnsTime * 0.5);
+        const dw = w * scale;
+        const dh = h * scale;
+        const dx = (w - dw) / 2 + 10 * Math.cos(videoKenBurnsTime * 0.3);
+        const dy = (h - dh) / 2 + 8 * Math.sin(videoKenBurnsTime * 0.3);
+        videoCtx.drawImage(videoBgImage, dx, dy, dw, dh);
+      } else {
+        // High-Tech Cyber AV Gradient
+        const grad = videoCtx.createLinearGradient(0, 0, w, h);
+        grad.addColorStop(0, '#0a0f1d');
+        grad.addColorStop(0.5, '#111827');
+        grad.addColorStop(1, '#0b1329');
+        videoCtx.fillStyle = grad;
+        videoCtx.fillRect(0, 0, w, h);
+
+        // Grid lines
+        videoCtx.strokeStyle = 'rgba(6, 182, 212, 0.08)';
+        videoCtx.lineWidth = 1;
+        for (let x = 0; x < w; x += 60) {
+          videoCtx.beginPath();
+          videoCtx.moveTo(x, 0);
+          videoCtx.lineTo(x, h);
+          videoCtx.stroke();
+        }
+        for (let y = 0; y < h; y += 60) {
+          videoCtx.beginPath();
+          videoCtx.moveTo(0, y);
+          videoCtx.lineTo(w, y);
+          videoCtx.stroke();
+        }
+      }
+
+      // Dark Vignette & Cinema Gradient for text readability
+      const vinGrad = videoCtx.createLinearGradient(0, 0, 0, h);
+      vinGrad.addColorStop(0, 'rgba(10, 13, 20, 0.75)');
+      vinGrad.addColorStop(0.3, 'rgba(10, 13, 20, 0.35)');
+      vinGrad.addColorStop(0.65, 'rgba(10, 13, 20, 0.85)');
+      vinGrad.addColorStop(1, 'rgba(10, 13, 20, 0.98)');
+      videoCtx.fillStyle = vinGrad;
+      videoCtx.fillRect(0, 0, w, h);
+
+      // 2. Top Header Bar on Video
+      videoCtx.fillStyle = '#38bdf8';
+      videoCtx.font = 'bold 22px system-ui, -apple-system, sans-serif';
+      videoCtx.fillText('🎬 AUDIO VISUAL ENGLISH • SPEAKING REEL', 40, 50);
+
+      videoCtx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+      videoCtx.font = '16px system-ui, -apple-system, sans-serif';
+      const topicTitle = videoCurrentTopic ? videoCurrentTopic.title : '';
+      videoCtx.fillText(topicTitle, 40, 80);
+
+      // 3. Current Message Content
+      if (videoCurrentDialogue && videoCurrentDialogue.messages && videoCurrentDialogue.messages[videoCurrentSceneIdx]) {
+        const msg = videoCurrentDialogue.messages[videoCurrentSceneIdx];
+        const isUserTurn = msg.side === 'right';
+
+        // Speaker Pill Badge
+        const pillX = 40;
+        const pillY = 400;
+        const speakerText = isUserTurn ? `🎤 BẠN (YOU - AV LEAD) • LƯỢT PHÁT ÂM` : `👤 ${msg.speaker.toUpperCase()}`;
+        videoCtx.font = 'bold 16px system-ui, -apple-system, sans-serif';
+        const pillWidth = videoCtx.measureText(speakerText).width + 30;
+
+        videoCtx.fillStyle = isUserTurn ? 'rgba(16, 185, 129, 0.25)' : 'rgba(6, 182, 212, 0.25)';
+        videoCtx.strokeStyle = isUserTurn ? '#10b981' : '#38bdf8';
+        videoCtx.lineWidth = 1.5;
+        drawRoundRect(videoCtx, pillX, pillY, pillWidth, 32, 16, true, true);
+
+        videoCtx.fillStyle = isUserTurn ? '#34d399' : '#38bdf8';
+        videoCtx.fillText(speakerText, pillX + 15, pillY + 22);
+
+        // English Subtitle (Large, High-Contrast)
+        videoCtx.fillStyle = '#ffffff';
+        videoCtx.font = 'bold 32px system-ui, -apple-system, sans-serif';
+        wrapText(videoCtx, `"${msg.en}"`, 40, 480, w - 100, 42);
+
+        // Vietnamese Translation (Muted, Clean)
+        videoCtx.fillStyle = '#94a3b8';
+        videoCtx.font = '20px system-ui, -apple-system, sans-serif';
+        wrapText(videoCtx, `👉 ${msg.vn}`, 40, 580, w - 100, 30);
+
+        // 4. Interactive Speaking Mode Overlay (Pulse Ring + Countdown)
+        if (videoState === 'SPEAKING_PAUSE' && videoPauseTotal > 0) {
+          const cx = w - 100;
+          const cy = 200;
+          const radius = 50;
+
+          // Glowing pulse
+          const pulse = 6 * Math.sin(videoKenBurnsTime * 8);
+          videoCtx.beginPath();
+          videoCtx.arc(cx, cy, radius + pulse, 0, Math.PI * 2);
+          videoCtx.strokeStyle = 'rgba(16, 185, 129, 0.4)';
+          videoCtx.lineWidth = 4;
+          videoCtx.stroke();
+
+          // Progress Arc
+          const progress = Math.max(0, videoPauseCountdown / videoPauseTotal);
+          videoCtx.beginPath();
+          videoCtx.arc(cx, cy, radius, -Math.PI / 2, -Math.PI / 2 + (1 - progress) * Math.PI * 2);
+          videoCtx.strokeStyle = '#10b981';
+          videoCtx.lineWidth = 8;
+          videoCtx.stroke();
+
+          // Number Countdown in Center
+          videoCtx.fillStyle = '#fff';
+          videoCtx.font = 'bold 36px "JetBrains Mono", monospace';
+          videoCtx.textAlign = 'center';
+          videoCtx.fillText(Math.ceil(videoPauseCountdown).toString(), cx, cy + 12);
+          videoCtx.textAlign = 'left';
+
+          // Call to action
+          videoCtx.fillStyle = '#34d399';
+          videoCtx.font = 'bold 18px system-ui, -apple-system, sans-serif';
+          videoCtx.fillText('🗣️ HÃY NÓI TO CÂU NÀY!', cx - 90, cy + radius + 35);
+        } else if (videoState === 'SPEAKING_AUDIO') {
+          // Animated Sound Waves at Bottom Right
+          const waveX = w - 180;
+          const waveY = 650;
+          videoCtx.fillStyle = '#06b6d4';
+          for (let i = 0; i < 8; i++) {
+            const barH = 10 + 25 * Math.abs(Math.sin(videoKenBurnsTime * 6 + i));
+            videoCtx.fillRect(waveX + i * 14, waveY - barH, 8, barH);
+          }
+        }
+      }
+
+      // 5. Timeline Progress Bar at very bottom
+      if (videoCurrentDialogue && videoCurrentDialogue.messages) {
+        const total = videoCurrentDialogue.messages.length;
+        const segW = (w - 80) / total;
+        for (let i = 0; i < total; i++) {
+          const sx = 40 + i * segW;
+          videoCtx.fillStyle = i <= videoCurrentSceneIdx ? '#06b6d4' : 'rgba(255, 255, 255, 0.15)';
+          videoCtx.fillRect(sx, h - 18, segW - 6, 6);
+        }
+      }
+    }
+
+    function drawRoundRect(ctx, x, y, width, height, radius, fill, stroke) {
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+      if (fill) ctx.fill();
+      if (stroke) ctx.stroke();
+    }
+
+    function wrapText(ctx, text, x, y, maxWidth, lineHeight) {
+      const words = text.split(' ');
+      let line = '';
+      let curY = y;
+
+      for (let n = 0; n < words.length; n++) {
+        const testLine = line + words[n] + ' ';
+        const metrics = ctx.measureText(testLine);
+        const testWidth = metrics.width;
+        if (testWidth > maxWidth && n > 0) {
+          ctx.fillText(line, x, curY);
+          line = words[n] + ' ';
+          curY += lineHeight;
+        } else {
+          line = testLine;
+        }
+      }
+      ctx.fillText(line, x, curY);
+    }
+
+    // MediaRecorder: Record & Download Canvas Video
+    function toggleRecordAndDownload() {
+      const btn = document.getElementById('btnRecordVideo');
+      if (!videoCanvas) return;
+
+      if (!isRecordingVideo) {
+        try {
+          const stream = videoCanvas.captureStream(30);
+          recordedChunks = [];
+          mediaRecorder = new MediaRecorder(stream, { mimeType: 'video/webm' });
+          
+          mediaRecorder.ondataavailable = (e) => {
+            if (e.data.size > 0) recordedChunks.push(e.data);
+          };
+
+          mediaRecorder.onstop = () => {
+            const blob = new Blob(recordedChunks, { type: 'video/webm' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const filename = `AV_English_Topic_${currentTopicIndex + 1}_Speaking_Reel.webm`;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            if (btn) btn.innerHTML = '<span>📹</span> Tải Video (.webm)';
+            soundSuccess();
+            alert(`Đã hoàn tất xuất video: "${filename}"! File đã được lưu về máy.`);
+          };
+
+          mediaRecorder.start();
+          isRecordingVideo = true;
+          if (btn) btn.innerHTML = '<span>⏹️</span> Dừng & Lưu Video';
+          
+          // Re-start playback from beginning to capture entire reel
+          restartVideoReel();
+        } catch(err) {
+          alert('Trình duyệt không hỗ trợ MediaRecorder captureStream: ' + err.message);
+        }
+      } else {
+        if (mediaRecorder && mediaRecorder.state !== 'inactive') {
+          mediaRecorder.stop();
+        }
+        isRecordingVideo = false;
+      }
+    }
+
+
     /* ==========================================================================
        LOCAL TOPIC COMPANION ENGINE (100% OFFLINE LOCAL - NO CORS, NO NETWORK)
        ========================================================================== */
@@ -5003,5 +5579,64 @@
       console.log("[AudioVisualEnglish] 100% Offline Local Mode Initialized Successfully.");
     });
   </script>
+
+  <!-- ==========================================================================
+       MODAL: VIDEO REEL PLAYER (VIDEO NGẮN KÈM MẪU CÂU & ĐỒNG HỒ LUYỆN NÓI)
+       ========================================================================== -->
+  <div class="modal-overlay" id="modalVideoReel" onclick="closeVideoReelPlayer(event)">
+    <div class="video-modal-card" onclick="event.stopPropagation()">
+      <div class="video-modal-header">
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 1.2rem;">🎬</span>
+          <div>
+            <h3 id="videoModalTitle" style="font-size: 1rem; font-weight: 700; color: #fff; line-height: 1.3;">Video Luyện Nói Thực Chiến</h3>
+            <p id="videoModalSubtitle" style="font-size: 0.76rem; color: var(--text-dim); margin-top: 2px;">Chế độ Video Reel kèm phụ đề chạy chữ & khoảng dừng phản xạ</p>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <button class="btn-icon" onclick="closeVideoReelPlayer()" title="Đóng Video">✕</button>
+        </div>
+      </div>
+
+      <!-- Video Display Area (Canvas 16:9) -->
+      <div class="video-screen-wrapper">
+        <canvas id="videoReelCanvas" width="1280" height="720"></canvas>
+        <div class="video-overlay-controls" id="videoOverlayControls">
+          <button class="video-big-play-btn" id="btnBigPlay" onclick="togglePlayVideoReel()">▶</button>
+        </div>
+      </div>
+
+      <!-- Video Bottom Controls -->
+      <div class="video-controls-bar">
+        <div style="display: flex; align-items: center; gap: 0.6rem; flex: 1;">
+          <button class="btn-secondary" style="padding: 0.35rem 0.75rem; font-size: 0.82rem;" id="btnPlayPauseVideo" onclick="togglePlayVideoReel()">
+            <span>▶</span> Phát Video
+          </button>
+          <button class="btn-secondary" style="padding: 0.35rem 0.65rem; font-size: 0.82rem;" onclick="prevVideoScene()" title="Cảnh trước">⏮</button>
+          <button class="btn-secondary" style="padding: 0.35rem 0.65rem; font-size: 0.82rem;" onclick="nextVideoScene()" title="Cảnh tiếp">⏭</button>
+          <button class="btn-secondary" style="padding: 0.35rem 0.65rem; font-size: 0.82rem;" onclick="repeatCurrentScene()" title="Luyện lại cảnh hiện tại">🔁</button>
+          <span id="videoSceneIndicator" style="font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; color: var(--accent-cyan); font-weight: 700;">Cảnh 1/4</span>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 0.6rem;">
+          <span style="font-size: 0.76rem; color: var(--text-dim);">Chế độ luyện:</span>
+          <select id="videoSpeakingModeSelect" onchange="updateVideoSpeakingMode()" style="font-size: 0.76rem; padding: 0.25rem 0.5rem;">
+            <option value="pause4s">Nói đuổi (Dừng 4s)</option>
+            <option value="pause6s">Nói đuổi (Dừng 6s)</option>
+            <option value="noPause">Nghe liên tục (Không dừng)</option>
+          </select>
+          <button class="btn-action" id="btnRecordVideo" style="padding: 0.35rem 0.85rem; font-size: 0.78rem; background: linear-gradient(135deg, #10b981, #059669);" onclick="toggleRecordAndDownload()" title="Quay và xuất file video .webm về máy tính">
+            <span>📹</span> Tải Video (.webm)
+          </button>
+        </div>
+      </div>
+      
+      <div style="padding: 0.5rem 1.25rem 0.75rem; font-size: 0.75rem; color: var(--text-dim); display: flex; justify-content: space-between; border-top: 1px solid var(--border-color);">
+        <span>💡 <strong>Hướng dẫn:</strong> Video sẽ đọc câu mẫu, sau đó dừng đếm ngược 4 giây để bạn phát âm theo.</span>
+        <span>Phím tắt: <strong>Space</strong> (Phát/Dừng), <strong>Mũi tên</strong> (Chuyển cảnh)</span>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
