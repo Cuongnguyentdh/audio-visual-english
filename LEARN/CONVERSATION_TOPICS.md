@@ -122,11 +122,29 @@ Hệ thống đối thoại 1-1 theo phương pháp **Turn-by-turn Role-Play** (
   > *"Hi! We have an important board meeting in 10 minutes. Can you quickly show me how to present my laptop screen?"*  
   > *(Chào bạn! 10 phút nữa chúng tôi có cuộc họp hội đồng quản trị quan trọng. Bạn hướng dẫn nhanh giúp tôi cách trình chiếu màn hình laptop được không?)*
 
+### Chủ đề 09: Báo phát sinh chi phí & Thi công nẹp sàn bán nguyệt (Additional Cost & Half-Round Floor Trunking)
+- **Bối cảnh**: Khách hàng hoặc PM muốn kéo cáp HDMI/Micro ra giữa phòng họp nhưng không có ống âm sàn. Kỹ sư AV đề xuất dùng nẹp sàn bán nguyệt để bảo vệ cáp, chống vấp ngã và giải thích việc phát sinh chi phí ngoài hợp đồng (Variation Order).
+- **Khung câu cốt lõi**:
+  - `Since there is no underfloor conduit, we need to install half-round floor trunking.` *(Vì không có ống âm sàn, chúng ta cần lắp nẹp sàn bán nguyệt.)*
+  - `This change is out of our original scope, so it will incur an additional cost.` *(Thay đổi này nằm ngoài phạm vi ban đầu, nên sẽ phát sinh thêm chi phí.)*
+  - `We will submit a variation order for your written approval before proceeding.` *(Chúng tôi sẽ gửi phiếu phát sinh để anh/chị ký duyệt trước khi triển khai.)*
+- **Từ khóa**:
+  - Half-round floor trunking (Nẹp sàn bán nguyệt / Nẹp mu rùa)
+  - Underfloor conduit (Ống luồn âm sàn)
+  - Additional cost / Extra charge (Chi phí phát sinh thêm)
+  - Out of scope (Ngoài phạm vi hợp đồng)
+  - Variation Order / VO (Phiếu yêu cầu thay đổi phát sinh)
+  - Trip hazard (Nguy cơ vấp ngã)
+  - Floor surface (Bề mặt sàn)
+- **Câu mở đầu gợi ý của AI (Vai Quản lý dự án của Khách hàng / PM)**: 
+  > *"Hi Cuong, we moved the conference table 3 meters away from the wall. Can you run the HDMI and microphone cables across the floor, and will this cost extra?"*  
+  > *(Chào Cường, bên anh dời bàn họp cách tường 3 mét. Em kéo dây HDMI và micro trên sàn giúp anh được không, và việc này có phát sinh thêm chi phí không?)*
+
 ---
 
 ## 🌐 NHÓM 3: LÀM VIỆC VỚI HÃNG & ĐỐI TÁC NƯỚC NGOÀI (SUPPLIER & VENDOR)
 
-### Chủ đề 09: Hỏi báo giá, tồn kho & Thời gian giao hàng (Lead Time)
+### Chủ đề 10: Hỏi báo giá, tồn kho & Thời gian giao hàng (Lead Time)
 - **Bối cảnh**: Gửi tin nhắn hoặc gọi điện cho hãng phân phối thiết bị (Q-SYS, Crestron, Shure, Bose...).
 - **Khung câu cốt lõi**:
   - `Is this model in stock?` *(Model này hiện có sẵn trong kho không?)*
@@ -139,7 +157,7 @@ Hệ thống đối thoại 1-1 theo phương pháp **Turn-by-turn Role-Play** (
 
 ---
 
-### Chủ đề 10: Yêu cầu hỗ trợ kỹ thuật khi thiết bị lỗi Firmware (Tech Support)
+### Chủ đề 11: Yêu cầu hỗ trợ kỹ thuật khi thiết bị lỗi Firmware (Tech Support)
 - **Bối cảnh**: Bộ xử lý trung tâm không nhận tín hiệu mạng Dante hoặc treo màn hình sau khi nâng cấp firmware.
 - **Khung câu cốt lõi**:
   - `The device is not showing up on the network.` *(Thiết bị không hiển thị trên mạng.)*
@@ -154,7 +172,7 @@ Hệ thống đối thoại 1-1 theo phương pháp **Turn-by-turn Role-Play** (
 
 ## 🚀 CÁCH THỨC BẮT ĐẦU NGAY BÂY GIỜ
 
-Bạn chỉ cần chọn mã số chủ đề (Ví dụ: **Chủ đề 01**, **Chủ đề 05** hoặc **Chủ đề 08**) hoặc nêu bất kỳ chủ đề đời thường/công việc nào bạn muốn luyện tập, tôi sẽ:
+Bạn chỉ cần chọn mã số chủ đề (Ví dụ: **Chủ đề 01**, **Chủ đề 05** hoặc **Chủ đề 09**) hoặc nêu bất kỳ chủ đề đời thường/công việc nào bạn muốn luyện tập, tôi sẽ:
 1. Đóng đúng vai nhân vật trong tình huống.
 2. Đưa ra câu hỏi/lời thoại đầu tiên bằng tiếng Anh ngắn kèm bản dịch tiếng Việt.
 3. Chờ bạn trả lời 1 câu ngắn, sau đó lập tức sửa lỗi chi tiết và tiếp tục lượt tiếp theo!

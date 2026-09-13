@@ -1651,12 +1651,12 @@
             <span class="status-dot online"></span>
             <span id="topicStatusText">Chế Độ Offline Local (100% Nội Bộ)</span>
           </div>
-          <span style="font-size: 0.75rem; color: var(--accent-cyan);" id="topicCategoryBadge">🎯 10 CHỦ ĐỀ ĐỐI THOẠI THỰC CHIẾN</span>
+          <span style="font-size: 0.75rem; color: var(--accent-cyan);" id="topicCategoryBadge">🎯 11 CHỦ ĐỀ ĐỐI THOẠI THỰC CHIẾN</span>
         </div>
 
         <div style="display: flex; gap: 0.45rem; align-items: center; flex-wrap: wrap;">
           <label style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Chủ đề:</label>
-          <select id="topicSelector" onchange="onTopicSelectChange(this.value)" style="max-width: 320px; font-weight: 600; color: #38bdf8; background: rgba(0,0,0,0.55); cursor: pointer;" title="Chọn 1 trong 10 chủ đề đối thoại">
+          <select id="topicSelector" onchange="onTopicSelectChange(this.value)" style="max-width: 320px; font-weight: 600; color: #38bdf8; background: rgba(0,0,0,0.55); cursor: pointer;" title="Chọn 1 trong 11 chủ đề đối thoại">
             <!-- Populated dynamically via JS -->
           </select>
           <button class="btn-secondary" style="padding: 0.35rem 0.65rem; font-size: 0.78rem;" onclick="navigateTopic(-1)" title="Chủ đề trước đó">◀</button>
@@ -3210,7 +3210,38 @@
       },
       {
             "id": 9,
-            "title": "Chủ Đề 09: Đàm Phán Báo Giá, Tồn Kho & Lead Time Với Hãng Phân Phối",
+            "title": "Chủ Đề 09: Báo Phát Sinh Chi Phí & Thi Công Nẹp Sàn Bán Nguyệt",
+            "desc": "Thảo luận với Quản lý Dự án về việc kéo cáp nổi trên sàn, nẹp bán nguyệt chống vấp ngã và thủ tục Variation Order (VO).",
+            "messages": [
+                  {
+                        "speaker": "Project Manager (Client)",
+                        "side": "left",
+                        "en": "Hi Cuong, we decided to move the conference table 3 meters away from the wall. Can you run the HDMI and microphone cables across the floor?",
+                        "vn": "Chào Cường, bên anh quyết định dời bàn họp cách xa tường 3 mét. Em kéo dây HDMI và micro trên mặt sàn giúp anh được không?"
+                  },
+                  {
+                        "speaker": "You (AV Lead)",
+                        "side": "right",
+                        "en": "Since there is no underfloor conduit here, we must install heavy-duty half-round floor trunking to protect the cables and prevent trip hazards.",
+                        "vn": "Vì ở đây không có ống âm sàn, chúng ta bắt buộc phải lắp nẹp sàn bán nguyệt chịu lực để bảo vệ dây và chống nguy cơ vấp ngã."
+                  },
+                  {
+                        "speaker": "Project Manager (Client)",
+                        "side": "left",
+                        "en": "Understood. Will this installation incur any additional cost for our project?",
+                        "vn": "Đã rõ. Vậy việc lắp đặt này có phát sinh thêm chi phí nào cho dự án của chúng ta không?"
+                  },
+                  {
+                        "speaker": "You (AV Lead)",
+                        "side": "right",
+                        "en": "Yes, this modification is out of our original contract scope. I will submit a variation order with the trunking material quote for your approval.",
+                        "vn": "Dạ có, phần điều chỉnh này nằm ngoài phạm vi hợp đồng ban đầu. Em sẽ gửi phiếu phát sinh (VO) kèm báo giá vật tư nẹp sàn để anh phê duyệt."
+                  }
+            ]
+      },
+      {
+            "id": 10,
+            "title": "Chủ Đề 10: Đàm Phán Báo Giá, Tồn Kho & Lead Time Với Hãng Phân Phối",
             "desc": "Trao đổi với Quản lý Bán hàng vùng (Regional Sales) về chiết khấu đăng ký dự án và thời gian giao hàng.",
             "messages": [
                   {
@@ -3240,8 +3271,8 @@
             ]
       },
       {
-            "id": 10,
-            "title": "Chủ Đề 10: Yêu Cầu Hỗ Trợ Kỹ Thuật (Tech Support) Khi Thiết Bị Lỗi Firmware",
+            "id": 11,
+            "title": "Chủ Đề 11: Yêu Cầu Hỗ Trợ Kỹ Thuật (Tech Support) Khi Thiết Bị Lỗi Firmware",
             "desc": "Liên hệ bộ phận hỗ trợ kỹ thuật quốc tế khi bộ xử lý DSP bị treo hoặc đèn trạng thái nhấp nháy đỏ.",
             "messages": [
                   {
@@ -3403,10 +3434,26 @@
       },
       {
             "id": 9,
-            "title": "Chủ Đề 09: Đàm Phán Báo Giá, Tồn Kho & Lead Time Với Hãng",
+            "title": "Chủ Đề 09: Báo Phát Sinh Chi Phí & Thi Công Nẹp Sàn Bán Nguyệt",
+            "category": "CÔNG TRƯỜNG & PHÁT SINH HỢP ĐỒNG",
+            "desc": "Kéo cáp nổi sàn, nẹp bán nguyệt chống vấp ngã và thủ tục phát sinh chi phí ngoài hợp đồng (VO).",
+            "dialogueId": 9,
+            "frame": "Since there is no underfloor conduit, we need to [Giải pháp kỹ thuật], which will incur [Chi phí/Thủ tục].",
+            "vn": "Vì không có ống âm sàn, chúng ta cần [Giải pháp kỹ thuật], việc này sẽ phát sinh [Chi phí/Thủ tục].",
+            "exampleEn": "Since there is no underfloor conduit, we need to install half-round floor trunking, which will incur an additional cost.",
+            "exampleVn": "Vì không có ống âm sàn, chúng ta cần lắp nẹp sàn bán nguyệt, việc này sẽ phát sinh thêm chi phí.",
+            "substitutions": [
+                  "install heavy-duty floor trunking / a variation order approval",
+                  "route cables along the wall baseboard / extra labor charges",
+                  "use wireless presentation transmitters / additional hardware costs"
+            ]
+      },
+      {
+            "id": 10,
+            "title": "Chủ Đề 10: Đàm Phán Báo Giá, Tồn Kho & Lead Time Với Hãng",
             "category": "THƯƠNG MẠI & QUAN HỆ ĐỐI TÁC HÃNG",
             "desc": "Hỏi giá chiết khấu dự án, tiến độ xuất xưởng và điều kiện vận chuyển CIF cho thiết bị nhập khẩu.",
-            "dialogueId": 9,
+            "dialogueId": 10,
             "frame": "Could you confirm the [Thông số thương mại] for [Số lượng] units of [Model sản phẩm]?",
             "vn": "Bạn có thể xác nhận [Thông số thương mại] cho [Số lượng] chiếc [Model sản phẩm] được không?",
             "exampleEn": "Could you confirm the lead time and project discount for 12 units of the DSP processor?",
@@ -3418,11 +3465,11 @@
             ]
       },
       {
-            "id": 10,
-            "title": "Chủ Đề 10: Yêu Cầu Hỗ Trợ Kỹ Thuật (Tech Support) Khi Lỗi Thiết Bị",
+            "id": 11,
+            "title": "Chủ Đề 11: Yêu Cầu Hỗ Trợ Kỹ Thuật (Tech Support) Khi Lỗi Thiết Bị",
             "category": "HỖ TRỢ KỸ THUẬT HÃNG (TECH SUPPORT)",
             "desc": "Mô tả trạng thái đèn LED nhấp nháy đỏ, treo firmware và phối hợp xử lý sự cố cấp độ cao.",
-            "dialogueId": 10,
+            "dialogueId": 11,
             "frame": "The device is [Trạng thái lỗi], and the status LED is [Hiện tượng đèn].",
             "vn": "Thiết bị đang bị [Trạng thái lỗi], và đèn LED trạng thái đang [Hiện tượng đèn].",
             "exampleEn": "The device is unresponsive on the network, and the status LED is flashing red.",
