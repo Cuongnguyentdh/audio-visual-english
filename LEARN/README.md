@@ -15,8 +15,7 @@ Không gian luyện tập thiết kế riêng cho người làm ngành Audio Vis
 
 ## 📂 2. Cấu Trúc Tài Liệu Luyện Tập
 
-- [ENGLISH_COACH.md](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_COACH.md): Phương pháp dạy A1, cấu trúc khung câu và tiêu chí đánh giá.
-- [CONVERSATION_TOPICS.md](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/CONVERSATION_TOPICS.md): 10 chủ đề đối thoại thực chiến chia theo 3 nhóm (Văn phòng, Kỹ thuật AV công trường, Làm việc với hãng).
+- [ENGLISH_COACH.md](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_COACH.md): **Sổ tay Gia sư & Hội thoại hợp nhất** (Phương pháp A1, quy trình luyện tập, cùng toàn bộ 11 chủ đề kèm ngữ cảnh và kịch bản song ngữ đối đáp hoàn chỉnh để đọc theo & nghe).
 - *Ma trận 12 thì, 4 thì cốt lõi A1, Động từ V1-V2-V3 và Tính từ AV*: Tích hợp tại tab **📊 Ma Trận Thì & Ngữ Pháp** trong [ENGLISH_AV_TRAINER.html](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_AV_TRAINER.html).
 
 ---
@@ -29,7 +28,8 @@ File HTML tra cứu và luyện phản xạ nội bộ trên máy tính cá nhâ
 - 🌐 [ENGLISH_AV_TRAINER.html](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_AV_TRAINER.html):
   - **⚡ Phản xạ nói 3 giây (Reflex Speaking Drill):** 20 tình huống công trường AV thực tế và giao tiếp văn phòng.
   - **📚 Từ vựng & Flashcard AV (AV Engineering Lexicon):** 24 thuật ngữ chuyên sâu (SPL, Headroom, Dante, AEC, Beamforming, EDID Handshake, PoE+, Throw Ratio, dvLED Pixel Pitch, As-built, Lead Time...) kèm audio phát âm chuẩn IPA.
-  - **👥 Hội thoại phối hợp dự án (Site & Client Role-Play):** 6 kịch bản đối thoại thực chiến.
+  - **👥 Hội thoại phối hợp dự án (Site & Client Role-Play):** 11 kịch bản đối thoại thực chiến song ngữ.
+  - **🎬 Video Reel Luyện Nói (Interactive Speaking Reel):** Trình phát video 16:9 Canvas kèm ảnh bối cảnh thực tế, phụ đề chữ to và vòng đếm ngược 4s luyện nói to theo nhân vật.
   - **🧩 Ghép câu phản xạ (Sentence Builder):** 10 bài tập luyện nghe và xếp các khối từ vựng thành câu kỹ thuật chuẩn ngữ pháp.
   - **📊 Ma Trận Thì & Ngữ Pháp (Tense & Grammar Matrix):** Ma trận 12 thì, 4 thì cốt lõi A1-A2, Bảng động từ bất quy tắc AV, Tính từ trạng thái.
   - **📋 Sổ tay khung câu & Email mẫu (Cheat Sheet):** Phối hợp công trường, Xử lý sự cố, Viết email với hãng & NCC.
@@ -37,17 +37,18 @@ File HTML tra cứu và luyện phản xạ nội bộ trên máy tính cá nhâ
 
 ---
 
-## 🗣️ 4. Phương Pháp Học Chính: Đối Thoại Trực Tiếp Theo Chủ Đề (Topic-Based Dialogue)
+## 🗣️ 4. Phương Pháp Học Chính: Đọc Theo & Đối Thoại Theo Chủ Đề (Read-Along & Dialogue)
 
-Thay vì phụ thuộc vào trang web hay kết nối phức tạp bên ngoài, cách học hiệu quả và nhanh tiến bộ nhất là **đối thoại 1-1 trực tiếp với Gia sư AI** trong từng lượt hỏi - đáp ngắn:
+Cách học hiệu quả và nhanh tiến bộ nhất là kết hợp **đọc theo kịch bản mẫu** và **đối thoại 1-1 trực tiếp với Gia sư AI** trong từng lượt hỏi - đáp ngắn:
 
-1. **Chọn chủ đề**: Mở [CONVERSATION_TOPICS.md](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/CONVERSATION_TOPICS.md) và chọn tình huống bạn muốn thực hành hôm nay.
-2. **Đối thoại từng câu (Turn-by-turn)**: AI hỏi 1 câu ngắn -> bạn trả lời 1 câu ngắn.
-3. **Sửa lỗi tức thì**: AI chỉ ra điểm sai ngữ pháp, cách dùng từ tự nhiên và cung cấp câu chuẩn để bạn ghi nhớ ngay.
+1. **Chọn chủ đề**: Mở [ENGLISH_COACH.md](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_COACH.md) và chọn tình huống bạn muốn thực hành hôm nay.
+2. **Đọc theo & Luyện nghe**: Đọc to theo kịch bản đối thoại song ngữ hoặc mở app HTML để nghe phát âm từng câu.
+3. **Đối thoại từng câu (Turn-by-turn)**: Nhắn tin vào khung chat, AI đóng vai hỏi 1 câu ngắn -> bạn trả lời 1 câu ngắn.
+4. **Sửa lỗi tức thì**: AI chỉ ra điểm sai ngữ pháp, cách dùng từ tự nhiên và cung cấp câu chuẩn để bạn ghi nhớ ngay.
 
 ---
 
 ## ⚡ 5. Bắt Đầu Ngay Cuộc Đối Thoại
 
-Chỉ cần gõ tên hoặc số thứ tự chủ đề trong chat (ví dụ: `Chủ đề 01`, `Chủ đề 07`, hoặc một chủ đề bạn tự nghĩ ra), Gia sư AI sẽ lập tức nhập vai để bắt đầu cùng bạn!
+Chỉ cần gõ tên hoặc số thứ tự chủ đề trong chat (ví dụ: `Chủ đề 01`, `Chủ đề 09: Nẹp bán nguyệt`, hoặc một chủ đề bạn tự nghĩ ra), Gia sư AI sẽ lập tức nhập vai để bắt đầu cùng bạn!
 
