@@ -1,4 +1,4 @@
-# 🎓 GIA SƯ TIẾNG ANH GIAO TIẾP & KỸ THUẬT AUDIO VISUAL (A1 ➔ A2/PRO)
+# 🎓 GIA SƯ TIẾNG ANH GIAO TIẾP & KỸ THUẬT AUDIO VISUAL (A1 -> A2/PRO)
 ### 👨‍💻 Tác giả: **By Chí Cường** | Chuyên gia Tư vấn & Kiến trúc Trải nghiệm Audio Visual
 *Sổ tay phương pháp đào tạo và ngân hàng kịch bản đối thoại thực chiến hợp nhất (Unified English Coach & Conversation Handbook).*
 
@@ -6,17 +6,17 @@
 
 # PHẦN 1: PHƯƠNG PHÁP GIA SƯ & QUY TRÌNH LUYỆN TẬP
 
-## 💡 1. Triết Lý Giảng Dạy Dành Riêng Cho Trình Độ A1
-1. **Không tạo áp lực ngữ pháp hàn lâm:** Không bắt nhớ các cấu trúc phức tạp như thì quá khứ hoàn thành hay câu điều kiện loại 3. Tập trung làm chủ 4 thì cốt lõi chiếm 80% giao tiếp: **Hiện tại đơn (Present Simple)**, **Hiện tại tiếp diễn (Present Continuous)**, **Quá khứ đơn (Past Simple)**, và **Tương lai gần (Be going to / Will)**.
+## 💡 1. Triết Lý Giảng Dạy Dành Riêng Cho Kỹ Sư AV (Trình độ A1 -> A2)
+1. **Không tạo áp lực ngữ pháp hàn lâm:** Tập trung làm chủ hệ thống các thì cốt lõi gắn liền với hoạt động công trường: **Hiện tại đơn (SOP tiêu chuẩn)**, **Hiện tại tiếp diễn (Thi công trực tiếp)**, **Quá khứ đơn (Báo cáo mốc hoàn thành)**, **Tương lai đơn (Cam kết tiến độ)** và **Bị động kỹ thuật (Thông số kết nối phần cứng)**.
 2. **Học theo Cụm từ (Chunks) & Khung câu (Sentence Frames):**
-   - Thay vì học từ vựng đơn lẻ, học cả cụm định hình sẵn: *I am responsible for...*, *Could you please help me with...*, *Since there is no underfloor conduit, we need to...*
-3. **Song ngữ đối chiếu Anh - Việt:** Luôn có nghĩa tiếng Việt kèm theo để người học hiểu sâu bản chất kỹ thuật, không suy đoán mập mờ.
+   - Thay vì học từng từ đơn lẻ, học trọn vẹn cả cấu trúc: *I am responsible for...*, *Since there is no underfloor conduit, we must install...*, *This modification will incur additional costs...*
+3. **Song ngữ đối chiếu Anh - Việt:** 100% kịch bản đều có bản dịch song ngữ kỹ thuật chuẩn xác, bảo đảm hiểu sâu bản chất kỹ thuật và sẵn sàng ứng dụng trong giao tiếp với Chủ đầu tư, Tư vấn và các nhà thầu liên quan.
 
 ---
 
 ## 🎧 2. Quy Trình 3 Bước Luyện Đọc Theo (Read-Along) & Luyện Nghe (Listening)
 
-Mỗi kịch bản đối thoại được thiết kế tối ưu để người học thực hành độc lập hoặc tương tác 1-1:
+Mỗi kịch bản đối thoại được thiết kế chuyên sâu với 10 đến 14 lượt thoại (communicative turns) phản ánh chính xác các tình huống thực tế tại công trường:
 
 ```mermaid
 graph LR
@@ -24,8 +24,8 @@ graph LR
     B --> C[3. Đóng Vai Phản Xạ 1-1<br/>Turn-by-Turn Role-Play]
 ```
 
-* **Bước 1 - Đọc theo (Read-Along / Shadowing):** Nhìn từng câu thoại tiếng Anh trong kịch bản và đọc to theo khẩu hình, chú ý các từ khóa in đậm và ngắt nghỉ theo dấu phẩy.
-* **Bước 2 - Luyện nghe (Listening):** Mở tệp offline [ENGLISH_AV_TRAINER.html](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_AV_TRAINER.html) hoặc bấm nút `🎬 Video Luyện Nói` để nghe giọng đọc bản xứ phát âm từng câu, kiểm tra khả năng bắt tai từ vựng.
+* **Bước 1 - Đọc theo (Read-Along / Shadowing):** Nhìn từng câu thoại tiếng Anh trong kịch bản và đọc to theo khẩu hình, bấm nghe giọng đọc mẫu để luyện ngữ điệu.
+* **Bước 2 - Luyện nghe qua Studio Tương Tác:** Mở tệp offline [ENGLISH_AV_TRAINER.html](file:///d:/WORKFLOW/CHI%20CUONG%20ANTIGRAVITY/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_AV_TRAINER.html) trên trình duyệt, bấm phát audio từng câu, bật tính năng lặp câu (Loop Line) và nhấp vào bất kỳ từ nào để tra từ điển tức thì (Click-to-Translate).
 * **Bước 3 - Đối thoại trực tiếp trong Chat:** Gõ tên hoặc số thứ tự chủ đề vào ô chat, Gia sư AI sẽ đóng vai đối phương hỏi từng câu một để bạn tự gõ câu đáp và sửa lỗi ngay lập tức.
 
 ---
@@ -41,284 +41,650 @@ graph LR
 
 ---
 
-# PHẦN 2: NGÂN HÀNG 11 CHỦ ĐỀ GIAO TIẾP & KỊCH BẢN ĐỌC THEO
+# PHẦN 2: MA TRẬN 12 THÌ & NGỮ PHÁP KỸ THUẬT AV
+
+## 🌟 Hệ Thống 12 Thì Theo Dòng Thời Gian (Timeline & Aspect Matrix)
+
+| Thể \ Thời gian | ⏳ QUÁ KHỨ (PAST) | ⏱️ HIỆN TẠI (PRESENT) | 🚀 TƯƠNG LAI (FUTURE) |
+| :--- | :--- | :--- | :--- |
+| **Đơn (Simple)** | **Past Simple ⭐**<br/>`S + V2/ed`<br/>*"I finished the audio design yesterday."*<br/>*(Tôi đã hoàn thành thiết kế hôm qua)* | **Present Simple ⭐**<br/>`S + V(s/es)`<br/>*"The DSP controls all speaker zones."*<br/>*(DSP điều khiển các vùng loa theo SOP)* | **Future Simple ⭐**<br/>`S + will + V-inf`<br/>*"We will email the quote tomorrow."*<br/>*(Chúng tôi sẽ gửi báo giá vào sáng mai)* |
+| **Tiếp diễn (Continuous)** | **Past Continuous**<br/>`S + was/were + V-ing`<br/>*"I was testing the mic at 3 PM."*<br/>*(Tôi đang đo thử micro lúc 3h chiều)* | **Present Continuous ⭐**<br/>`S + am/is/are + V-ing`<br/>*"We are commissioning the LED now."*<br/>*(Chúng tôi đang đo kiểm màn LED lúc này)* | **Future Continuous**<br/>`S + will be + V-ing`<br/>*"I will be attending the expo next week."*<br/>*(Tôi sẽ đang tham dự triển lãm tuần tới)* |
+| **Hoàn thành (Perfect)** | **Past Perfect**<br/>`S + had + V3/ed`<br/>*"Cables had been pulled before ceiling closed."*<br/>*(Cáp đã được kéo trước khi đóng trần)* | **Present Perfect ⭐**<br/>`S + have/has + V3/ed`<br/>*"We have installed all floor trunking."*<br/>*(Chúng tôi đã hoàn thành lắp toàn bộ nẹp)* | **Future Perfect**<br/>`S + will have + V3/ed`<br/>*"We will have completed handover by Friday."*<br/>*(Chúng tôi sẽ hoàn tất bàn giao trước thứ Sáu)* |
+| **Hoàn thành Tiếp diễn** | **Past Perf. Cont.**<br/>`S + had been + V-ing`<br/>*"We had been testing for 2 hours."*<br/>*(Đã đo thử liên tục 2 tiếng trước đó)* | **Present Perf. Cont.**<br/>`S + have/has been + V-ing`<br/>*"We have been pulling cables all morning."*<br/>*(Đã kéo cáp liên tục từ sáng đến giờ)* | **Future Perf. Cont.**<br/>`S + will have been + V-ing`<br/>*"I will have been working here for 2 years."*<br/>*(Tôi sẽ làm việc ở đây tròn 2 năm)* |
 
 ---
 
-## 🏢 NHÓM 1: GIAO TIẾP CÔNG SỞ & HẰNG NGÀY (GENERAL & OFFICE)
+# PHẦN 3: NGÂN HÀNG 11 CHỦ ĐỀ GIAO TIẾP (10 - 15 LƯỢT THOẠI)
 
-### 📌 Chủ đề 01: Giới thiệu bản thân & Vai trò Kỹ sư AV
+---
+
+## 📌 Chủ đề 01: Giới thiệu bản thân & Vai trò Kỹ sư AV
 * **Ngữ cảnh thực tế (Scenario):** Buổi họp khởi động dự án (Kick-off meeting) tại văn phòng Ban Quản lý Dự án tòa nhà văn phòng hạng A. Giám đốc dự án (Project Director) mời bạn giới thiệu bản thân và phạm vi công việc của nhà thầu AV trước các bên tư vấn và thầu phụ.
 * **Khung câu nòng cốt (Sentence Frame):** `I am responsible for [Hạng mục/Công việc] in [Dự án/Khu vực].`
-* **Từ vựng then chốt:** Lead AV Engineer (Kỹ sư trưởng AV), System design (Thiết kế hệ thống), Commissioning (Đo kiểm nghiệm thu), Milestone (Mốc tiến độ), First-fix cabling (Kéo cáp thô đợt 1).
+* **Từ vựng then chốt:** Senior AV Systems Lead (Trưởng nhóm kỹ thuật AV), Electro-acoustic design (Thiết kế điện âm học), Ballroom sound reinforcement (Tăng cường âm thanh hội trường), BACnet & RS-232 integration (Tích hợp điều khiển qua BACnet/RS-232), Staging (Tập kết thiết bị).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
 > 👤 **Project Director (Client):**  
-> *"Good morning everyone. Could you please introduce yourself and your role on this project?"*  
-> *(Chào buổi sáng mọi người. Bạn có thể vui lòng giới thiệu bản thân và vai trò của bạn trong dự án này không?)*  
->  
+> *"Good morning. Could you please introduce yourself and your role on this project?"*  
+> *(Chào buổi sáng. Bạn có thể giới thiệu bản thân và vai trò của bạn trong dự án này không?)*  
+>
 > 🎯 **You (AV Lead):**  
-> *"Good morning! My name is Cuong, and I am the lead AV Engineer. I am responsible for audio-visual system design and site commissioning."*  
-> *(Chào buổi sáng! Tôi tên là Cường, là Kỹ sư AV phụ trách chính. Tôi chịu trách nhiệm về thiết kế hệ thống âm thanh - hình ảnh và đo kiểm nghiệm thu tại công trường.)*  
->  
+> *"Good morning. My name is Cuong Nguyen, and I am the Senior AV Systems Lead for this project."*  
+> *(Chào buổi sáng. Tôi tên là Nguyễn Cường, là Trưởng nhóm kỹ thuật hệ thống AV cho dự án này.)*  
+>
 > 👤 **Project Director (Client):**  
-> *"Glad to have you with us, Cuong. What is your team's immediate milestone for this month?"*  
-> *(Rất vui được hợp tác với bạn, Cường. Mốc tiến độ trước mắt của đội bạn trong tháng này là gì?)*  
->  
+> *"Nice to meet you, Cuong. How many years have you been working with hospitality and commercial AV systems?"*  
+> *(Rất vui được gặp Cường. Bạn đã có bao nhiêu năm kinh nghiệm làm việc với hệ thống AV khách sạn và thương mại?)*  
+>
 > 🎯 **You (AV Lead):**  
-> *"Our first milestone is completing first-fix cable pulling and conduit inspection before the ceiling grid is installed."*  
-> *(Mốc tiến độ đầu tiên của chúng tôi là hoàn thành kéo cáp thô đợt 1 và kiểm tra ống luồn trước khi lắp khung xương trần thạch cao.)*
-
+> *"I have over eight years of experience in electro-acoustic design, network audio routing, and central control automation."*  
+> *(Tôi có hơn 8 năm kinh nghiệm trong thiết kế điện âm học, định tuyến âm thanh mạng IP và tự động hóa điều khiển trung tâm.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"That's impressive. What specific packages are under your direct responsibility on this site?"*  
+> *(Rất ấn tượng. Những gói thầu cụ thể nào thuộc trách nhiệm trực tiếp của bạn tại công trường này?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"I oversee the ballroom sound reinforcement, all meeting room video conferencing, and the background music system across public areas."*  
+> *(Tôi giám sát hệ thống tăng cường âm thanh hội trường, hội nghị truyền hình các phòng họp và âm thanh nền các khu vực công cộng.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Will your team also handle the integration with our third-party lighting and building management systems?"*  
+> *(Đội ngũ của bạn có đảm nhận việc tích hợp với hệ thống chiếu sáng và quản lý tòa nhà (BMS) của bên thứ ba không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, we coordinate closely with the MEP and lighting teams using IP-based control protocols, BACnet, and RS-232 interfaces."*  
+> *(Dạ có, chúng tôi phối hợp chặt chẽ với đội cơ điện và chiếu sáng thông qua các giao thức điều khiển IP, BACnet và cổng RS-232.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Who will be our primary point of contact for daily site inspections and progress reporting?"*  
+> *(Ai sẽ là đầu mối liên hệ chính của chúng tôi cho các buổi kiểm tra công trường và báo cáo tiến độ hàng ngày?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"I am your main technical contact. I attend the morning coordination meetings and supervise all on-site testing."*  
+> *(Tôi là đầu mối kỹ thuật chính. Tôi tham gia các cuộc họp phối hợp đầu ngày và trực tiếp giám sát toàn bộ công tác đo kiểm tại hiện trường.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Excellent. When do you expect to begin the initial cabling verification and equipment staging?"*  
+> *(Rất tốt. Khi nào bạn dự kiến bắt đầu công tác kiểm tra kéo cáp và tập kết thiết bị?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Our staging begins this Thursday once the central AV rack room is air-conditioned and dust-free."*  
+> *(Chúng tôi sẽ bắt đầu tập kết vào thứ Năm tuần này, ngay khi phòng tủ rack trung tâm được cấp điều hòa và vệ sinh sạch bụi.)*  
+>
 ---
 
-### 📌 Chủ đề 02: Rủ đồng nghiệp đi ăn trưa & Cà phê (Small Talk)
-* **Ngữ cảnh thực tế (Scenario):** 12h trưa tại văn phòng. Bạn vừa hoàn thành bản vẽ bố trí thiết bị phòng họp. Đồng nghiệp Sarah đi ngang qua bàn làm việc và rủ đi ăn trưa, uống cà phê giải lao.
+## 📌 Chủ đề 02: Rủ đồng nghiệp đi ăn trưa & Cà phê (Small Talk)
+* **Ngữ cảnh thực tế (Scenario):** 12h trưa tại văn phòng công trường. Bạn vừa hoàn thành file cấu hình bộ ma trận DSP. Đồng nghiệp David rủ bạn đi ăn trưa tại quán ăn Việt Nam mới mở và uống cà phê trước khi tiếp tục công việc buổi chiều.
 * **Khung câu nòng cốt (Sentence Frame):** `Would you like to grab [Món ăn/Đồ uống] with me at [Thời gian/Địa điểm]?`
-* **Từ vựng then chốt:** Buried in drawings (Chúi đầu vào bản vẽ), Ready for a break (Sẵn sàng nghỉ tay), Check out (Ghé thử/Khám phá), Stay sharp (Giữ tỉnh táo/tập trung), Client presentation (Thuyết trình với khách).
+* **Từ vựng then chốt:** Configuration backup (Sao lưu file cấu hình), Audio sweep (Đo quét âm thanh), Low frequencies (Dải tần thấp), Acoustic response (Đáp tuyến âm học), Iced milk coffee (Cà phê sữa đá), Rack termination (Đấu nối tủ rack).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Sarah (Colleague):**  
-> *"Hey Cuong! It's already noon. Have you had lunch yet, or are you still buried in your drawings?"*  
-> *(Chào Cường! Đã 12 giờ trưa rồi. Bạn đã ăn trưa chưa, hay vẫn đang chúi đầu vào bản vẽ thế?)*  
->  
-> 🎯 **You (Cuong):**  
-> *"Not yet! I just finished the speaker layout. I am definitely ready for a break."*  
-> *(Chưa đâu! Tôi vừa làm xong bản vẽ bố trí loa. Tôi hoàn toàn sẵn sàng nghỉ tay rồi.)*  
->  
-> 👤 **Sarah (Colleague):**  
-> *"Awesome! Let's check out the new noodle shop down the street. Would you like to grab an iced coffee afterwards?"*  
-> *(Tuyệt quá! Cùng ghé quán mì mới mở ở cuối phố nhé. Ăn xong bạn có muốn đi uống một ly cà phê đá không?)*  
->  
-> 🎯 **You (Cuong):**  
-> *"That sounds fantastic! A fresh coffee will help me stay sharp for the client presentation this afternoon."*  
-> *(Nghe tuyệt vời đấy! Một ly cà phê sẽ giúp tôi tỉnh táo cho buổi thuyết trình với khách hàng chiều nay.)*
-
----
-
-### 📌 Chủ đề 03: Báo cáo tiến độ đầu ngày (Daily Standup)
-* **Ngữ cảnh thực tế (Scenario):** Cuộc họp điều phối nhanh 10 phút đầu giờ sáng tại văn phòng ban chỉ huy công trường. Quản lý dự án (PM) hỏi về các đầu việc đã xong hôm qua và kế hoạch triển khai trong ngày hôm nay.
-* **Khung câu nòng cốt (Sentence Frame):** `Yesterday, I completed [Nhiệm vụ 1], and today I will focus on [Nhiệm vụ 2].`
-* **Từ vựng then chốt:** Accomplish (Hoàn thành), Terminate patch panels (Bấm đầu thanh đấu nối mạng), Blockers (Trở ngại/Vướng mắc), Calibrate mic gain (Cân chỉnh độ nhạy micro), Motorized projector lift (Giá nâng hạ máy chiếu tự động).
-
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Project Manager:**  
-> *"Good morning Cuong. What did your crew accomplish yesterday, and what is the plan for today?"*  
-> *(Chào buổi sáng Cường. Đội của bạn hôm qua đã hoàn thành việc gì, và kế hoạch hôm nay là gì?)*  
->  
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (10 lượt thoại):
+> 👤 **Colleague (David):**  
+> *"Hi Cuong, it's already twelve o'clock. Have you finished testing that DSP matrix?"*  
+> *(Chào Cường, 12 giờ trưa rồi đấy. Bạn đã đo thử xong bộ ma trận DSP đó chưa?)*  
+>
 > 🎯 **You (AV Lead):**  
-> *"Yesterday, we finished terminating all Cat6A patch panels and verified the Dante network ports."*  
-> *(Hôm qua, chúng tôi đã hoàn thành bấm đầu toàn bộ thanh đấu nối Cat6A và kiểm tra các cổng mạng chạy Dante.)*  
->  
-> 👤 **Project Manager:**  
-> *"Very good. Do you have any technical blockers or access issues on site?"*  
-> *(Rất tốt. Bạn có gặp trở ngại kỹ thuật hay vướng mắc bàn giao mặt bằng nào không?)*  
->  
+> *"Hey David, I just saved the configuration backup. I am definitely ready for a lunch break."*  
+> *(Chào David, tôi vừa lưu file sao lưu cấu hình xong. Tôi hoàn toàn sẵn sàng nghỉ trưa rồi.)*  
+>
+> 👤 **Colleague (David):**  
+> *"Great! Do you want to grab lunch together? A new Vietnamese restaurant just opened across the street."*  
+> *(Tuyệt quá! Bạn có muốn đi ăn trưa cùng không? Có quán ăn Việt Nam mới mở ngay bên kia đường.)*  
+>
 > 🎯 **You (AV Lead):**  
-> *"No blockers at the moment. Today, I will calibrate the DSP microphone gain and test the motorized projector lifts in the meeting rooms."*  
-> *(Hiện tại không có trở ngại gì. Hôm nay, tôi sẽ cân chỉnh độ nhạy mic trên bộ xử lý DSP và chạy thử khung nâng máy chiếu tự động ở các phòng họp.)*
-
+> *"That sounds fantastic. I could really go for a warm bowl of Pho today."*  
+> *(Nghe hấp dẫn đấy. Hôm nay tôi thực sự rất thèm một tô Phở nóng hổi.)*  
+>
+> 👤 **Colleague (David):**  
+> *"Perfect. How did the morning audio sweep go in the grand ballroom?"*  
+> *(Chuẩn luôn. Buổi đo quét âm thanh sáng nay trong hội trường lớn diễn ra thế nào rồi?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"The acoustic response is surprisingly smooth, though we need to trim the low frequencies around 125 Hz."*  
+> *(Đáp tuyến âm học mượt mà một cách đáng ngạc nhiên, dù chúng ta cần gọt nhẹ dải tần thấp quanh 125 Hz.)*  
+>
+> 👤 **Colleague (David):**  
+> *"Good to hear. Do you want to get some iced coffee after lunch before we head back to the site?"*  
+> *(Mừng là mọi thứ ổn. Bạn có muốn uống cà phê đá sau bữa trưa trước khi chúng ta quay lại công trường không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Definitely! A strong iced milk coffee will keep us energized for the rack termination this afternoon."*  
+> *(Chắc chắn rồi! Một ly cà phê sữa đá đậm đà sẽ giúp chúng ta tràn đầy năng lượng để đấu nối tủ rack chiều nay.)*  
+>
+> 👤 **Colleague (David):**  
+> *"Let's go then. Should we invite the IT network engineer to join us?"*  
+> *(Vậy đi thôi nào. Chúng ta có nên rủ thêm kỹ sư mạng IT đi cùng không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Sure, let's call Mark. We can chat about the Dante VLAN configurations casually over coffee."*  
+> *(Chắc chắn rồi, gọi Mark đi cùng. Chúng ta có thể thảo luận thoải mái về cấu hình VLAN Dante trong lúc uống cà phê.)*  
+>
 ---
 
-### 📌 Chủ đề 04: Xin dời lịch họp & Nhờ đồng nghiệp hỗ trợ gấp
-* **Ngữ cảnh thực tế (Scenario):** 2h chiều trên công trường. Kiến trúc sư nội thất hẹn họp lúc 3h chiều để chốt vị trí khoét lỗ trần cho loa, nhưng bạn đang phải trực tiếp kiểm tra sự cố tắc ống luồn dây cáp ngầm với bên cơ điện MEP.
-* **Khung câu nòng cốt (Sentence Frame):** `Could we reschedule our meeting to [Thời gian] because [Lý do bận]?`
-* **Từ vựng then chốt:** Reschedule (Dời lịch họp), Ceiling coordinates (Tọa độ trần), Conduit blockage (Tắc ống luồn dây), Reflected ceiling plan / RCP (Bản vẽ mặt bằng trần phản xạ), Cutout dimensions (Kích thước khoét lỗ).
+## 📌 Chủ đề 03: Báo cáo tiến độ dự án đầu ngày (Daily Standup)
+* **Ngữ cảnh thực tế (Scenario):** Cuộc họp giao ban nhanh 15 phút đầu ngày với Giám đốc dự án. Bạn báo cáo tiến độ kéo cáp Cat6 hôm qua, mục tiêu lắp giá treo loa hôm nay và giải quyết vướng mắc trần thạch cao với thầu nội thất.
+* **Khung câu nòng cốt (Sentence Frame):** `Yesterday, we completed [Công việc]. Today, we plan to [Mục tiêu].`
+* **Từ vựng then chốt:** Permanent link certification (Đo kiểm chứng nhận đường truyền cố định), Zero crosstalk (Không bị nhiễu xuyên âm), Bulkhead closure (Đóng nẹp giật cấp trần), Line array brackets (Giá đỡ cụm loa line array), Scissor lift (Xe nâng cắt kéo).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Site Architect:**  
-> *"Hi Cuong, are we still meeting at 3:00 PM today to review the ceiling speaker coordinates?"*  
-> *(Chào Cường, chúng ta vẫn họp lúc 3 giờ chiều nay để rà soát tọa độ loa âm trần chứ?)*  
->  
-> 🎯 **You (AV Engineer):**  
-> *"I apologize, but could we reschedule our meeting to 4:30 PM? I am resolving an urgent conduit blockage with the MEP team."*  
-> *(Tôi rất xin lỗi, liệu chúng ta có thể dời cuộc họp sang 4h30 chiều được không? Tôi đang phải xử lý gấp sự cố tắc ống luồn dây với bên cơ điện.)*  
->  
-> 👤 **Site Architect:**  
-> *"Sure, no problem at all. 4:30 PM works fine. Do you need me to bring the updated reflected ceiling plan?"*  
-> *(Được chứ, không vấn đề gì cả. 4h30 chiều rất thuận tiện. Bạn có cần tôi mang bản vẽ mặt bằng trần phản xạ cập nhật theo không?)*  
->  
-> 🎯 **You (AV Engineer):**  
-> *"Yes, please! That will help us confirm the exact cutout dimensions and avoid any clashes with ceiling lights."*  
-> *(Vâng, nhờ bạn nhé! Như vậy sẽ giúp chúng ta chốt chính xác kích thước khoét lỗ và tránh va chạm với đèn chiếu sáng.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
+> 👤 **Project Director (Client):**  
+> *"Good morning everyone. Let's start our daily standup. Cuong, please update us on the AV package progress."*  
+> *(Chào buổi sáng mọi người. Chúng ta bắt đầu cuộc họp đầu ngày nhé. Cường, vui lòng cập nhật tiến độ gói thầu AV.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Good morning. Yesterday, my team pulled all Cat6 and speaker cables in meeting rooms 101 through 104."*  
+> *(Chào buổi sáng. Hôm qua, đội của tôi đã kéo xong toàn bộ cáp Cat6 và cáp loa tại các phòng họp từ 101 đến 104.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Did you complete the continuity and Fluke certification tests on those cable runs?"*  
+> *(Các bạn đã hoàn thành việc đo thông mạch và đo kiểm chứng nhận Fluke cho các tuyến cáp đó chưa?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, all 32 network drops passed the Category 6 permanent link certification with zero crosstalk issues."*  
+> *(Dạ rồi, tất cả 32 đầu chờ mạng đều đạt chứng nhận đường truyền chuẩn Cat6 mà không gặp lỗi nhiễu xuyên âm.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Excellent. What is the key objective for your team today?"*  
+> *(Rất xuất sắc. Mục tiêu trọng tâm của đội bạn hôm nay là gì?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Today, our focus is installing the motorized projector lifts and hanging the line array brackets in the ballroom."*  
+> *(Hôm nay, trọng tâm của chúng tôi là lắp khung nâng hạ máy chiếu tự động và treo giá đỡ cụm loa line array trong hội trường.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Are there any technical blockers or coordination dependencies with other contractors?"*  
+> *(Có bất kỳ vướng mắc kỹ thuật hoặc điểm phụ thuộc phối hợp nào với các nhà thầu khác không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, we need the ceiling contractor to finish closing the bulkheads in meeting room 102 so we can mount the flush speakers."*  
+> *(Dạ có, chúng tôi cần thầu thạch cao đóng nốt trần giật cấp tại phòng họp 102 để chúng tôi lắp loa âm trần phẳng.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Understood. I will push the interior contractor to finish those bulkheads by 2 PM today."*  
+> *(Đã rõ. Tôi sẽ đôn đốc thầu nội thất hoàn thành phần trần đó trước 2 giờ chiều nay.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Thank you. That will allow us to stay right on schedule for tomorrow's audio tuning session."*  
+> *(Cảm ơn anh. Điều đó sẽ giúp chúng tôi duy trì đúng tiến độ cho buổi cân chỉnh âm thanh vào ngày mai.)*  
+>
+> 👤 **Project Director (Client):**  
+> *"Do you need any extra manpower or lifting equipment for the ballroom brackets?"*  
+> *(Bạn có cần thêm nhân lực hay thiết bị nâng hạ cho phần giá treo hội trường không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"No, our scissor lift is booked and our safety rigging crew is already certified and on standby."*  
+> *(Dạ không, xe nâng cắt kéo đã được đặt trước và đội móc cáp an toàn của chúng tôi đã có chứng chỉ sẵn sàng trực chiến.)*  
+>
 ---
 
-## 🏗️ NHÓM 2: PHỐI HỢP CÔNG TRƯỜNG & KỸ THUẬT AV (SITE & ENGINEERING)
+## 📌 Chủ đề 04: Xin dời lịch họp & Nhờ đồng nghiệp hỗ trợ gấp
+* **Ngữ cảnh thực tế (Scenario):** Bạn bị trùng lịch khẩn cấp do kỹ sư thanh tra của Chủ đầu tư tới nghiệm thu tiếp địa tủ rack đột xuất. Bạn nhờ đồng nghiệp Sarah xin dời lịch họp với tổng thầu sang 4h chiều và in giúp bản vẽ sơ đồ đơn tuyến.
+* **Khung câu nòng cốt (Sentence Frame):** `Could you please contact [Đối tác] to push our meeting back to [Thời gian]?`
+* **Từ vựng then chốt:** Schedule conflict (Xung đột lịch trình), Rack earthing (Tiếp địa tủ rack), Safety breakers (Át-tô-mát an toàn), Reschedule (Dời lịch họp), Single-line power schematic (Sơ đồ đơn tuyến cấp nguồn).
 
-### 📌 Chủ đề 05: Kiểm tra nguồn điện & Tủ Rack với thầu MEP
-* **Ngữ cảnh thực tế (Scenario):** Khảo sát thực địa phòng máy chủ / phòng Rack trung tâm tầng 3 cùng Kỹ sư điện MEP. Bạn cần làm rõ yêu cầu cấp nguồn điện sạch, có tiếp địa độc lập cách ly để chống ù rè âm thanh và đấu nối qua bộ lưu điện UPS.
-* **Khung câu nòng cốt (Sentence Frame):** `We require [Yêu cầu kỹ thuật] for the AV rack to prevent [Sự cố phát sinh].`
-* **Từ vựng then chốt:** Distribution board (Tủ điện phân phối), Independent 20-amp circuit (Lộ điện 20A độc lập), Isolated earth / ground (Tiếp địa cách ly chống nhiễu), Ground loop (Vòng lặp tiếp địa), 50Hz hum (Tiếng ù xì tần số 50Hz).
-
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Site MEP Engineer:**  
-> *"Hello AV team. We are finishing the power distribution board for your rack room. What are your specific electrical requirements?"*  
-> *(Chào đội AV. Chúng tôi đang hoàn thiện bảng điện phân phối cho phòng tủ rack của các bạn. Yêu cầu điện cụ thể của các bạn là gì?)*  
->  
-> 🎯 **You (Site AV Engineer):**  
-> *"We require two independent 20-amp circuits with dedicated isolated earth, connected to the building UPS system."*  
-> *(Chúng tôi yêu cầu 2 lộ điện 20 Ampe độc lập có tiếp địa cách ly riêng biệt, được cấp nguồn qua hệ thống lưu điện UPS của tòa nhà.)*  
->  
-> 👤 **Site MEP Engineer:**  
-> *"Understood. Why is isolated earth strictly needed for this audio equipment?"*  
-> *(Đã hiểu. Tại sao thiết bị âm thanh này lại bắt buộc phải có tiếp địa cách ly nghiêm ngặt như vậy?)*  
->  
-> 🎯 **You (Site AV Engineer):**  
-> *"It eliminates ground loops and prevents 50Hz hum and electromagnetic noise from elevators and air-conditioning motors."*  
-> *(Nó loại bỏ vòng lặp tiếp địa và ngăn chặn tiếng ù 50Hz cũng như nhiễu điện từ do động cơ thang máy và máy lạnh gây ra.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (10 lượt thoại):
+> 🎯 **You (AV Lead):**  
+> *"Hi Sarah, do you have a quick minute? I have an urgent schedule conflict."*  
+> *(Chào Sarah, bạn có rảnh một phút không? Mình đang bị trùng lịch gấp quá.)*  
+>
+> 👤 **Colleague (Sarah):**  
+> *"Sure Cuong, what happened? Aren't we supposed to meet the general contractor at 2 PM?"*  
+> *(Được chứ Cường, có chuyện gì vậy? Chẳng phải 2 giờ chiều nay chúng ta có lịch họp với tổng thầu sao?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, but the client's inspector just arrived unannounced to inspect the central AV rack earthing and safety breakers."*  
+> *(Đúng vậy, nhưng kỹ sư thanh tra của chủ đầu tư vừa tới đột xuất để nghiệm thu tiếp địa tủ rack AV và át-tô-mát an toàn.)*  
+>
+> 👤 **Colleague (Sarah):**  
+> *"I see. Rack earthing is critical for site sign-off. Can we reschedule the coordination meeting?"*  
+> *(Mình hiểu rồi. Tiếp địa tủ rack là hạng mục cốt lõi để ký nghiệm thu. Chúng ta có thể dời cuộc họp phối hợp không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Could you please contact the contractor to push our meeting back to 4 PM this afternoon?"*  
+> *(Bạn có thể liên hệ tổng thầu xin lùi cuộc họp của chúng ta xuống 4 giờ chiều nay được không?)*  
+>
+> 👤 **Colleague (Sarah):**  
+> *"I can do that right away. Do you need any assistance with the rack inspection paperwork?"*  
+> *(Mình làm được ngay. Bạn có cần hỗ trợ gì về hồ sơ giấy tờ nghiệm thu tủ rack không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"If you could print out the single-line power schematic from the server, that would be a huge help."*  
+> *(Nếu bạn in giúp mình sơ đồ đơn tuyến cấp nguồn từ máy chủ ra thì tốt quá, đỡ mất thời gian lắm.)*  
+>
+> 👤 **Colleague (Sarah):**  
+> *"No problem. I will print two copies and bring them directly to the server room."*  
+> *(Không vấn đề gì. Mình sẽ in 2 bản và mang thẳng xuống phòng máy chủ cho bạn nhé.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Thank you so much, Sarah. I really appreciate your quick support on this."*  
+> *(Cảm ơn Sarah rất nhiều. Mình thật sự rất cảm kích sự hỗ trợ nhanh chóng của bạn.)*  
+>
+> 👤 **Colleague (Sarah):**  
+> *"You're welcome! Good luck with the inspection, and I will see you at 4 PM for the contractor meeting."*  
+> *(Có gì đâu! Chúc bạn nghiệm thu suôn sẻ nhé, hẹn gặp bạn lúc 4 giờ chiều trong cuộc họp nhà thầu.)*  
+>
 ---
 
-### 📌 Chủ đề 06: Bàn giao hạ tầng cáp âm tường / trần với thầu IT
-* **Ngữ cảnh thực tế (Scenario):** Tại phòng họp hội đồng quản trị (Boardroom), đội kéo cáp của thầu IT đang hoàn thiện đấu nối dây mạng LAN. Bạn trao đổi với Giám sát IT để phân định cổng mạng cho micro Dante và màn hình cảm ứng điều khiển.
-* **Khung câu nòng cốt (Sentence Frame):** `Did your team terminate the [Loại cáp] cables at [Vị trí cụ thể]?`
-* **Từ vựng then chốt:** Terminate lines (Bấm đầu dây), Boardroom floor box (Hộp âm sàn phòng họp lớn), Cat6A drops (Đầu chờ cáp mạng Cat6A), Multicast streams (Luồng truyền đa hướng), Dedicated VLAN (VLAN mạng chuyên dụng).
+## 📌 Chủ đề 05: Kiểm tra nguồn điện & Tủ rack với thầu Cơ Điện MEP
+* **Ngữ cảnh thực tế (Scenario):** Khảo sát và đối chiếu kỹ thuật trực tiếp tại phòng máy chủ với Trưởng nhóm Cơ Điện MEP: kiểm tra CB 32A riêng biệt, nguồn điện dự phòng UPS 30 phút, điện trở tiếp địa sạch dưới 1.2 Ohm và điều hòa chính xác giải nhiệt 12,000 BTU/h.
+* **Khung câu nòng cốt (Sentence Frame):** `We need a dedicated [Thông số công suất] breaker and an isolated ground below [Mức điện trở].`
+* **Từ vựng then chốt:** Dedicated breaker (Át-tô-mát riêng biệt), Critical UPS bus (Thanh cái nguồn lưu điện ưu tiên), Isolated audio ground bar (Thanh tiếp địa sạch cách ly), Ground resistance (Điện trở tiếp địa), Heat dissipation (Tản nhiệt), Handover checklist (Biên bản nghiệm thu bàn giao).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **IT Site Supervisor:**  
-> *"Hi Cuong, our cabling crew is terminating network patch panels today. Which zone should we prioritize for AV?"*  
-> *(Chào Cường, đội kéo cáp của tôi hôm nay bấm đầu thanh đấu nối patch panel. Bạn muốn ưu tiên khu vực nào cho AV trước?)*  
->  
-> 🎯 **You (AV Engineer):**  
-> *"Please terminate the boardroom floor box lines first. We need 4 Cat6A drops for Dante ceiling microphones and the touch control panel."*  
-> *(Nhờ bên bạn bấm trước các đường hộp âm sàn phòng họp hội đồng. Chúng tôi cần 4 nút mạng Cat6A cho mic âm trần Dante và màn hình điều khiển cảm ứng.)*  
->  
-> 👤 **IT Site Supervisor:**  
-> *"Got it. Have you prepared the VLAN configuration table for your audio multicast streams?"*  
-> *(Đã rõ. Các bạn đã chuẩn bị bảng cấu hình VLAN cho các luồng âm thanh đa hướng multicast chưa?)*  
->  
-> 🎯 **You (AV Engineer):**  
-> *"Yes, I have. We need VLAN 20 dedicated to Dante traffic with Quality of Service enabled and Green Ethernet turned off."*  
-> *(Vâng, tôi đã chuẩn bị rồi. Chúng tôi cần VLAN 20 dành riêng cho dữ liệu Dante, có bật chế độ ưu tiên QoS và tắt tính năng tiết kiệm điện Green Ethernet.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (14 lượt thoại):
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"Good morning Cuong. We finished installing the power feeds for your central equipment rack."*  
+> *(Chào buổi sáng Cường. Bên anh đã kéo xong đường nguồn cho tủ rack thiết bị trung tâm của em rồi.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Good morning Mr. Tuan. Let's inspect the distribution board together before we power up any gear."*  
+> *(Chào buổi sáng anh Tuấn. Em với anh cùng kiểm tra tủ điện phân phối trước khi chúng ta bật nguồn thiết bị nhé.)*  
+>
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"We provided a dedicated 32-amp single-phase breaker as requested in your shop drawing."*  
+> *(Bên anh đã cấp một át-tô-mát 1 pha 32A riêng biệt đúng theo bản vẽ thi công của em yêu cầu.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Thank you. Can you also confirm if this circuit is fed directly from the building's online UPS system?"*  
+> *(Cảm ơn anh. Anh có thể xác nhận đường điện này có được cấp trực tiếp từ hệ thống UPS online của tòa nhà không?)*  
+>
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"Yes, it is connected to the critical UPS bus with 30 minutes of backup runtime in case of power failure."*  
+> *(Có chứ, nguồn được nối vào thanh cái UPS ưu tiên với thời gian lưu điện 30 phút phòng khi mất điện lưới.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"That's great. Next, we need to verify the earth grounding resistance for the isolated audio ground bar."*  
+> *(Tuyệt vời. Tiếp theo, chúng ta cần đo kiểm tra điện trở tiếp địa cho thanh đồng tiếp địa sạch cách ly của âm thanh.)*  
+>
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"Our earthing test showed a resistance of 1.2 Ohms to ground, which complies with your specification."*  
+> *(Kết quả đo tiếp địa của bên anh đạt 1.2 Ohm xuống đất, hoàn toàn đáp ứng tiêu chuẩn kỹ thuật của em.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Excellent. Clean earthing below 2 Ohms is essential to prevent audible 50 Hz hum in the amplifiers."*  
+> *(Rất chuẩn. Tiếp địa sạch dưới 2 Ohm là điều kiện bắt buộc để triệt tiêu tiếng ù rền 50 Hz trên dàn ampli công suất.)*  
+>
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"What about the heat dissipation? Does the room exhaust fan provide enough airflow for your equipment?"*  
+> *(Còn vấn đề tản nhiệt thì sao? Quạt hút phòng có cung cấp đủ lưu lượng gió cho thiết bị của em không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"With all amplifiers operating at full load, the rack produces roughly 12,000 BTU per hour of heat."*  
+> *(Khi tất cả các cục đẩy ampli chạy hết tải, tủ rack tỏa ra nhiệt lượng khoảng 12,000 BTU/giờ.)*  
+>
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"We will ensure the precision air conditioner maintains a constant room temperature between 20 and 22 degrees Celsius."*  
+> *(Bên anh sẽ đảm bảo điều hòa chính xác duy trì nhiệt độ phòng ổn định từ 20 đến 22 độ C.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Perfect. That temperature range guarantees the long-term reliability of the DSP processors and network switches."*  
+> *(Hoàn hảo. Dải nhiệt độ đó đảm bảo độ bền và tính ổn định lâu dài cho các bộ DSP và switch mạng.)*  
+>
+> 👤 **MEP Lead (Mr. Tuan):**  
+> *"Can we sign the electrical handover checklist today so we can finalize our weekly report?"*  
+> *(Hôm nay mình ký biên bản bàn giao điện luôn được không để bên anh chốt báo cáo tuần?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, once we verify phase voltage stability with our multimeter, I will gladly sign off on the handover form."*  
+> *(Dạ được, đo kiểm tra điện áp các pha ổn định bằng đồng hồ vạn năng xong là em ký xác nhận biên bản ngay.)*  
+>
 ---
 
-### 📌 Chủ đề 07: Xử lý sự cố âm thanh ù rè & Mất đồng bộ Dante Clock
-* **Ngữ cảnh thực tế (Scenario):** Buổi tổng duyệt âm thanh 2 tiếng trước sự kiện khánh thành hội trường. Loa siêu trầm bị tiếng ù nền rất lớn, đồng thời phần mềm Dante Controller báo lỗi mất đồng bộ xung nhịp (Clock sync error).
-* **Khung câu nòng cốt (Sentence Frame):** `There is [Hiện tượng lỗi] on [Thiết bị/Kênh], so let's verify [Nguyên nhân nghi vấn].`
-* **Từ vựng then chốt:** Emergency (Sự cố khẩn cấp), Severe hum (Tiếng ù rè nghiêm trọng), Clock sync error (Lỗi mất đồng bộ xung nhịp), Energy Efficient Ethernet / Green Ethernet (Chế độ tiết kiệm điện trên switch), Audio ground isolator (Bộ cách ly tiếp địa âm thanh).
+## 📌 Chủ đề 06: Bàn giao hạ tầng cáp âm tường & Mạng với thầu IT
+* **Ngữ cảnh thực tế (Scenario):** Nghiệm thu hạ tầng truyền dẫn mạng với Trưởng phòng IT: trình nộp hồ sơ đo kiểm Fluke không lỗi NEXT, cấu hình phân tách VLAN 10 (Dante Primary), VLAN 11 (Dante Secondary), VLAN 20 (Control), kích hoạt IGMP Snooping và công suất PoE+ 420W.
+* **Khung câu nòng cốt (Sentence Frame):** `All cable drops have passed [Tiêu chuẩn đo kiểm]. We allocate VLAN [Số] for [Dịch vụ mạng].`
+* **Từ vựng then chốt:** Structured cabling (Hạ tầng cáp có cấu trúc), Fluke test report (Báo cáo đo kiểm Fluke), Near-End Crosstalk - NEXT (Nhiễu xuyên âm đầu gần), IGMP Snooping (Giao thức quản lý luồng multicast), PoE power budget (Tổng định mức công suất cấp nguồn qua mạng).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Audio Technician:**  
-> *"Cuong, we have an emergency! The ceiling subwoofers have a loud humming sound, and Dante Controller shows clock sync errors."*  
-> *(Cường ơi, chúng ta gặp ca khẩn cấp rồi! Loa siêu trầm âm trần bị tiếng ù rất to, và Dante Controller đang báo lỗi mất đồng bộ xung nhịp.)*  
->  
-> 🎯 **You (Senior AV):**  
-> *"Stay calm. First, log into the network switch and check if Energy Efficient Ethernet is disabled on all Dante ports."*  
-> *(Bình tĩnh nào. Đầu tiên, hãy đăng nhập vào switch mạng và kiểm tra xem tính năng tiết kiệm điện EEE đã được tắt trên tất cả các cổng Dante chưa.)*  
->  
-> 👤 **Audio Technician:**  
-> *"Checking now... Ah, port 12 still had Green Ethernet active! I just disabled it, and the clock status turned green immediately."*  
-> *(Tôi kiểm tra ngay... À, cổng 12 vẫn còn bật Green Ethernet! Tôi vừa tắt đi và trạng thái clock đã chuyển sang màu xanh ngay lập tức.)*  
->  
-> 🎯 **You (Senior AV):**  
-> *"Excellent! Now for the analog subwoofer hum, let's insert an audio ground isolator between the DSP output and the power amplifier."*  
-> *(Xuất sắc! Còn về tiếng ù analog của loa sub, hãy đấu thêm bộ cách ly tiếp địa giữa đầu ra DSP và âm ly công suất.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
+> 👤 **IT Manager (Alex):**  
+> *"Hello Cuong. We are ready to inspect the AV structured cabling infrastructure today."*  
+> *(Chào Cường. Hôm nay bên IT sẵn sàng kiểm tra nghiệm thu hạ tầng cáp truyền dẫn AV rồi.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Hello Alex. We have labeled and terminated all 48 Cat6A drops into patch panel rack unit 12."*  
+> *(Chào Alex. Bên mình đã dán nhãn và bấm đầu toàn bộ 48 sợi cáp Cat6A vào thanh patch panel tại U12 của tủ rack.)*  
+>
+> 👤 **IT Manager (Alex):**  
+> *"Did your team conduct permanent link tests according to TIA-568 standards?"*  
+> *(Đội của bạn đã đo kiểm tra đường truyền cố định (permanent link) theo tiêu chuẩn TIA-568 chưa?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, here is the full Fluke test report. Every channel achieved a positive margin with zero NEXT failures."*  
+> *(Dạ rồi, đây là báo cáo máy đo Fluke chi tiết. Từng kênh đều đạt dung sai an toàn và không bị lỗi xuyên âm đầu gần (NEXT).)*  
+>
+> 👤 **IT Manager (Alex):**  
+> *"Great documentation. Which VLANs have you allocated for the Dante digital audio and control network?"*  
+> *(Hồ sơ rất chuẩn. Các bạn phân bổ những VLAN nào cho mạng âm thanh số Dante và mạng điều khiển?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"We designated VLAN 10 for Dante primary audio, VLAN 11 for Dante secondary redundancy, and VLAN 20 for control."*  
+> *(Chúng mình gán VLAN 10 cho âm thanh Dante chính, VLAN 11 cho đường dự phòng và VLAN 20 cho các lệnh điều khiển.)*  
+>
+> 👤 **IT Manager (Alex):**  
+> *"Have you verified that IGMP Snooping and Fast Leave are enabled on our core network switch?"*  
+> *(Bạn đã kiểm tra xem tính năng IGMP Snooping và Fast Leave đã được bật trên switch mạng lõi chưa?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, IGMP Snooping is mandatory to manage Dante multicast flows and prevent packet flooding on the network."*  
+> *(Dạ rồi, IGMP Snooping là bắt buộc để điều tiết các luồng multicast Dante và chống nghẽn gói tin trên toàn mạng.)*  
+>
+> 👤 **IT Manager (Alex):**  
+> *"What is your total PoE power budget requirement across all network switches?"*  
+> *(Tổng mức công suất cấp nguồn PoE yêu cầu trên tất cả các switch của bên bạn là bao nhiêu?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"We have 16 ceiling microphones and 6 touch panels, requiring a total PoE budget of approximately 420 Watts."*  
+> *(Bên mình có 16 micro âm trần và 6 màn hình cảm ứng, yêu cầu tổng công suất PoE xấp xỉ 420 Watt.)*  
+>
+> 👤 **IT Manager (Alex):**  
+> *"Our Cisco switch delivers up to 740 Watts of PoE+, so you have plenty of headroom."*  
+> *(Switch Cisco của bên mình cung cấp tới 740 Watt PoE+, vậy là các bạn có khoảng dự trữ công suất rất thoải mái.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"That gives us great stability. Let's patch the uplink cables and verify the switch port status now."*  
+> *(Quá an tâm về độ ổn định. Chúng ta cùng cắm dây nhảy uplink và kiểm tra trạng thái các cổng switch ngay nhé.)*  
+>
 ---
 
-### 📌 Chủ đề 08: Hướng dẫn khách hàng dùng màn hình cảm ứng (Touch Panel SOP)
-* **Ngữ cảnh thực tế (Scenario):** Bàn giao phòng họp cho Ban Thư ký trước cuộc họp Hội đồng Quản trị. Bạn hướng dẫn người dùng cuối thao tác kích hoạt hệ thống một chạm, cắm cáp chia sẻ hình ảnh và chỉnh âm lượng.
-* **Khung câu nòng cốt (Sentence Frame):** `Just tap [Nút điều khiển] on the touch panel to [Chức năng thực hiện].`
-* **Từ vựng then chốt:** Touch screen / Touch panel (Màn hình cảm ứng điều khiển), Wake up (Đánh thức/Bật sáng màn hình), Presentation button (Nút chọn nguồn trình chiếu), Powers on display (Tự động bật màn hình), Presentation mode (Chế độ chiếu phim/thuyết trình).
+## 📌 Chủ đề 07: Xử lý sự cố âm thanh ù rè & Mất đồng bộ Dante Clock
+* **Ngữ cảnh thực tế (Scenario):** Sự cố khẩn cấp tại khán phòng tiệc: tiếng ù mass 50Hz xuất hiện do đội phục vụ tiệc cắm quầy hâm nóng thức ăn, kèm hiện tượng micro không dây bị ngắt tiếng ngắt quãng do xung đồng hồ PTP jitter trên mạng Dante.
+* **Khung câu nòng cốt (Sentence Frame):** `To eliminate the ground loop, we need to insert [Thiết bị cách ly] into [Tuyến tín hiệu].`
+* **Từ vựng then chốt:** Ground loop (Vòng lặp tiếp địa gây ù mass), Audio isolation transformer (Biến áp cách ly âm thanh DI box), Intermittent audio dropouts (Mất tiếng chập chờn), PTP clock jitter (Dao động xung thời gian PTP), Grandmaster Clock (Thiết bị đồng hồ xung chủ).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Client Secretary:**  
-> *"Hi Cuong! The board meeting starts in 15 minutes. Can you show me how to present my laptop screen from this touch screen?"*  
-> *(Chào Cường! 15 phút nữa cuộc họp hội đồng bắt đầu rồi. Bạn chỉ giúp tôi cách trình chiếu màn hình laptop từ màn hình cảm ứng này được không?)*  
->  
-> 🎯 **You (AV Engineer):**  
-> *"Of course, it is very simple. Just tap the screen to wake it up, then press the 'Presentation' button on the main dashboard."*  
-> *(Dạ tất nhiên rồi, rất đơn giản ạ. Chị chỉ cần chạm vào màn hình để bật sáng, sau đó nhấn nút 'Presentation' trên bảng điều khiển chính.)*  
->  
-> 👤 **Client Secretary:**  
-> *"Do I need to find the TV remote to turn on the large display on the wall?"*  
-> *(Tôi có cần phải tìm điều khiển TV để bật màn hình lớn trên tường không?)*  
->  
-> 🎯 **You (AV Engineer):**  
-> *"No need at all! The system automatically powers on the display, selects your HDMI input, and adjusts the room lights to presentation mode."*  
-> *(Dạ hoàn toàn không cần ạ! Hệ thống sẽ tự động bật màn hình, chọn đúng cổng HDMI của chị và tự động chuyển đèn phòng sang chế độ hội thảo.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
+> 👤 **Hotel GM (Client):**  
+> *"Cuong, we have an emergency in the ballroom! There is a loud humming noise coming through all speakers."*  
+> *(Cường ơi, hội trường lớn có sự cố khẩn cấp! Đang có tiếng ù rất lớn phát ra từ tất cả các loa.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"I will investigate immediately. When did the humming start, and is there any audio signal passing through?"*  
+> *(Em xuống kiểm tra ngay đây ạ. Tiếng ù bắt đầu từ lúc nào và hiện có tín hiệu âm thanh nào đang phát không anh?)*  
+>
+> 👤 **Hotel GM (Client):**  
+> *"It started ten minutes ago when the catering team plugged in their portable buffet warming stations."*  
+> *(Nó vừa bị cách đây 10 phút, đúng lúc đội tiệc cắm các quầy hâm nóng thức ăn di động vào ổ điện.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"That indicates a ground loop between the audio ground and the temporary catering power circuit."*  
+> *(Hiện tượng đó cho thấy đã xảy ra vòng lặp tiếp địa (ground loop) giữa mass âm thanh và nguồn điện tạm của bên tiệc.)*  
+>
+> 👤 **Hotel GM (Client):**  
+> *"Can we fix it without shutting down the entire sound system before tonight's banquet?"*  
+> *(Mình có xử lý được ngay mà không cần tắt toàn bộ hệ thống âm thanh trước giờ tiệc tối nay không em?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, I will insert an audio isolation transformer into the stage input lines to break the ground loop immediately."*  
+> *(Dạ được, em sẽ gắn biến áp cách ly (DI box cách ly) vào các đường tín hiệu sân khấu để ngắt vòng lặp mass ngay lập tức.)*  
+>
+> 👤 **Hotel GM (Client):**  
+> *"Also, the technician reported intermittent audio dropouts every few seconds on the wireless microphones."*  
+> *(Ngoài ra, kỹ thuật viên báo là micro không dây cứ vài giây lại bị ngắt tiếng chập chờn một lần.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Let me open the Dante Controller software. I see high PTP clock jitter on the stage rack processor."*  
+> *(Để em mở phần mềm Dante Controller. Em thấy độ dao động xung nhịp PTP clock đang rất cao trên thiết bị ở tủ sân khấu.)*  
+>
+> 👤 **Hotel GM (Client):**  
+> *"What does clock jitter mean, and how does it affect our audio playback?"*  
+> *(Dao động xung nhịp clock jitter là sao em, và nó ảnh hưởng thế nào đến việc phát âm thanh?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"When devices lose clock synchronization, digital packets are dropped, causing clicks and audio muting."*  
+> *(Khi các thiết bị mất đồng bộ xung thời gian, các gói tin âm thanh số sẽ bị rớt, gây ra tiếng lách tách và mất tiếng.)*  
+>
+> 👤 **Hotel GM (Client):**  
+> *"What is the permanent solution to ensure this never happens during live events?"*  
+> *(Giải pháp dứt điểm là gì để đảm bảo không bao giờ tái diễn trong các sự kiện trực tiếp?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"I just locked the central DSP as the Grandmaster Clock with Priority 1. The clock is now stable, and the hum is completely gone."*  
+> *(Em vừa khóa bộ DSP trung tâm làm đồng hồ chủ Grandmaster với độ ưu tiên cao nhất. Xung nhịp đã ổn định và tiếng ù đã hết sạch 100%.)*  
+>
 ---
 
-### 📌 Chủ đề 09: Báo phát sinh chi phí & Thi công nẹp sàn bán nguyệt (Additional Cost & Floor Trunking)
-* **Ngữ cảnh thực tế (Scenario):** Khách hàng/Quản lý Dự án (Client PM) quyết định dời bàn họp hội nghị cách xa tường 3 mét ra giữa phòng khi sàn nhà đã hoàn thiện lát gỗ và không có ống âm sàn. Bạn tư vấn giải pháp nẹp sàn bán nguyệt chịu lực và thông báo việc phát sinh chi phí ngoài hợp đồng (Variation Order).
-* **Khung câu nòng cốt (Sentence Frame):** `Since there is no underfloor conduit, we need to [Giải pháp kỹ thuật], which will incur [Chi phí/Thủ tục].`
-* **Từ vựng then chốt:** Underfloor conduit (Ống luồn âm sàn), Heavy-duty half-round floor trunking (Nẹp sàn bán nguyệt chịu lực), Trip hazard (Nguy cơ vấp ngã), Out of original scope (Ngoài phạm vi hợp đồng ban đầu), Variation Order / VO (Phiếu yêu cầu phát sinh thay đổi), Written approval (Phê duyệt bằng văn bản).
+## 📌 Chủ đề 08: Hướng dẫn khách hàng thao tác màn hình cảm ứng (Touch Panel SOP)
+* **Ngữ cảnh thực tế (Scenario):** Đào tạo vận hành SOP trực tiếp cho Thư ký Hội đồng Quản trị: đánh thức màn hình, chuyển chế độ Trình chiếu (Presentation Mode) và Họp trực tuyến (Video Conference Mode), chỉnh âm lượng micro, nhận diện cổng HDMI âm bàn và nút khởi động lại khẩn cấp.
+* **Khung câu nòng cốt (Sentence Frame):** `Tap [Vị trí trên màn hình] to activate [Chế độ vận hành].`
+* **Từ vựng then chốt:** Standby mode (Chế độ chờ tiết kiệm điện), Beamforming ceiling microphones (Micro âm trần định hướng búp sóng thu), Motorized cable cubby (Hộp ổ cắm điện/HDMI âm bàn tự động), Volume fader (Thanh trượt điều khiển âm lượng), Silent system reboot (Khởi động lại ngầm hệ thống).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
+> 👤 **Board Secretary:**  
+> *"Hi Cuong, could you please show our executive board how to use this new touch screen controller?"*  
+> *(Chào Cường, em có thể hướng dẫn ban thư ký và hội đồng quản trị cách dùng màn hình cảm ứng điều khiển mới này không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"With pleasure. Tap the screen anywhere to wake up the system from standby mode."*  
+> *(Rất sẵn lòng ạ. Chị chỉ cần chạm nhẹ vào bất kỳ điểm nào trên màn hình để đánh thức hệ thống từ chế độ chờ.)*  
+>
+> 👤 **Board Secretary:**  
+> *"I see two big buttons: 'Presentation Mode' and 'Video Conference Mode'. What is the difference?"*  
+> *(Chị thấy có 2 nút lớn: 'Chế độ Trình chiếu' và 'Chế độ Họp trực tuyến'. Hai chế độ này khác nhau thế nào em?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Presentation Mode lowers the motorized screen and turns on the laser projector for local laptop sharing."*  
+> *(Chế độ Trình chiếu sẽ tự động hạ màn chiếu điện và bật máy chiếu laser để chia sẻ nội dung từ máy tính xách tay trong phòng.)*  
+>
+> 👤 **Board Secretary:**  
+> *"And what happens if our chairman selects Video Conference Mode for a Zoom or Teams meeting?"*  
+> *(Thế nếu Chủ tịch chọn Chế độ Họp trực tuyến để họp Zoom hoặc Microsoft Teams thì hệ thống sẽ chạy thế nào?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"The system powers on the 98-inch dual displays, activates the beamforming ceiling microphones, and tracks the active speaker."*  
+> *(Hệ thống sẽ bật cặp màn hình 98 inch, kích hoạt cụm micro âm trần định hướng búp sóng và tự động bám đuổi theo người phát biểu.)*  
+>
+> 👤 **Board Secretary:**  
+> *"How can we adjust the volume of the wireless microphones if a speaker talks too softly?"*  
+> *(Làm thế nào để chỉnh âm lượng của micro không dây nếu có người nói quá nhỏ trong phòng họp?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Simply tap the 'Audio' icon on the left menu and slide the master volume fader up or down."*  
+> *(Chị chỉ cần chạm vào biểu tượng 'Audio' ở menu bên trái rồi kéo thanh trượt âm lượng tổng lên hoặc xuống.)*  
+>
+> 👤 **Board Secretary:**  
+> *"What should we do if an attendee brings an older laptop with only an HDMI connection?"*  
+> *(Nếu có đại biểu mang máy tính đời cũ chỉ có cổng cắm HDMI thì bên chị xử lý thế nào?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"They can plug directly into the motorized table cubby, and the switcher will detect and route the signal automatically."*  
+> *(Đại biểu cắm dây trực tiếp vào hộp ổ cắm điện âm bàn, bộ chuyển mạch sẽ tự động nhận diện và xuất hình ảnh lên màn hình.)*  
+>
+> 👤 **Board Secretary:**  
+> *"If something freezes during an important executive meeting, is there an emergency restart button?"*  
+> *(Nếu lỡ hệ thống bị treo trong cuộc họp quan trọng của HĐQT thì có nút khởi động lại khẩn cấp không em?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, press and hold the room logo in the top right corner for 5 seconds to perform a silent system reboot."*  
+> *(Dạ có, chị nhấn giữ logo phòng ở góc trên bên phải trong 5 giây, hệ thống sẽ tự khởi động lại ngầm trong vòng 20 giây.)*  
+>
+---
+
+## 📌 Chủ đề 09: Báo phát sinh chi phí & Thi công nẹp sàn bán nguyệt
+* **Ngữ cảnh thực tế (Scenario):** Quản lý Dự án yêu cầu dời bàn họp cách xa tường 3 mét, mặt sàn không có ống âm sàn. Kỹ sư AV cảnh báo rủi ro vấp ngã nguy hiểm, đề xuất giải pháp lắp nẹp sàn bán nguyệt bằng nhôm chịu lực nhiều khoang cách ly, lập phiếu phát sinh chi phí (Variation Order) và phối hợp màu thảm.
+* **Khung câu nòng cốt (Sentence Frame):** `Since there is no underfloor conduit, we must install [Loại nẹp] to prevent trip hazards. This modification will incur [Loại chi phí].`
+* **Từ vựng then chốt:** Underfloor conduit (Ống luồn âm sàn), Trip hazard (Nguy cơ vấp ngã an toàn lao động), Heavy-duty half-round floor trunking (Nẹp sàn bán nguyệt chịu lực), Multi-compartment (Nhiều khoang cách ly điện và tín hiệu), Contract scope (Phạm vi hợp đồng), Variation Order - VO (Phiếu phát sinh ngoài hợp đồng).
+
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (14 lượt thoại):
 > 👤 **Project Manager (Client):**  
 > *"Hi Cuong, we decided to move the conference table 3 meters away from the wall. Can you run the HDMI and microphone cables across the floor?"*  
-> *(Chào Cường, bên anh quyết định dời bàn họp cách tường 3 mét. Em kéo dây HDMI và micro trên mặt sàn giúp anh được không?)*  
->  
+> *(Chào Cường, bên anh quyết định dời bàn họp cách xa tường 3 mét. Em kéo dây HDMI và micro trên mặt sàn giúp anh được không?)*  
+>
 > 🎯 **You (AV Lead):**  
-> *"Since there is no underfloor conduit here, we must install heavy-duty half-round floor trunking to protect the cables and prevent trip hazards."*  
-> *(Vì ở đây không có ống âm sàn, chúng ta bắt buộc phải lắp nẹp sàn bán nguyệt chịu lực để bảo vệ dây cáp và chống nguy cơ vấp ngã cho mọi người.)*  
->  
+> *"Since there is no underfloor conduit here, running loose cables across the carpet creates a severe trip hazard and violates site safety rules."*  
+> *(Vì ở đây không có ống âm sàn, việc để dây lòng thòng trên thảm tạo ra nguy cơ vấp ngã nguy hiểm và vi phạm an toàn công trường.)*  
+>
 > 👤 **Project Manager (Client):**  
-> *"Understood. Will this installation incur any additional cost for our project?"*  
-> *(Đã rõ. Vậy việc lắp đặt này có phát sinh thêm chi phí nào cho dự án của chúng ta không?)*  
->  
+> *"I understand the hazard. What is your proposed solution to make it both safe and aesthetically acceptable for the executive board?"*  
+> *(Anh hiểu rủi ro đó. Vậy giải pháp đề xuất của em là gì để vừa an toàn vừa đảm bảo thẩm mỹ cho phòng họp ban lãnh đạo?)*  
+>
 > 🎯 **You (AV Lead):**  
-> *"Yes, this modification is out of our original contract scope. I will submit a variation order with the trunking material quote for your written approval today."*  
-> *(Dạ có, phần điều chỉnh này nằm ngoài phạm vi hợp đồng ban đầu. Em sẽ gửi phiếu phát sinh kèm báo giá vật tư nẹp sàn để anh phê duyệt bằng văn bản ngay hôm nay.)*
-
+> *"We must install heavy-duty aluminum half-round floor trunking with chamfered edges to protect the cables and prevent people from tripping."*  
+> *(Chúng ta bắt buộc phải lắp nẹp sàn bán nguyệt bằng nhôm chịu lực có mép vát hai bên để bảo vệ dây cáp và chống vấp ngã khi đi lại.)*  
+>
+> 👤 **Project Manager (Client):**  
+> *"That sounds reasonable. Can this trunking accommodate all our required lines, including the backup network and power cords?"*  
+> *(Nghe rất hợp lý. Loại nẹp này có đủ sức chứa toàn bộ các đường dây cần thiết, bao gồm cả dây mạng dự phòng và dây nguồn không em?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, we will select a multi-compartment trunking model to keep signal lines isolated from AC power, eliminating electromagnetic interference."*  
+> *(Dạ được, em sẽ chọn loại nẹp có vách ngăn nhiều khoang để cách ly dây tín hiệu với nguồn điện 220V, triệt tiêu nhiễu điện từ.)*  
+>
+> 👤 **Project Manager (Client):**  
+> *"Understood. Will this modification incur any additional cost for our project budget?"*  
+> *(Đã rõ. Vậy việc điều chỉnh này có phát sinh thêm chi phí nào cho ngân sách dự án của bên anh không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Yes, because this routing change is outside our original contract scope, it will require an official variation order for the trunking materials and floor mounting labor."*  
+> *(Dạ có, vì thay đổi tuyến dây này nằm ngoài phạm vi hợp đồng ban đầu, nên sẽ cần lập phiếu phát sinh (VO) cho vật tư nẹp và nhân công lắp đặt sàn.)*  
+>
+> 👤 **Project Manager (Client):**  
+> *"How soon can you provide the quotation and technical data sheet for our procurement team to review?"*  
+> *(Bao lâu nữa thì em có thể gửi báo giá và tài liệu kỹ thuật datasheet để phòng mua hàng bên anh duyệt?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"I will submit the formal variation order with the catalog cut sheets and price breakdown by 3 PM today."*  
+> *(Em sẽ nộp phiếu phát sinh chính thức kèm catalogue mẫu nẹp và bảng bóc tách chi tiết đơn giá trước 3 giờ chiều nay.)*  
+>
+> 👤 **Project Manager (Client):**  
+> *"Great. If management approves the cost tomorrow morning, when can your team complete the installation?"*  
+> *(Tốt lắm. Nếu ban giám đốc phê duyệt chi phí vào sáng mai, thì khi nào đội của em có thể thi công xong?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Once approved, our site technicians can procure the trunking and complete the floor installation within 4 hours without delaying the room handover."*  
+> *(Ngay khi được duyệt, kỹ thuật viên bên em sẽ lấy vật tư và hoàn thành thi công lắp nẹp trong vòng 4 tiếng, không làm trễ hạn bàn giao phòng.)*  
+>
+> 👤 **Project Manager (Client):**  
+> *"Perfect. Please prepare the paperwork and coordinate with our interior design contractor regarding carpet color matching."*  
+> *(Tuyệt vời. Em chuẩn bị giấy tờ thủ tục và phối hợp với bên nhà thầu nội thất để chọn màu nẹp tệp với màu thảm sàn nhé.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Understood. We will ensure the trunking finish matches the room aesthetic and passes all safety sign-offs."*  
+> *(Dạ em đã rõ. Bên em sẽ đảm bảo lớp sơn hoàn thiện của nẹp hài hòa với thẩm mỹ phòng họp và đạt đầy đủ các biên bản nghiệm thu an toàn.)*  
+>
 ---
 
-## 🌐 NHÓM 3: LÀM VIỆC VỚI HÃNG & ĐỐI TÁC NƯỚC NGOÀI (SUPPLIER & VENDOR)
+## 📌 Chủ đề 10: Đàm phán báo giá, Tồn kho & Lead time với hãng phân phối
+* **Ngữ cảnh thực tế (Scenario):** Kỹ sư AV gọi điện cho đại diện kinh doanh của nhà phân phối thiết bị: kiểm tra tồn kho ma trận 4K60 modular 16x16, đàm phán rút ngắn thời gian giao hàng (lead time) bằng chuyển phát nhanh từ 6 tuần xuống 3 tuần, xin chiết khấu đối tác dự án 25% và chính sách bảo hành 3 năm đổi mới linh kiện.
+* **Khung câu nòng cốt (Sentence Frame):** `What is the estimated lead time for [Thiết bị]? Could you please apply our [Chính sách chiết khấu] to this quotation?`
+* **Từ vựng then chốt:** Modular matrix switcher (Bộ chuyển mạch ma trận module), Warehouse inventory (Hàng có sẵn trong kho), Lead time (Thời gian từ khi đặt hàng tới khi nhận hàng), Express courier surcharge (Phụ phí chuyển phát nhanh hàng không), Project partner discount (Mức chiết khấu đối tác dự án), Advance replacement warranty (Chính sách bảo hành đổi mới linh kiện trước khi thu hồi).
 
-### 📌 Chủ đề 10: Hỏi báo giá, tồn kho & Thời gian giao hàng (Lead Time)
-* **Ngữ cảnh thực tế (Scenario):** Trao đổi trực tuyến với Giám đốc kinh doanh vùng (Regional Sales Director) của hãng thiết bị DSP âm thanh tại Singapore để chốt đơn giá dự án và tiến độ giao hàng cho hồ sơ thầu khu nghỉ dưỡng cao cấp.
-* **Khung câu nòng cốt (Sentence Frame):** `Could you confirm the [Thông số thương mại] for [Số lượng] units of [Model sản phẩm]?`
-* **Từ vựng then chốt:** Finalizing equipment list (Chốt danh mục thiết bị), Stock availability (Tình trạng tồn kho), Project registration pricing (Giá hỗ trợ đăng ký dự án), Factory lead time (Thời gian sản xuất xuất xưởng), CIF Haiphong terms (Điều kiện giao hàng CIF cảng Hải Phòng).
-
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Regional Sales Director:**  
-> *"Good afternoon Cuong. Thank you for reaching out. Are you finalizing the equipment list for the 5-star resort project?"*  
-> *(Chào buổi chiều Cường. Cảm ơn bạn đã liên hệ. Có phải bạn đang chốt danh mục thiết bị cho dự án khu nghỉ dưỡng 5 sao không?)*  
->  
-> 🎯 **You (Pre-sales Consultant):**  
-> *"Yes, exactly. Could you confirm current stock availability and project registration pricing for 12 units of the Core DSP processor?"*  
-> *(Vâng, chính xác ạ. Nhờ bạn xác nhận tình trạng tồn kho hiện tại và mức giá hỗ trợ đăng ký dự án cho 12 bộ vi xử lý Core DSP nhé.)*  
->  
-> 👤 **Regional Sales Director:**  
-> *"We currently have 4 units in stock in Singapore, and 8 units will require a 4-week factory lead time. We can offer a special 12% project discount."*  
-> *(Hiện tại chúng tôi có sẵn 4 chiếc tại kho Singapore, còn 8 chiếc sẽ cần thời gian đặt hàng 4 tuần từ nhà máy. Chúng tôi có thể chiết khấu đặc biệt 12% cho dự án.)*  
->  
-> 🎯 **You (Pre-sales Consultant):**  
-> *"Four weeks works well with our cabling schedule. Please send over the formal quotation with CIF Haiphong shipping terms by tomorrow morning."*  
-> *(4 tuần hoàn toàn phù hợp với tiến độ thi công cáp của chúng tôi. Nhờ bạn gửi báo giá chính thức theo điều kiện giao hàng CIF Hải Phòng trước sáng mai nhé.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
+> 🎯 **You (AV Lead):**  
+> *"Good afternoon. I am calling from the AV installation contractor regarding our project bill of materials."*  
+> *(Xin chào buổi chiều. Tôi gọi từ phía nhà thầu thi công AV liên quan đến bảng danh mục vật tư thiết bị của dự án.)*  
+>
+> 👤 **Distributor Sales:**  
+> *"Good afternoon Cuong. How can I assist you with your equipment order today?"*  
+> *(Chào buổi chiều Cường. Hôm nay tôi có thể hỗ trợ gì cho đơn đặt hàng thiết bị của bạn?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"We need to order six units of the 16x16 4K60 HDMI modular matrix switcher for the hotel project."*  
+> *(Chúng tôi cần đặt 6 bộ chuyển mạch ma trận HDMI module 16x16 chuẩn 4K60 cho dự án khách sạn.)*  
+>
+> 👤 **Distributor Sales:**  
+> *"Let me check our warehouse inventory. Currently, we have two units in stock in our regional warehouse."*  
+> *(Để tôi kiểm tra tồn kho tại kho hàng. Hiện tại chúng tôi có sẵn 2 bộ tại kho khu vực.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Only two units? What is the estimated lead time for the remaining four units if we issue a purchase order today?"*  
+> *(Chỉ có 2 bộ thôi sao? Thời gian giao hàng (lead time) dự kiến cho 4 bộ còn lại là bao lâu nếu chúng tôi phát hành đơn đặt hàng (PO) hôm nay?)*  
+>
+> 👤 **Distributor Sales:**  
+> *"The factory manufacturing and air shipping lead time is approximately four to six weeks from factory dispatch."*  
+> *(Thời gian sản xuất tại nhà máy và vận chuyển đường hàng không là khoảng 4 đến 6 tuần kể từ ngày xuất xưởng.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Six weeks is too long for our milestone. Can the factory expedite the shipment if we cover the express courier surcharge?"*  
+> *(Sáu tuần là quá dài so với cột mốc bàn giao dự án. Hãng có thể đẩy nhanh tiến độ nếu chúng tôi trả thêm phụ phí chuyển phát nhanh không?)*  
+>
+> 👤 **Distributor Sales:**  
+> *"Yes, with express courier, we can compress the delivery window down to three weeks guaranteed."*  
+> *(Được chứ, nếu đi dịch vụ chuyển phát nhanh, chúng tôi cam kết rút ngắn thời gian giao hàng xuống còn 3 tuần.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"That works for our schedule. Could you also apply our registered project partner discount to this quote?"*  
+> *(Thời gian đó phù hợp với tiến độ của chúng tôi. Bạn có thể áp dụng mức chiết khấu đối tác dự án đã đăng ký vào báo giá này không?)*  
+>
+> 👤 **Distributor Sales:**  
+> *"Since this project is officially registered, I can grant you an additional 25 percent commercial discount on the entire order."*  
+> *(Vì dự án này đã đăng ký chính thức với hãng, tôi sẽ áp dụng thêm mức chiết khấu thương mại 25% cho toàn bộ đơn hàng.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Thank you. Please send the revised formal proforma invoice with warranty terms by email."*  
+> *(Cảm ơn bạn. Vui lòng gửi email hóa đơn chiếu lệ (proforma invoice) cập nhật kèm các điều khoản bảo hành giúp tôi.)*  
+>
+> 👤 **Distributor Sales:**  
+> *"I will issue the proforma invoice right away with full three-year advance replacement warranty terms."*  
+> *(Tôi sẽ xuất hóa đơn chiếu lệ ngay lập tức kèm chính sách bảo hành 3 năm đổi mới linh kiện trước khi thu hồi.)*  
+>
 ---
 
-### 📌 Chủ đề 11: Yêu cầu hỗ trợ kỹ thuật khi thiết bị lỗi Firmware (Tech Support Ticket)
-* **Ngữ cảnh thực tế (Scenario):** Bộ vi xử lý trung tâm DSP tại công trường bị ngắt điện đột ngột trong lúc đang nâng cấp firmware. Sau khi khởi động lại, thiết bị bị treo, mất kết nối mạng và đèn nguồn nhấp nháy đỏ. Bạn gọi điện cho Kỹ sư hỗ trợ kỹ thuật quốc tế Tier-2 của hãng để xử lý.
-* **Khung câu nòng cốt (Sentence Frame):** `The device is [Trạng thái lỗi], and the status LED is [Hiện tượng đèn].`
-* **Từ vựng then chốt:** High-priority ticket (Yêu cầu hỗ trợ ưu tiên khẩn), Unresponsive on local network (Không phản hồi trên mạng LAN), Flashing red rapidly (Nhấp nháy đỏ liên tục), Bootloader corrupted (Hỏng trình khởi động cơ sở), Serial recovery tool (Công cụ cứu hộ nạp qua cổng nối tiếp).
+## 📌 Chủ đề 11: Yêu cầu hỗ trợ kỹ thuật (Tech Support) khi thiết bị lỗi firmware
+* **Ngữ cảnh thực tế (Scenario):** Gọi điện quốc tế cho bộ phận Hỗ trợ Kỹ thuật của hãng khi bộ xử lý DSP trung tâm bị treo đơ sau khi nâng cấp firmware v2.4: cung cấp số sê-ri, miêu tả trạng thái đèn LED đỏ/vàng, nhận hướng dẫn kích hoạt chế độ khôi phục bootloader phần cứng qua nút reset chìm và nạp file cứu hộ rescue image qua cổng mạng TFTP.
+* **Khung câu nòng cốt (Sentence Frame):** `Our [Tên thiết bị] is unresponsive after [Hành động cập nhật]. Is there an emergency [Phương thức khôi phục] we can perform on-site?`
+* **Từ vựng then chốt:** Unresponsive (Bị treo, không phản hồi tín hiệu), Bootloader partition (Phân vùng nạp khởi động phần cứng), Interrupted flash writing (Gián đoạn quá trình ghi bộ nhớ flash), Recessed pinhole reset button (Nút reset chìm dạng lỗ kim), TFTP rescue image (File ảnh cứu hộ nạp qua giao thức TFTP), Operational mode (Chế độ vận hành bình thường).
 
-#### 📖 Kịch bản đối thoại hoàn chỉnh (Read-Along Script):
-> 👤 **Tier-2 Tech Support Engineer:**  
-> *"Hello Tech Support here. I received your high-priority ticket regarding the Dante processor. What is the current status of the device?"*  
-> *(Xin chào, bộ phận hỗ trợ kỹ thuật đây. Tôi nhận được yêu cầu ưu tiên cao của bạn về bộ xử lý Dante. Trạng thái hiện tại của thiết bị thế nào?)*  
->  
-> 🎯 **You (AV Field Engineer):**  
-> *"The processor is completely unresponsive on the local network, and the front power LED is flashing red rapidly after a failed firmware update."*  
-> *(Bộ xử lý hoàn toàn không phản hồi trên mạng nội bộ, và đèn LED nguồn phía trước đang nhấp nháy đỏ liên tục sau khi bị lỗi nâng cấp firmware.)*  
->  
-> 👤 **Tier-2 Tech Support Engineer:**  
-> *"Understood. The internal bootloader seems corrupted. Can you connect a USB console cable and launch our serial recovery tool?"*  
-> *(Đã hiểu. Bộ nạp khởi động bootloader bên trong có vẻ đã bị hỏng. Bạn có thể cắm cáp console USB và mở công cụ khôi phục qua cổng nối tiếp của chúng tôi không?)*  
->  
-> 🎯 **You (AV Field Engineer):**  
-> *"Yes, I have the serial cable connected to my laptop right now. Please provide the firmware recovery file and the terminal command instructions."*  
-> *(Vâng, tôi đã cắm cáp nối tiếp vào máy tính xách tay rồi. Nhờ bạn gửi file khôi phục firmware và các câu lệnh hướng dẫn qua terminal nhé.)*
-
+### 📖 Kịch bản đối thoại thực chiến hoàn chỉnh (12 lượt thoại):
+> 👤 **Tech Support (Kevin):**  
+> *"Thank you for calling Technical Support. My name is Kevin. How can I help you today?"*  
+> *(Cảm ơn bạn đã gọi tới bộ phận Hỗ trợ Kỹ thuật. Tôi tên là Kevin. Hôm nay tôi có thể hỗ trợ gì cho bạn?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Hi Kevin, our main DSP audio core has become completely unresponsive after upgrading to firmware version 2.4."*  
+> *(Chào Kevin, bộ xử lý âm thanh số DSP trung tâm của bên tôi bị treo hoàn toàn sau khi nâng cấp lên phiên bản firmware 2.4.)*  
+>
+> 👤 **Tech Support (Kevin):**  
+> *"I am sorry to hear that. Could you please provide the device model and serial number from the rear chassis?"*  
+> *(Rất tiếc vì sự cố bạn đang gặp phải. Bạn có thể đọc mã model và số sê-ri ở mặt sau khung máy được không?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"The model is DSP-Core-64, and the serial number is SN-98234-AVX. It was installed six months ago."*  
+> *(Model máy là DSP-Core-64, và số sê-ri là SN-98234-AVX. Thiết bị được lắp đặt cách đây 6 tháng.)*  
+>
+> 👤 **Tech Support (Kevin):**  
+> *"What is the current status of the front panel LED indicators?"*  
+> *(Hiện tại trạng thái các đèn LED ở mặt trước thiết bị đang báo như thế nào?)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"The power LED is solid red, the status LED is blinking rapidly in amber, and the network port shows no link activity."*  
+> *(Đèn nguồn đứng màu đỏ, đèn trạng thái nhấp nháy vàng cam rất nhanh và cổng mạng LAN không sáng đèn kết nối.)*  
+>
+> 👤 **Tech Support (Kevin):**  
+> *"That indicates the firmware update interrupted the bootloader partition during the flash writing process."*  
+> *(Hiện tượng đó cho thấy quá trình cập nhật firmware đã làm gián đoạn phân vùng khởi động bootloader trong lúc ghi bộ nhớ flash.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Is there a hardware recovery procedure or emergency TFTP restore mode we can perform on-site?"*  
+> *(Có quy trình khôi phục phần cứng hay chế độ nạp cứu hộ khẩn cấp qua TFTP nào mà chúng tôi có thể tự xử lý tại chỗ không?)*  
+>
+> 👤 **Tech Support (Kevin):**  
+> *"Yes. Power down the unit, hold down the recessed pinhole reset button, and power it back up for 15 seconds."*  
+> *(Có chứ. Bạn hãy tắt nguồn, lấy tăm nhấn giữ nút reset chìm trong lỗ nhỏ, rồi bật nguồn lại và giữ nguyên trong 15 giây.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"Hold on, let me try that right now... Okay, the status LED has turned into slow blinking blue."*  
+> *(Chờ tôi thao tác ngay nhé... Được rồi, đèn trạng thái vừa chuyển sang nhấp nháy chậm màu xanh dương.)*  
+>
+> 👤 **Tech Support (Kevin):**  
+> *"Great, the unit is now in factory bootloader recovery mode. Assign your laptop the IP address 192.168.1.100 and push the rescue image."*  
+> *(Tuyệt, máy đã vào chế độ cứu hộ bootloader. Bạn đặt IP máy tính là 192.168.1.100 và nạp file ảnh cứu hộ rescue image vào là xong.)*  
+>
+> 🎯 **You (AV Lead):**  
+> *"The rescue image uploaded successfully! The DSP has rebooted cleanly into operational mode. Thank you for your excellent guidance, Kevin."*  
+> *(File cứu hộ đã nạp thành công rồi! Bộ DSP đã tự khởi động lại về trạng thái hoạt động bình thường. Cảm ơn sự hướng dẫn tuyệt vời của bạn, Kevin.)*  
+>
 ---
 
-# PHẦN 3: KẾT NỐI VỚI ỨNG DỤNG OFFLINE & VIDEO REEL
+# PHẦN 4: HƯỚNG DẪN ÔN TẬP & PHÍM TẮT TRÊN ỨNG DỤNG HTML
 
-Khi bạn muốn nghe phát âm giọng bản xứ hoặc tự động xuất video clip ngắn kèm phụ đề và đồng hồ luyện nói:
-1. Mở tệp [ENGLISH_AV_TRAINER.html](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_AV_TRAINER.html) trực tiếp bằng trình duyệt Chrome hoặc Edge trên máy tính (hoạt động 100% Offline, không cần mạng).
-2. Tại menu thả trên cùng, chọn đúng mã chủ đề bạn đang muốn học (ví dụ: **Chủ đề 09: Báo phát sinh chi phí & nẹp bán nguyệt**).
-3. **Luyện nghe & đọc theo từng câu:** Chuyển sang **Tab 3: Hội Thoại Phối Hợp** để bấm biểu tượng 🔊 nghe phát âm chuẩn của từng lời thoại.
-4. **Luyện nói cùng Video ngắn:** Bấm nút màu hồng **`🎬 Video Luyện Nói`** để mở trình phát Video Cinema 16:9 kèm ảnh bối cảnh thực tế [floor_trunking_av.jpg](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/assets/floor_trunking_av.jpg), phụ đề chữ to và vòng đếm ngược 4 giây để bạn đọc to theo nhân vật!
+Để đạt kết quả học tập cao nhất, hãy sử dụng song song cuốn sổ tay này với ứng dụng tương tác [ENGLISH_AV_TRAINER.html](file:///d:/WORKFLOW/CHI%20CUONG%20ANTIGRAVITY/CHI%20CUONG%20WORKSPACE/LEARN/ENGLISH_AV_TRAINER.html):
+
+1. **Chế độ Luyện Đọc Đuổi (Shadowing Tab):** Bấm nút Micro và đọc theo từng câu thoại. Hệ thống sẽ tính điểm % độ chính xác và tô màu các từ phát âm chuẩn.
+2. **Chế độ Chép Chính Tả (Dictation Tab):** Nghe ở tốc độ chuẩn hoặc tốc độ chậm (0.75x) rồi tự gõ vào ô văn bản để rèn luyện khả năng bắt tai từ vựng.
+3. **Chế độ Điền Từ Khuyết (Fill Blanks Tab):** Luyện nhớ các thuật ngữ kỹ thuật nẹp sàn, cáp âm sàn, tiếp địa, PoE, Dante và hợp đồng.
+4. **Phím tắt nhanh trên máy tính:**
+   - `Phím Cách (Space)`: Phát / Tạm dừng đọc.
+   - `Mũi tên Trái / Phải`: Chuyển câu Trước / Kế tiếp.
+   - `Phím L`: Bật/Tắt chế độ lặp lại câu hiện tại (Loop Line).
+   - `Phím R`: Nghe lại câu hiện tại.
+   - `Phím 1 đến 5`: Chuyển nhanh giữa 5 Tab luyện tập.
+   - `Click chuột vào từ`: Tra từ điển tức thì (Click-to-Translate).

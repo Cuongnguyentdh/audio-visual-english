@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4You AV Studio - Nền Tảng Học Tiếng Anh AV Tương Tác & Luyện Nói Qua Video</title>
+  <title>4You AV Studio - Nền Tảng Luyện Tiếng Anh AV Tương Tác & Luyện Nói Qua Video</title>
   <style>
     /* ==========================================================================
        1. 4YOU.STUDY DESIGN SYSTEM & MODERN DARK THEME
@@ -67,7 +67,7 @@
       user-select: none;
     }
 
-    /* Scrollbar Styling */
+    /* Scrollbars */
     ::-webkit-scrollbar {
       width: 6px;
       height: 6px;
@@ -83,7 +83,6 @@
       background: var(--accent-cyan);
     }
 
-    /* App Container Layout */
     #app-container {
       display: flex;
       height: 100vh;
@@ -130,7 +129,6 @@
       font-weight: 900;
       color: #fff;
       line-height: 1;
-      letter-spacing: -0.5px;
     }
     .brand-logo span:last-child {
       font-size: 9px;
@@ -193,7 +191,6 @@
       border-radius: 0 4px 4px 0;
     }
 
-    /* Tooltip */
     .rail-btn[data-tooltip]::after {
       content: attr(data-tooltip);
       position: absolute;
@@ -238,7 +235,7 @@
     }
 
     /* ==========================================================================
-       3. MAIN VIEW CONTAINER & TOP NAVIGATION BAR
+       3. TOP NAVBAR & LAYOUT
        ========================================================================== */
     #main-content {
       flex: 1;
@@ -271,7 +268,7 @@
 
     .topic-select-wrapper {
       position: relative;
-      max-width: 460px;
+      max-width: 480px;
       flex: 1;
     }
     .topic-select {
@@ -288,7 +285,6 @@
       outline: none;
       transition: var(--transition-fast);
       appearance: none;
-      -webkit-appearance: none;
     }
     .topic-select:focus {
       border-color: var(--accent-cyan);
@@ -377,9 +373,7 @@
       color: #fff;
     }
 
-    /* ==========================================================================
-       4. SPLIT SCREEN STUDIO (VIEW 1: VIDEO MEDIA PLAYER + 5 TABS)
-       ========================================================================== */
+    /* Views */
     .view-panel {
       display: none;
       flex: 1;
@@ -390,13 +384,15 @@
       display: flex;
     }
 
+    /* ==========================================================================
+       4. SPLIT SCREEN STUDIO (VIEW 1: MEDIA PLAYER + 5 PRACTICE TABS)
+       ========================================================================== */
     #view-studio {
       display: grid;
       grid-template-columns: 52% 48%;
       height: 100%;
       width: 100%;
     }
-
     @media (max-width: 960px) {
       #view-studio {
         grid-template-columns: 100%;
@@ -416,7 +412,6 @@
       overflow-y: auto;
     }
 
-    /* 16:9 Video Canvas Frame */
     .video-canvas-box {
       width: 100%;
       aspect-ratio: 16 / 9;
@@ -438,7 +433,6 @@
       display: block;
     }
 
-    /* Topic 09 Image Backdrop */
     #sceneImage {
       position: absolute;
       top: 0;
@@ -454,7 +448,6 @@
       opacity: 1;
     }
 
-    /* Video HUD Overlays */
     .canvas-hud-top {
       position: absolute;
       top: 12px;
@@ -555,7 +548,7 @@
       50% { opacity: 1; transform: scale(1.2); }
     }
 
-    /* Subtitle Interactive Card */
+    /* Subtitle Card */
     .subtitle-card {
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
@@ -578,14 +571,14 @@
     }
 
     .sub-en-text {
-      font-size: 19px;
+      font-size: 18.5px;
       font-weight: 600;
       line-height: 1.55;
       color: #f8fafc;
       letter-spacing: -0.2px;
     }
 
-    /* Word Token - Click To Translate Signature Feature */
+    /* Word Token - One Tap Click to Translate */
     .word-token {
       display: inline-block;
       cursor: pointer;
@@ -656,7 +649,7 @@
       background: #67e8f9;
     }
 
-    /* Media Control Toolbar */
+    /* Media Controls */
     .media-toolbar {
       display: flex;
       align-items: center;
@@ -732,7 +725,7 @@
       color: #080c14;
     }
 
-    /* RIGHT: PRACTICE STUDIO (5 TABS) */
+    /* RIGHT: PRACTICE STUDIO */
     .practice-studio {
       background: #080c14;
       display: flex;
@@ -741,7 +734,6 @@
       overflow: hidden;
     }
 
-    /* Tab Headers */
     .practice-tabs-header {
       height: 48px;
       background: var(--bg-surface);
@@ -785,7 +777,6 @@
       box-shadow: 0 0 10px var(--accent-cyan);
     }
 
-    /* Tab Contents Area */
     .practice-tabs-content {
       flex: 1;
       overflow-y: auto;
@@ -802,7 +793,7 @@
       display: flex;
     }
 
-    /* TAB 1: TRANSCRIPT */
+    /* Tab 1: Transcript */
     .transcript-list {
       display: flex;
       flex-direction: column;
@@ -838,12 +829,8 @@
       font-size: 11px;
       font-weight: 700;
     }
-    .transcript-speaker.side-left {
-      color: #818cf8;
-    }
-    .transcript-speaker.side-right {
-      color: #22d3ee;
-    }
+    .transcript-speaker.side-left { color: #818cf8; }
+    .transcript-speaker.side-right { color: #22d3ee; }
     .transcript-actions {
       display: flex;
       gap: 4px;
@@ -872,7 +859,7 @@
       color: var(--text-muted);
     }
 
-    /* TAB 2: SHADOWING */
+    /* Practice Card Base */
     .card-practice {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
@@ -882,6 +869,8 @@
       flex-direction: column;
       gap: 1rem;
     }
+
+    /* Tab 2: Shadowing */
     .shadow-target-box {
       background: rgba(0, 0, 0, 0.35);
       border-radius: var(--radius-md);
@@ -903,7 +892,7 @@
       gap: 1rem;
       align-items: center;
       justify-content: center;
-      padding: 1rem 0;
+      padding: 0.8rem 0;
     }
     .btn-mic-record {
       width: 72px;
@@ -970,18 +959,13 @@
       color: #34d399;
       border: 1px solid rgba(16, 185, 129, 0.4);
     }
-    .chip-diff.near {
-      background: rgba(245, 158, 11, 0.2);
-      color: #fbbf24;
-      border: 1px solid rgba(245, 158, 11, 0.4);
-    }
     .chip-diff.miss {
       background: rgba(244, 63, 94, 0.2);
       color: #fb7185;
       border: 1px solid rgba(244, 63, 94, 0.4);
     }
 
-    /* TAB 3: DICTATION */
+    /* Tab 3: Dictation */
     .dictation-input-box {
       width: 100%;
       min-height: 90px;
@@ -1038,7 +1022,7 @@
       color: #fff;
     }
 
-    /* TAB 4: FILL BLANKS */
+    /* Tab 4: Fill Blanks */
     .cloze-sentence-card {
       font-size: 17px;
       font-weight: 500;
@@ -1099,7 +1083,7 @@
       pointer-events: none;
     }
 
-    /* TAB 5: AI CONVERSATION */
+    /* Tab 5: AI Conversation */
     .chat-container {
       display: flex;
       flex-direction: column;
@@ -1132,21 +1116,11 @@
       font-weight: 700;
       color: var(--text-dim);
     }
-    .chat-bubble.partner .chat-speaker-label {
-      color: #818cf8;
-    }
-    .chat-bubble.user .chat-speaker-label {
-      color: #38bdf8;
-    }
-    .chat-text-en {
-      font-size: 14px;
-      font-weight: 500;
-      color: #fff;
-    }
-    .chat-text-vn {
-      font-size: 12px;
-      color: var(--text-muted);
-    }
+    .chat-bubble.partner .chat-speaker-label { color: #818cf8; }
+    .chat-bubble.user .chat-speaker-label { color: #38bdf8; }
+    .chat-text-en { font-size: 14px; font-weight: 500; color: #fff; }
+    .chat-text-vn { font-size: 12px; color: var(--text-muted); }
+    
     .roleplay-options-panel {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
@@ -1187,7 +1161,7 @@
     .roleplay-level-tag.pro { color: #f59e0b; }
 
     /* ==========================================================================
-       5. ONE-TAP WORD DICTIONARY POPUP (4YOU SIGNATURE FEATURE)
+       5. ONE-TAP WORD DICTIONARY POPUP (#wordPopup)
        ========================================================================== */
     #wordPopup {
       position: fixed;
@@ -1208,205 +1182,267 @@
       from { opacity: 0; transform: translateY(6px) scale(0.97); }
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
-
-    .popup-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-    .popup-word-title {
-      font-size: 19px;
-      font-weight: 800;
-      color: #fff;
-      line-height: 1.2;
-    }
-    .popup-ipa {
-      font-size: 13px;
-      color: var(--accent-cyan);
-      font-family: var(--font-mono);
-      margin-top: 2px;
-    }
-    .popup-pos-badge {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 2px 7px;
-      border-radius: 12px;
-      background: rgba(16, 185, 129, 0.15);
-      color: #34d399;
-      border: 1px solid rgba(16, 185, 129, 0.3);
-    }
-    .popup-close-btn {
-      background: transparent;
-      border: none;
-      color: var(--text-dim);
-      font-size: 16px;
-      cursor: pointer;
-      line-height: 1;
-      padding: 2px 5px;
-      border-radius: 4px;
-    }
-    .popup-close-btn:hover {
-      color: #fff;
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .popup-meaning {
-      font-size: 13.5px;
-      line-height: 1.45;
-      color: #f1f5f9;
-      background: rgba(255, 255, 255, 0.04);
-      padding: 8px 10px;
-      border-radius: var(--radius-sm);
-      border-left: 2px solid var(--accent-cyan);
-    }
-    .popup-av-note {
-      font-size: 12px;
-      color: #94a3b8;
-      line-height: 1.4;
-    }
-    .popup-av-note strong {
-      color: #38bdf8;
-    }
-
-    .popup-actions {
-      display: flex;
-      gap: 6px;
-      margin-top: 4px;
-    }
-    .popup-btn {
-      flex: 1;
-      padding: 6px 10px;
-      border-radius: var(--radius-sm);
-      font-size: 12px;
-      font-weight: 700;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      border: none;
-      transition: var(--transition-fast);
-    }
-    .popup-btn-listen {
-      background: rgba(6, 182, 212, 0.2);
-      color: var(--accent-cyan);
-      border: 1px solid rgba(6, 182, 212, 0.35);
-    }
-    .popup-btn-listen:hover {
-      background: var(--accent-cyan);
-      color: #080c14;
-    }
-    .popup-btn-save {
-      background: rgba(245, 158, 11, 0.2);
-      color: #f59e0b;
-      border: 1px solid rgba(245, 158, 11, 0.35);
-    }
-    .popup-btn-save:hover {
-      background: #f59e0b;
-      color: #080c14;
-    }
-    .popup-btn-save.saved {
-      background: rgba(16, 185, 129, 0.2);
-      color: #10b981;
-      border-color: rgba(16, 185, 129, 0.4);
-    }
+    .popup-header { display: flex; justify-content: space-between; align-items: flex-start; }
+    .popup-word-title { font-size: 19px; font-weight: 800; color: #fff; line-height: 1.2; }
+    .popup-ipa { font-size: 13px; color: var(--accent-cyan); font-family: var(--font-mono); margin-top: 2px; }
+    .popup-pos-badge { font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 2px 7px; border-radius: 12px; background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+    .popup-close-btn { background: transparent; border: none; color: var(--text-dim); font-size: 16px; cursor: pointer; padding: 2px 5px; border-radius: 4px; }
+    .popup-close-btn:hover { color: #fff; background: rgba(255, 255, 255, 0.1); }
+    .popup-meaning { font-size: 13.5px; line-height: 1.45; color: #f1f5f9; background: rgba(255, 255, 255, 0.04); padding: 8px 10px; border-radius: var(--radius-sm); border-left: 2px solid var(--accent-cyan); }
+    .popup-av-note { font-size: 12px; color: #94a3b8; line-height: 1.4; }
+    .popup-av-note strong { color: #38bdf8; }
+    .popup-actions { display: flex; gap: 6px; margin-top: 4px; }
+    .popup-btn { flex: 1; padding: 6px 10px; border-radius: var(--radius-sm); font-size: 12px; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 5px; border: none; transition: var(--transition-fast); }
+    .popup-btn-listen { background: rgba(6, 182, 212, 0.2); color: var(--accent-cyan); border: 1px solid rgba(6, 182, 212, 0.35); }
+    .popup-btn-listen:hover { background: var(--accent-cyan); color: #080c14; }
+    .popup-btn-save { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.35); }
+    .popup-btn-save:hover { background: #f59e0b; color: #080c14; }
+    .popup-btn-save.saved { background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: rgba(16, 185, 129, 0.4); }
 
     /* ==========================================================================
-       6. SECONDARY VIEWS: FLASHCARDS, GRAMMAR MATRIX, REFLEX DRILLS
+       6. SECONDARY VIEWS: FLASHCARDS, GRAMMAR & TENSES MATRIX, REFLEX DRILLS
        ========================================================================== */
     /* View 2: Flashcards */
-    #view-flashcards {
-      flex-direction: column;
-      padding: 1.5rem 2rem;
-      gap: 1.25rem;
-      overflow-y: auto;
-    }
-    .flashcards-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .filter-chips-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-    .filter-chip {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      color: var(--text-muted);
-      font-size: 12px;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: var(--transition-fast);
-    }
-    .filter-chip:hover {
-      color: #fff;
-    }
-    .filter-chip.active {
-      background: rgba(6, 182, 212, 0.15);
-      color: var(--accent-cyan);
-      border-color: var(--accent-cyan);
-    }
+    #view-flashcards { flex-direction: column; padding: 1.5rem 2rem; gap: 1.25rem; overflow-y: auto; }
+    .flashcards-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .filter-chips-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-chip { background: var(--bg-surface); border: 1px solid var(--border-subtle); color: var(--text-muted); font-size: 12px; font-weight: 600; padding: 6px 14px; border-radius: 20px; cursor: pointer; transition: var(--transition-fast); }
+    .filter-chip:hover { color: #fff; }
+    .filter-chip.active { background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan); border-color: var(--accent-cyan); }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.25rem; }
+    .flip-card { background: transparent; perspective: 1000px; height: 190px; cursor: pointer; }
+    .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); transform-style: preserve-3d; }
+    .flip-card.flipped .flip-card-inner { transform: rotateY(180deg); }
+    .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--border-subtle); box-shadow: var(--shadow-subtle); }
+    .flip-card-front { background: var(--bg-surface); }
+    .flip-card-back { background: linear-gradient(145deg, #131b2e 0%, #0d1527 100%); transform: rotateY(180deg); text-align: left; }
 
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.25rem;
-    }
-    .flip-card {
-      background: transparent;
-      perspective: 1000px;
-      height: 190px;
-      cursor: pointer;
-    }
-    .flip-card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      text-align: center;
-      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-      transform-style: preserve-3d;
-    }
-    .flip-card.flipped .flip-card-inner {
-      transform: rotateY(180deg);
-    }
-    .flip-card-front, .flip-card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      border-radius: var(--radius-lg);
-      padding: 1.25rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border: 1px solid var(--border-subtle);
-      box-shadow: var(--shadow-subtle);
-    }
-    .flip-card-front {
-      background: var(--bg-surface);
-    }
-    .flip-card-back {
-      background: linear-gradient(145deg, #131b2e 0%, #0d1527 100%);
-      transform: rotateY(180deg);
-      text-align: left;
-    }
-
-    /* View 3: Grammar Matrix */
+    /* View 3: Grammar & Tense Matrix */
     #view-grammar {
       flex-direction: column;
       padding: 1.5rem 2rem;
-      gap: 1.5rem;
+      gap: 1.25rem;
       overflow-y: auto;
     }
-    .formula-card {
+    .grammar-subnav {
+      display: flex;
+      gap: 0.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 0.8rem;
+      overflow-x: auto;
+    }
+    .grammar-sub-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      white-space: nowrap;
+    }
+    .grammar-sub-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+    }
+    .grammar-sub-btn.active {
+      background: linear-gradient(135deg, rgba(6, 182, 212, 0.25), rgba(99, 102, 241, 0.25));
+      border-color: var(--accent-cyan);
+      color: #38bdf8;
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+    }
+    .grammar-view {
+      display: none;
+      flex-direction: column;
+      gap: 1.25rem;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+    .grammar-view.active {
+      display: flex;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 12 Tenses Matrix Table */
+    .matrix-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      overflow-x: auto;
+      box-shadow: var(--shadow-subtle);
+    }
+    .tense-matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0.6rem;
+      min-width: 840px;
+    }
+    .tense-matrix-table th {
+      padding: 0.8rem 1rem;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius-sm);
+      text-align: left;
+    }
+    .tense-matrix-table th.head-aspect {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-muted);
+      width: 180px;
+    }
+    .tense-matrix-table th.head-time {
+      background: rgba(6, 182, 212, 0.12);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+    .tense-cell {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      vertical-align: top;
+      transition: var(--transition-fast);
+      cursor: pointer;
+      position: relative;
+    }
+    .tense-cell:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    .tense-cell.core {
+      background: linear-gradient(145deg, rgba(6, 182, 212, 0.08), rgba(99, 102, 241, 0.08));
+      border: 1px solid rgba(6, 182, 212, 0.35);
+    }
+    .tense-cell.core:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.25);
+    }
+    .tense-cell-name {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+    .tense-cell-formula {
+      font-size: 0.76rem;
+      font-family: var(--font-mono);
+      color: #38bdf8;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.45rem;
+    }
+    .tense-cell-ex {
+      font-size: 0.8rem;
+      color: #e2e8f0;
+      line-height: 1.35;
+      font-style: italic;
+      margin-bottom: 0.3rem;
+    }
+    .tense-cell-vn {
+      font-size: 0.74rem;
+      color: var(--text-dim);
+      line-height: 1.3;
+    }
+
+    /* Core Tenses Breakdown Cards */
+    .tenses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 1.25rem;
+    }
+    .tense-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      box-shadow: var(--shadow-subtle);
+      border-left: 3px solid var(--accent-cyan);
+    }
+
+    /* Tense Review Quiz Component */
+    .quiz-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      box-shadow: var(--shadow-subtle);
+      max-width: 850px;
+    }
+    .quiz-question-box {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: var(--radius-md);
+      padding: 1.25rem;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.6;
+      border-left: 4px solid var(--accent-cyan);
+    }
+    .quiz-options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+    @media (max-width: 680px) {
+      .quiz-options-grid { grid-template-columns: 1fr; }
+    }
+    .btn-quiz-opt {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 16px;
+      text-align: left;
+      cursor: pointer;
+      transition: var(--transition-fast);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-quiz-opt:hover {
+      background: rgba(6, 182, 212, 0.1);
+      border-color: var(--accent-cyan);
+    }
+    .btn-quiz-opt.correct {
+      background: rgba(16, 185, 129, 0.2) !important;
+      border-color: #10b981 !important;
+      color: #34d399 !important;
+    }
+    .btn-quiz-opt.wrong {
+      background: rgba(244, 63, 94, 0.2) !important;
+      border-color: #f43f5e !important;
+      color: #fb7185 !important;
+    }
+    .quiz-explain-box {
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* Tense Transformer Cards */
+    .transformer-card {
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-lg);
@@ -1415,21 +1451,50 @@
       flex-direction: column;
       gap: 0.75rem;
     }
-    .formula-badge {
-      font-size: 11px;
-      font-weight: 800;
-      color: var(--accent-cyan);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .formula-code {
-      font-family: var(--font-mono);
-      background: rgba(0, 0, 0, 0.4);
-      padding: 8px 14px;
+    .transformer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
       border-radius: var(--radius-sm);
-      color: #38bdf8;
-      font-size: 14px;
-      border-left: 3px solid var(--accent-cyan);
+      padding: 8px 12px;
+      gap: 8px;
+    }
+    .transformer-tense-tag {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      min-width: 140px;
+    }
+
+    /* Action Verbs Table */
+    .table-responsive {
+      overflow-x: auto;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .data-table th, .data-table td {
+      padding: 10px 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .data-table th {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--accent-cyan);
+      font-size: 11.5px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .data-table tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
     }
 
     /* View 4: Reflex Drills */
@@ -1443,7 +1508,7 @@
       width: 100%;
     }
 
-    /* Toast Notification */
+    /* Toast Container */
     #toastContainer {
       position: fixed;
       bottom: 20px;
@@ -1481,9 +1546,7 @@
       align-items: center;
       justify-content: center;
     }
-    .modal-overlay.active {
-      display: flex;
-    }
+    .modal-overlay.active { display: flex; }
     .modal-card {
       background: var(--bg-surface-elevated);
       border: 1px solid var(--border-subtle);
@@ -1511,7 +1574,7 @@
         <span>AV</span>
       </div>
 
-      <button class="rail-btn active" id="rail-btn-studio" onclick="switchView('studio')" data-tooltip="Studio Luyện Nói & Video">
+      <button class="rail-btn active" id="rail-btn-studio" onclick="switchView('studio')" data-tooltip="Studio Luyện Nói & Video (10-15 Lượt Thoại)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
         <span class="rail-label">Studio</span>
       </button>
@@ -1538,14 +1601,14 @@
 
       <div class="nav-divider"></div>
 
+      <button class="rail-btn" id="rail-btn-grammar" onclick="switchView('grammar')" data-tooltip="Ma Trận Các Thì & Chức Năng Ôn Tập">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+        <span class="rail-label">Grammar</span>
+      </button>
+
       <button class="rail-btn" id="rail-btn-flashcards" onclick="switchView('flashcards')" data-tooltip="Thẻ Từ Vựng & Thuật Ngữ">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M7 15h0M2 9.5h20"></path></svg>
         <span class="rail-label">Cards</span>
-      </button>
-
-      <button class="rail-btn" id="rail-btn-grammar" onclick="switchView('grammar')" data-tooltip="Ma Trận Ngữ Pháp & Khung Câu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
-        <span class="rail-label">Grammar</span>
       </button>
 
       <button class="rail-btn" id="rail-btn-drills" onclick="switchView('drills')" data-tooltip="Luyện Phản Xạ Nhanh">
@@ -1579,7 +1642,7 @@
             </select>
           </div>
           <span class="badge-pill badge-category" id="badgeCategory">GIAO TIẾP DỰ ÁN</span>
-          <span class="badge-pill badge-counter" id="badgeLineProgress">01 / 04</span>
+          <span class="badge-pill badge-counter" id="badgeLineProgress">01 / 14</span>
         </div>
 
         <div class="top-right">
@@ -1608,7 +1671,7 @@
           <!-- 16:9 Canvas Video Screen -->
           <div class="video-canvas-box" id="videoBox">
             <canvas id="sceneCanvas" width="1280" height="720"></canvas>
-            <img id="sceneImage" src="assets/floor_trunking_av.jpg" alt="AV Boardroom Scene" />
+            <img id="sceneImage" src="assets/floor_trunking_av.jpg" alt="AV Boardroom Scene" onerror="this.classList.remove('visible')" />
 
             <!-- Overlays -->
             <div class="canvas-hud-top">
@@ -1630,7 +1693,7 @@
             <div class="canvas-hud-bottom">
               <div class="live-status">
                 <span class="pulse-dot"></span>
-                <span>4YOU AV ENGINE</span>
+                <span>4YOU AV STUDIO</span>
               </div>
               <span id="canvasSpeedTag" style="font-size: 11px; font-weight: 700; color: #94a3b8; background: rgba(0,0,0,0.6); padding: 2px 8px; border-radius: 6px;">1.0x</span>
             </div>
@@ -1646,7 +1709,7 @@
             </div>
           </div>
 
-          <!-- Timeline Scrubber -->
+          <!-- Timeline Scrubber with segment dots for 10-15 lines -->
           <div class="timeline-container">
             <div class="timeline-bar" id="timelineBar">
               <!-- Segments injected by JS -->
@@ -1717,7 +1780,7 @@
             <!-- TAB 1: SUBTITLES / TRANSCRIPT -->
             <div class="tab-pane active" id="tab-subtitles">
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
-                <span style="font-size: 12px; font-weight: 700; color: var(--text-dim); text-transform: uppercase;">Toàn bộ kịch bản đối thoại</span>
+                <span style="font-size: 12px; font-weight: 700; color: var(--text-dim); text-transform: uppercase;">Toàn bộ kịch bản đối thoại (10 - 15 lượt thoại)</span>
                 <span style="font-size: 11px; color: var(--accent-cyan); cursor: pointer;" onclick="toggleVNSubtitle()">Nhấp vào từ để tra từ điển tức thì</span>
               </div>
               <div class="transcript-list" id="transcriptList">
@@ -1888,17 +1951,309 @@
       </section>
 
       <!-- ====================================================================
-           VIEW 3: GRAMMAR & ARCHITECTURAL FORMULAS
+           VIEW 3: MA TRẬN CÁC THÌ TIẾNG ANH & CHỨC NĂNG ÔN TẬP (CORE FEATURE)
            ==================================================================== -->
       <section class="view-panel" id="view-grammar">
-        <div>
-          <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff;">6 Khung Câu Thực Chiến Dành Cho Kỹ Sư AV</h2>
-          <p style="font-size: 12px; color: var(--text-muted);">Các cấu trúc câu chuẩn mực quốc tế dùng trong báo cáo kỹ thuật, điều phối thầu phụ và xử lý sự cố</p>
+        
+        <!-- Grammar Sub-Navigation Tabs -->
+        <div class="grammar-subnav">
+          <button class="grammar-sub-btn active" onclick="switchGrammarView('view-matrix', this)">🌟 Ma Trận 12 Thì Tổng Quan</button>
+          <button class="grammar-sub-btn" onclick="switchGrammarView('view-core', this)">🎯 4 Thì Trọng Tâm (A1 - A2)</button>
+          <button class="grammar-sub-btn" onclick="switchGrammarView('view-quiz', this)">🧠 Ôn Tập & Trắc Nghiệm Thì (Quiz)</button>
+          <button class="grammar-sub-btn" onclick="switchGrammarView('view-transform', this)">🔄 Bộ Chuyển Đổi Thì Thực Chiến</button>
+          <button class="grammar-sub-btn" onclick="switchGrammarView('view-verbs', this)">⚡ Động Từ Hành Động (Action Verbs)</button>
+          <button class="grammar-sub-btn" onclick="switchGrammarView('view-formulas', this)">📐 6 Khung Câu Thực Chiến</button>
         </div>
 
-        <div style="display: flex; flex-direction: column; gap: 1rem;" id="grammarContainer">
-          <!-- Injected by JS -->
+        <!-- SUB-VIEW 1: MA TRẬN 12 THÌ TỔNG QUAN (2D TABLE) -->
+        <div class="grammar-view active" id="view-matrix">
+          <div class="matrix-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+              <div>
+                <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700;">Hệ Thống 12 Thì Tiếng Anh Theo Dòng Thời Gian (Timeline & Aspect)</h3>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">Nhấp vào từng ô thì để nghe phát âm câu ví dụ thực chiến trong ngành AV.</p>
+              </div>
+              <span class="badge-pill badge-category">⭐ 4 THÌ TRỌNG TÂM (80% GIAO TIẾP DỰ ÁN)</span>
+            </div>
+
+            <table class="tense-matrix-table">
+              <thead>
+                <tr>
+                  <th class="head-aspect">Thể  Thời gian</th>
+                  <th class="head-time">⏳ QUÁ KHỨ (PAST)</th>
+                  <th class="head-time">⏱️ HIỆN TẠI (PRESENT)</th>
+                  <th class="head-time">🚀 TƯƠNG LAI (FUTURE)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Row 1: Simple -->
+                <tr>
+                  <th class="head-aspect">Đơn (Simple)</th>
+                  <td class="tense-cell core" onclick="previewTenseDetail('past-simple')">
+                    <div class="tense-cell-name">
+                      <span>Past Simple ⭐</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('I finished the audio design yesterday.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + V2/ed</div>
+                    <div class="tense-cell-ex">"I finished the audio design yesterday."</div>
+                    <div class="tense-cell-vn">Tôi đã hoàn thành thiết kế âm thanh hôm qua.</div>
+                  </td>
+
+                  <td class="tense-cell core" onclick="previewTenseDetail('present-simple')">
+                    <div class="tense-cell-name">
+                      <span>Present Simple ⭐</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('The DSP processor controls all loudspeaker zones.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + V(s/es)</div>
+                    <div class="tense-cell-ex">"The DSP controls all speaker zones."</div>
+                    <div class="tense-cell-vn">Bộ DSP điều khiển tất cả các vùng loa theo SOP.</div>
+                  </td>
+
+                  <td class="tense-cell core" onclick="previewTenseDetail('future-simple')">
+                    <div class="tense-cell-name">
+                      <span>Future Simple ⭐</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('We will email the formal quotation tomorrow morning.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + will + V-inf</div>
+                    <div class="tense-cell-ex">"We will email the quote tomorrow."</div>
+                    <div class="tense-cell-vn">Chúng tôi sẽ gửi báo giá vào sáng mai.</div>
+                  </td>
+                </tr>
+
+                <!-- Row 2: Continuous -->
+                <tr>
+                  <th class="head-aspect">Tiếp diễn (Continuous)</th>
+                  <td class="tense-cell" onclick="previewTenseDetail('past-continuous')">
+                    <div class="tense-cell-name">
+                      <span>Past Continuous</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('I was testing the microphone at 3 PM.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + was/were + V-ing</div>
+                    <div class="tense-cell-ex">"I was testing the mic at 3 PM."</div>
+                    <div class="tense-cell-vn">Tôi đang đo thử micro lúc 3 giờ chiều qua.</div>
+                  </td>
+
+                  <td class="tense-cell core" onclick="previewTenseDetail('present-continuous')">
+                    <div class="tense-cell-name">
+                      <span>Present Continuous ⭐</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('We are commissioning the LED screen right now.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + am/is/are + V-ing</div>
+                    <div class="tense-cell-ex">"We are commissioning the LED screen now."</div>
+                    <div class="tense-cell-vn">Chúng tôi đang đo kiểm màn hình LED ngay lúc này.</div>
+                  </td>
+
+                  <td class="tense-cell" onclick="previewTenseDetail('future-continuous')">
+                    <div class="tense-cell-name">
+                      <span>Future Continuous</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('I will be attending the AV exhibition next Tuesday.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + will be + V-ing</div>
+                    <div class="tense-cell-ex">"I will be attending the expo next week."</div>
+                    <div class="tense-cell-vn">Tôi sẽ đang tham dự triển lãm AV vào thứ Ba tới.</div>
+                  </td>
+                </tr>
+
+                <!-- Row 3: Perfect -->
+                <tr>
+                  <th class="head-aspect">Hoàn thành (Perfect)</th>
+                  <td class="tense-cell" onclick="previewTenseDetail('past-perfect')">
+                    <div class="tense-cell-name">
+                      <span>Past Perfect</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('The cables had been pulled before the ceiling was closed.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + had + V3/ed</div>
+                    <div class="tense-cell-ex">"The cables had been pulled before ceiling closure."</div>
+                    <div class="tense-cell-vn">Dây cáp đã được kéo trước khi trần được đóng kín.</div>
+                  </td>
+
+                  <td class="tense-cell core" onclick="previewTenseDetail('present-perfect')">
+                    <div class="tense-cell-name">
+                      <span>Present Perfect ⭐</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('We have successfully installed all trunking conduits.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + have/has + V3/ed</div>
+                    <div class="tense-cell-ex">"We have installed all trunking conduits."</div>
+                    <div class="tense-cell-vn">Chúng tôi đã hoàn thành lắp đặt toàn bộ nẹp sàn.</div>
+                  </td>
+
+                  <td class="tense-cell" onclick="previewTenseDetail('future-perfect')">
+                    <div class="tense-cell-name">
+                      <span>Future Perfect</span>
+                      <button class="btn-item-action" onclick="event.stopPropagation(); speakText('We will have completed the handover by Friday.')">🔊</button>
+                    </div>
+                    <div class="tense-cell-formula">S + will have + V3/ed</div>
+                    <div class="tense-cell-ex">"We will have completed handover by Friday."</div>
+                    <div class="tense-cell-vn">Chúng tôi sẽ hoàn tất bàn giao trước thứ Sáu.</div>
+                  </td>
+                </tr>
+
+                <!-- Row 4: Perfect Continuous -->
+                <tr>
+                  <th class="head-aspect">Hoàn thành Tiếp diễn</th>
+                  <td class="tense-cell">
+                    <div class="tense-cell-name">
+                      <span>Past Perf. Cont.</span>
+                    </div>
+                    <div class="tense-cell-formula">S + had been + V-ing</div>
+                    <div class="tense-cell-ex">"We had been testing for 2 hours before power failed."</div>
+                    <div class="tense-cell-vn">Chúng tôi đã đo thử suốt 2 tiếng trước khi mất điện.</div>
+                  </td>
+
+                  <td class="tense-cell">
+                    <div class="tense-cell-name">
+                      <span>Present Perf. Cont.</span>
+                    </div>
+                    <div class="tense-cell-formula">S + have/has been + V-ing</div>
+                    <div class="tense-cell-ex">"We have been pulling cables all morning."</div>
+                    <div class="tense-cell-vn">Chúng tôi đã kéo dây liên tục suốt từ sáng đến giờ.</div>
+                  </td>
+
+                  <td class="tense-cell">
+                    <div class="tense-cell-name">
+                      <span>Future Perf. Cont.</span>
+                    </div>
+                    <div class="tense-cell-formula">S + will have been + V-ing</div>
+                    <div class="tense-cell-ex">"By next month, I will have been working here for 2 years."</div>
+                    <div class="tense-cell-vn">Tính đến tháng sau, tôi sẽ làm việc ở đây tròn 2 năm.</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        <!-- SUB-VIEW 2: 4 THÌ TRỌNG TÂM (CORE BREAKDOWN) -->
+        <div class="grammar-view" id="view-core">
+          <div class="tenses-grid">
+            <div class="tense-card">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">1. Hiện Tại Đơn (Present Simple)</h4>
+                <button class="btn-item-action" onclick="speakText('The Dante switch routes multicast packets according to IGMP.')">🔊</button>
+              </div>
+              <div class="tense-cell-formula">S + V(s/es) | S + do/does not + V-inf</div>
+              <p style="font-size: 13px; color: var(--text-main);"><strong>Ngữ cảnh AV:</strong> Diễn tả tính năng kỹ thuật, SOP quy trình và nguyên lý vận hành cố định.</p>
+              <div style="font-size: 12.5px; color: #34d399; font-weight: 600;">"The Dante switch routes multicast packets according to IGMP."</div>
+              <div style="font-size: 12px; color: var(--text-dim);">Dấu hiệu: regularly, always, usually, every day, by default.</div>
+            </div>
+
+            <div class="tense-card">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">2. Hiện Tại Tiếp Diễn (Present Continuous)</h4>
+                <button class="btn-item-action" onclick="speakText('We are currently terminating the Cat6A cables in rack room.')">🔊</button>
+              </div>
+              <div class="tense-cell-formula">S + am/is/are + V-ing</div>
+              <p style="font-size: 13px; color: var(--text-main);"><strong>Ngữ cảnh AV:</strong> Báo cáo các hoạt động đang triển khai trực tiếp tại công trường ngay lúc nói.</p>
+              <div style="font-size: 12.5px; color: #34d399; font-weight: 600;">"We are currently terminating the Cat6A cables in the rack room."</div>
+              <div style="font-size: 12px; color: var(--text-dim);">Dấu hiệu: right now, currently, at the moment, at present.</div>
+            </div>
+
+            <div class="tense-card">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">3. Quá Khứ Đơn (Past Simple)</h4>
+                <button class="btn-item-action" onclick="speakText('Yesterday we tested the isolated ground and found 1.2 Ohms.')">🔊</button>
+              </div>
+              <div class="tense-cell-formula">S + V2/ed | S + did not + V-inf</div>
+              <p style="font-size: 13px; color: var(--text-main);"><strong>Ngữ cảnh AV:</strong> Báo cáo các công việc kỹ thuật đã hoàn thành vào một mốc thời gian xác định.</p>
+              <div style="font-size: 12.5px; color: #34d399; font-weight: 600;">"Yesterday we tested the isolated ground and found 1.2 Ohms."</div>
+              <div style="font-size: 12px; color: var(--text-dim);">Dấu hiệu: yesterday, last week, ago, in 2024, on Monday.</div>
+            </div>
+
+            <div class="tense-card">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-size: 1.05rem; font-weight: 700; color: #fff;">4. Tương Lai Đơn (Future Simple)</h4>
+                <button class="btn-item-action" onclick="speakText('We will submit the variation order with material quotation by 3 PM.')">🔊</button>
+              </div>
+              <div class="tense-cell-formula">S + will + V-inf | S + will not + V-inf</div>
+              <p style="font-size: 13px; color: var(--text-main);"><strong>Ngữ cảnh AV:</strong> Đưa ra cam kết tiến độ, hẹn nộp hồ sơ hoặc đề xuất phương án thi công tiếp theo.</p>
+              <div style="font-size: 12.5px; color: #34d399; font-weight: 600;">"We will submit the variation order with material quotation by 3 PM."</div>
+              <div style="font-size: 12px; color: var(--text-dim);">Dấu hiệu: tomorrow, next week, soon, by 3 PM, in the future.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUB-VIEW 3: CHỨC NĂNG ÔN TẬP & TRẮC NGHIỆM THÌ (NEW FEATURE) -->
+        <div class="grammar-view" id="view-quiz">
+          <div class="quiz-card">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+              <div>
+                <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700;">Trắc Nghiệm Phản Xạ 12 Thì AV (Tense Recognition Quiz)</h3>
+                <p style="font-size: 0.8rem; color: var(--text-dim);">Chọn đúng dạng động từ theo ngữ cảnh công trường để ghi nhớ quy luật các thì.</p>
+              </div>
+              <span class="badge-pill badge-counter" id="quizProgressBadge">Câu 01 / 10</span>
+            </div>
+
+            <div class="quiz-question-box" id="quizQuestionText">
+              Loading question...
+            </div>
+
+            <div class="quiz-options-grid" id="quizOptionsGrid">
+              <!-- Injected by JS -->
+            </div>
+
+            <div class="quiz-explain-box" id="quizExplainBox">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span id="quizResultTitle" style="font-weight: 800; font-size: 13px; color: #10b981;">Chính xác! ✓</span>
+                <span id="quizTenseTag" class="badge-pill badge-category">Thì áp dụng</span>
+              </div>
+              <p id="quizExplainText" style="font-size: 12.5px; color: #e2e8f0; line-height: 1.45;"></p>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem;">
+              <span style="font-size: 12.5px; font-weight: 700; color: var(--text-muted);" id="quizScoreText">Điểm: 0 / 0</span>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn-action-secondary" onclick="resetQuiz()">Làm Lại Từ Đầu</button>
+                <button class="btn-action-primary" id="btnNextQuiz" onclick="nextQuizQuestion()">Câu Kế Tiếp ⏭</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUB-VIEW 4: BỘ CHUYỂN ĐỔI THÌ THỰC CHIẾN (TENSE TRANSFORMER) -->
+        <div class="grammar-view" id="view-transform">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+            <div>
+              <h3 style="font-size: 1.15rem; color: #fff; font-weight: 700;">Bộ Chuyển Đổi Thì Thực Chiến (Interactive Tense Transformer)</h3>
+              <p style="font-size: 0.8rem; color: var(--text-dim);">Xem cùng 1 hành động kỹ thuật biến đổi ngữ pháp thế nào qua các mốc thời gian khác nhau.</p>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;" id="transformerContainer">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
+        <!-- SUB-VIEW 5: ĐỘNG TỪ HÀNH ĐỘNG (ACTION VERBS) -->
+        <div class="grammar-view" id="view-verbs">
+          <div class="table-responsive">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+              <h4 style="font-size: 1rem; font-weight: 700; color: #fff;">12+ Động Từ Bất Quy Tắc & Quy Tắc Cốt Lõi (V1 - V2 - V3)</h4>
+              <span style="font-size: 12px; color: var(--text-dim);">Bấm 🔊 để nghe phát âm từng từ</span>
+            </div>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>V1 (Nguyên Thể)</th>
+                  <th>V2 (Quá Khứ)</th>
+                  <th>V3 (Quá Khứ Phân Từ)</th>
+                  <th>Ý Nghĩa Kỹ Thuật AV</th>
+                  <th>Ví Dụ Thực Tế</th>
+                </tr>
+              </thead>
+              <tbody id="verbsTableBody">
+                <!-- Injected by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SUB-VIEW 6: 6 KHUNG CÂU THỰC CHIẾN -->
+        <div class="grammar-view" id="view-formulas">
+          <div style="display: flex; flex-direction: column; gap: 1rem;" id="grammarContainer">
+            <!-- Injected by JS -->
+          </div>
+        </div>
+
       </section>
 
       <!-- ====================================================================
@@ -1918,7 +2273,7 @@
     </div>
 
     <!-- ======================================================================
-         ONE-TAP DICTIONARY POPUP TOOLTIP (4YOU SIGNATURE FEATURE)
+         ONE-TAP DICTIONARY POPUP TOOLTIP (#wordPopup)
          ====================================================================== -->
     <div id="wordPopup">
       <div class="popup-header">
@@ -2186,7 +2541,7 @@
   {
     "id": 1,
     "title": "Chủ Đề 01: Giới Thiệu Bản Thân & Vai Trò Kỹ Sư AV",
-    "desc": "Gặp gỡ Project Director & Quản lý dự án để giới thiệu chuyên môn và phân chia công việc.",
+    "desc": "Gặp gỡ Project Director & Quản lý dự án để giới thiệu chuyên môn, trách nhiệm chính và phân chia công việc trong dự án AV.",
     "messages": [
       {
         "speaker": "Project Director (Client)",
@@ -2197,244 +2552,616 @@
       {
         "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Good morning! My name is Cuong, and I am the lead AV Engineer. I am responsible for system design and site commissioning.",
-        "vn": "Chào buổi sáng! Tôi tên là Cường, là kỹ sư AV phụ trách chính. Tôi chịu trách nhiệm về thiết kế hệ thống và đo kiểm nghiệm thu tại công trường."
+        "en": "Good morning. My name is Cuong Nguyen, and I am the Senior AV Systems Lead for this project.",
+        "vn": "Chào buổi sáng. Tôi tên là Nguyễn Cường, là Trưởng nhóm kỹ thuật hệ thống AV cho dự án này."
       },
       {
         "speaker": "Project Director (Client)",
         "side": "left",
-        "en": "Glad to meet you, Cuong. What is the expected timeline for your audio-visual installation?",
-        "vn": "Rất vui được gặp bạn, Cường. Tiến độ dự kiến cho việc lắp đặt âm thanh - hình ảnh của các bạn là bao lâu?"
+        "en": "Nice to meet you, Cuong. How many years have you been working with hospitality and commercial AV systems?",
+        "vn": "Rất vui được gặp Cường. Bạn đã có bao nhiêu năm kinh nghiệm làm việc với hệ thống AV khách sạn và thương mại?"
       },
       {
         "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "We will complete first-fix cabling in two weeks, followed by equipment rack mounting and audio tuning.",
-        "vn": "Chúng tôi sẽ hoàn thành kéo cáp đợt 1 trong 2 tuần, tiếp theo là lắp đặt tủ rack thiết bị và cân chỉnh âm thanh."
+        "en": "I have over eight years of experience in electro-acoustic design, network audio routing, and central control automation.",
+        "vn": "Tôi có hơn 8 năm kinh nghiệm trong thiết kế điện âm học, định tuyến âm thanh mạng IP và tự động hóa điều khiển trung tâm."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "That's impressive. What specific packages are under your direct responsibility on this site?",
+        "vn": "Rất ấn tượng. Những gói thầu cụ thể nào thuộc trách nhiệm trực tiếp của bạn tại công trường này?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "I oversee the ballroom sound reinforcement, all meeting room video conferencing, and the background music system across public areas.",
+        "vn": "Tôi giám sát hệ thống tăng cường âm thanh hội trường, hội nghị truyền hình các phòng họp và âm thanh nền các khu vực công cộng."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Will your team also handle the integration with our third-party lighting and building management systems?",
+        "vn": "Đội ngũ của bạn có đảm nhận việc tích hợp với hệ thống chiếu sáng và quản lý tòa nhà (BMS) của bên thứ ba không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, we coordinate closely with the MEP and lighting teams using IP-based control protocols, BACnet, and RS-232 interfaces.",
+        "vn": "Dạ có, chúng tôi phối hợp chặt chẽ với đội cơ điện và chiếu sáng thông qua các giao thức điều khiển IP, BACnet và cổng RS-232."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Who will be our primary point of contact for daily site inspections and progress reporting?",
+        "vn": "Ai sẽ là đầu mối liên hệ chính của chúng tôi cho các buổi kiểm tra công trường và báo cáo tiến độ hàng ngày?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "I am your main technical contact. I attend the morning coordination meetings and supervise all on-site testing.",
+        "vn": "Tôi là đầu mối kỹ thuật chính. Tôi tham gia các cuộc họp phối hợp đầu ngày và trực tiếp giám sát toàn bộ công tác đo kiểm tại hiện trường."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Excellent. When do you expect to begin the initial cabling verification and equipment staging?",
+        "vn": "Rất tốt. Khi nào bạn dự kiến bắt đầu công tác kiểm tra kéo cáp và tập kết thiết bị?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Our staging begins this Thursday once the central AV rack room is air-conditioned and dust-free.",
+        "vn": "Chúng tôi sẽ bắt đầu tập kết vào thứ Năm tuần này, ngay khi phòng tủ rack trung tâm được cấp điều hòa và vệ sinh sạch bụi."
       }
     ]
   },
   {
     "id": 2,
-    "title": "Chủ Đề 02: Rủ Đồng Nghiệp Đi Ăn Trưa & Uống Cà Phê",
-    "desc": "Giao tiếp đời thường, kết nối đồng nghiệp và thư giãn giải lao sau những giờ làm việc căng thẳng.",
+    "title": "Chủ Đề 02: Rủ Đồng Nghiệp Đi Ăn Trưa & Uống Cà Phê (Small Talk)",
+    "desc": "Giao tiếp xã giao thường nhật (small talk), xây dựng mối quan hệ thân thiện với đồng nghiệp quốc tế, trao đổi nhẹ về công việc và thư giãn.",
     "messages": [
       {
-        "speaker": "Sarah (Colleague)",
+        "speaker": "Colleague (David)",
         "side": "left",
-        "en": "Hey Cuong! It's already 12:00 PM. Have you had lunch yet, or are you still busy?",
-        "vn": "Chào Cường! Đã 12 giờ trưa rồi. Bạn đã ăn trưa chưa, hay vẫn đang bận thế?"
+        "en": "Hi Cuong, it's already twelve o'clock. Have you finished testing that DSP matrix?",
+        "vn": "Chào Cường, 12 giờ trưa rồi đấy. Bạn đã đo thử xong bộ ma trận DSP đó chưa?"
       },
       {
-        "speaker": "You (Cuong)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Not yet! I just finished reviewing the floor box drawings. I am definitely ready for lunch.",
-        "vn": "Chưa đâu! Tôi vừa xem xong bản vẽ hộp âm sàn. Tôi hoàn toàn sẵn sàng đi ăn trưa rồi."
+        "en": "Hey David, I just saved the configuration backup. I am definitely ready for a lunch break.",
+        "vn": "Chào David, tôi vừa lưu file sao lưu cấu hình xong. Tôi hoàn toàn sẵn sàng nghỉ trưa rồi."
       },
       {
-        "speaker": "Sarah (Colleague)",
+        "speaker": "Colleague (David)",
         "side": "left",
-        "en": "Great, let's try that new Vietnamese restaurant around the corner. Would you like to grab coffee after that?",
-        "vn": "Tuyệt quá, cùng ghé quán ăn Việt Nam mới mở ở góc phố nhé. Ăn xong bạn có muốn đi uống cà phê không?"
+        "en": "Great! Do you want to grab lunch together? A new Vietnamese restaurant just opened across the street.",
+        "vn": "Tuyệt quá! Bạn có muốn đi ăn trưa cùng không? Có quán ăn Việt Nam mới mở ngay bên kia đường."
       },
       {
-        "speaker": "You (Cuong)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "That sounds perfect! An iced coffee will help me stay energized for the afternoon testing session.",
-        "vn": "Nghe tuyệt đấy! Một ly cà phê đá sẽ giúp tôi tràn đầy năng lượng cho buổi kiểm thử chiều nay."
+        "en": "That sounds fantastic. I could really go for a warm bowl of Pho today.",
+        "vn": "Nghe hấp dẫn đấy. Hôm nay tôi thực sự rất thèm một tô Phở nóng hổi."
+      },
+      {
+        "speaker": "Colleague (David)",
+        "side": "left",
+        "en": "Perfect. How did the morning audio sweep go in the grand ballroom?",
+        "vn": "Chuẩn luôn. Buổi đo quét âm thanh sáng nay trong hội trường lớn diễn ra thế nào rồi?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "The acoustic response is surprisingly smooth, though we need to trim the low frequencies around 125 Hz.",
+        "vn": "Đáp tuyến âm học mượt mà một cách đáng ngạc nhiên, dù chúng ta cần gọt nhẹ dải tần thấp quanh 125 Hz."
+      },
+      {
+        "speaker": "Colleague (David)",
+        "side": "left",
+        "en": "Good to hear. Do you want to get some iced coffee after lunch before we head back to the site?",
+        "vn": "Mừng là mọi thứ ổn. Bạn có muốn uống cà phê đá sau bữa trưa trước khi chúng ta quay lại công trường không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Definitely! A strong iced milk coffee will keep us energized for the rack termination this afternoon.",
+        "vn": "Chắc chắn rồi! Một ly cà phê sữa đá đậm đà sẽ giúp chúng ta tràn đầy năng lượng để đấu nối tủ rack chiều nay."
+      },
+      {
+        "speaker": "Colleague (David)",
+        "side": "left",
+        "en": "Let's go then. Should we invite the IT network engineer to join us?",
+        "vn": "Vậy đi thôi nào. Chúng ta có nên rủ thêm kỹ sư mạng IT đi cùng không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Sure, let's call Mark. We can chat about the Dante VLAN configurations casually over coffee.",
+        "vn": "Chắc chắn rồi, gọi Mark đi cùng. Chúng ta có thể thảo luận thoải mái về cấu hình VLAN Dante trong lúc uống cà phê."
       }
     ]
   },
   {
     "id": 3,
     "title": "Chủ Đề 03: Báo Cáo Tiến Độ Dự Án Đầu Ngày (Daily Standup)",
-    "desc": "Họp nhanh đầu giờ với Quản lý dự án để cập nhật các đầu việc đã xong và kế hoạch hôm nay.",
+    "desc": "Họp giao ban nhanh đầu ca làm việc: báo cáo công việc hoàn thành hôm qua, mục tiêu hôm nay và rào cản phối hợp mặt bằng với các thầu khác.",
     "messages": [
       {
-        "speaker": "Project Manager",
+        "speaker": "Project Director (Client)",
         "side": "left",
-        "en": "Good morning Cuong. What did you complete yesterday, and what is your main focus today?",
-        "vn": "Chào buổi sáng Cường. Hôm qua bạn đã làm xong những việc gì, và hôm nay trọng tâm chính của bạn là gì?"
+        "en": "Good morning everyone. Let's start our daily standup. Cuong, please update us on the AV package progress.",
+        "vn": "Chào buổi sáng mọi người. Chúng ta bắt đầu cuộc họp đầu ngày nhé. Cường, vui lòng cập nhật tiến độ gói thầu AV."
       },
       {
         "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Yesterday, I completed the Dante network routing and verified all PoE switch ports.",
-        "vn": "Hôm qua, tôi đã hoàn thành định tuyến mạng Dante và kiểm tra toàn bộ các cổng switch cấp nguồn PoE."
+        "en": "Good morning. Yesterday, my team pulled all Cat6 and speaker cables in meeting rooms 101 through 104.",
+        "vn": "Chào buổi sáng. Hôm qua, đội của tôi đã kéo xong toàn bộ cáp Cat6 và cáp loa tại các phòng họp từ 101 đến 104."
       },
       {
-        "speaker": "Project Manager",
+        "speaker": "Project Director (Client)",
         "side": "left",
-        "en": "Excellent. Are you facing any technical blockers or site access delays?",
-        "vn": "Xuất sắc. Bạn có đang gặp trở ngại kỹ thuật hay vướng mắc bàn giao mặt bằng nào không?"
+        "en": "Did you complete the continuity and Fluke certification tests on those cable runs?",
+        "vn": "Các bạn đã hoàn thành việc đo thông mạch và đo kiểm chứng nhận Fluke cho các tuyến cáp đó chưa?"
       },
       {
         "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "No blockers today. I will calibrate the DSP microphone gain and test the motorized projector lift this afternoon.",
-        "vn": "Hôm nay không có trở ngại gì. Chiều nay tôi sẽ cân chỉnh độ nhạy mic trên DSP và thử nghiệm khung nâng máy chiếu tự động."
+        "en": "Yes, all 32 network drops passed the Category 6 permanent link certification with zero crosstalk issues.",
+        "vn": "Dạ rồi, tất cả 32 đầu chờ mạng đều đạt chứng nhận đường truyền chuẩn Cat6 mà không gặp lỗi nhiễu xuyên âm."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Excellent. What is the key objective for your team today?",
+        "vn": "Rất xuất sắc. Mục tiêu trọng tâm của đội bạn hôm nay là gì?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Today, our focus is installing the motorized projector lifts and hanging the line array brackets in the ballroom.",
+        "vn": "Hôm nay, trọng tâm của chúng tôi là lắp khung nâng hạ máy chiếu tự động và treo giá đỡ cụm loa line array trong hội trường."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Are there any technical blockers or coordination dependencies with other contractors?",
+        "vn": "Có bất kỳ vướng mắc kỹ thuật hoặc điểm phụ thuộc phối hợp nào với các nhà thầu khác không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, we need the ceiling contractor to finish closing the bulkheads in meeting room 102 so we can mount the flush speakers.",
+        "vn": "Dạ có, chúng tôi cần thầu thạch cao đóng nốt trần giật cấp tại phòng họp 102 để chúng tôi lắp loa âm trần phẳng."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Understood. I will push the interior contractor to finish those bulkheads by 2 PM today.",
+        "vn": "Đã rõ. Tôi sẽ đôn đốc thầu nội thất hoàn thành phần trần đó trước 2 giờ chiều nay."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Thank you. That will allow us to stay right on schedule for tomorrow's audio tuning session.",
+        "vn": "Cảm ơn anh. Điều đó sẽ giúp chúng tôi duy trì đúng tiến độ cho buổi cân chỉnh âm thanh vào ngày mai."
+      },
+      {
+        "speaker": "Project Director (Client)",
+        "side": "left",
+        "en": "Do you need any extra manpower or lifting equipment for the ballroom brackets?",
+        "vn": "Bạn có cần thêm nhân lực hay thiết bị nâng hạ cho phần giá treo hội trường không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "No, our scissor lift is booked and our safety rigging crew is already certified and on standby.",
+        "vn": "Dạ không, xe nâng cắt kéo đã được đặt trước và đội móc cáp an toàn của chúng tôi đã có chứng chỉ sẵn sàng trực chiến."
       }
     ]
   },
   {
     "id": 4,
     "title": "Chủ Đề 04: Xin Dời Lịch Họp & Nhờ Đồng Nghiệp Hỗ Trợ Gấp",
-    "desc": "Xử lý khi bị trùng lịch khẩn trên công trường hoặc cần hỗ trợ kiểm tra bản vẽ thiết kế.",
+    "desc": "Xử lý tình huống xung đột lịch trình khi có sự cố phát sinh tại công trường, xin dời lịch họp và nhờ đồng nghiệp hỗ trợ công việc khẩn.",
     "messages": [
       {
-        "speaker": "Site Architect",
-        "side": "left",
-        "en": "Hi Cuong, are we still meeting at 3:00 PM today to review the ceiling speaker coordinates?",
-        "vn": "Chào Cường, chúng ta vẫn họp lúc 3 giờ chiều nay để rà soát tọa độ loa âm trần chứ?"
-      },
-      {
-        "speaker": "You (AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "I apologize, but could we reschedule our meeting to 4:30 PM? I am inspecting an urgent conduit issue with MEP.",
-        "vn": "Tôi rất xin lỗi, liệu chúng ta có thể dời cuộc họp sang 4h30 chiều được không? Tôi đang phải kiểm tra gấp sự cố ống luồn với bên cơ điện."
+        "en": "Hi Sarah, do you have a quick minute? I have an urgent schedule conflict.",
+        "vn": "Chào Sarah, bạn có rảnh một phút không? Mình đang bị trùng lịch gấp quá."
       },
       {
-        "speaker": "Site Architect",
+        "speaker": "Colleague (Sarah)",
         "side": "left",
-        "en": "No problem at all. 4:30 PM works fine. Do you need me to bring the revised CAD layout?",
-        "vn": "Không vấn đề gì cả. 4h30 chiều rất thuận tiện. Bạn có cần tôi mang bản vẽ mặt bằng CAD cập nhật theo không?"
+        "en": "Sure Cuong, what happened? Aren't we supposed to meet the general contractor at 2 PM?",
+        "vn": "Được chứ Cường, có chuyện gì vậy? Chẳng phải 2 giờ chiều nay chúng ta có lịch họp với tổng thầu sao?"
       },
       {
-        "speaker": "You (AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Yes, please! That would be extremely helpful so we can confirm the cutout dimensions together.",
-        "vn": "Vâng, nhờ bạn nhé! Như vậy sẽ rất hữu ích để chúng ta cùng chốt chính xác kích thước khoét lỗ trần."
+        "en": "Yes, but the client's inspector just arrived unannounced to inspect the central AV rack earthing and safety breakers.",
+        "vn": "Đúng vậy, nhưng kỹ sư thanh tra của chủ đầu tư vừa tới đột xuất để nghiệm thu tiếp địa tủ rack AV và át-tô-mát an toàn."
+      },
+      {
+        "speaker": "Colleague (Sarah)",
+        "side": "left",
+        "en": "I see. Rack earthing is critical for site sign-off. Can we reschedule the coordination meeting?",
+        "vn": "Mình hiểu rồi. Tiếp địa tủ rack là hạng mục cốt lõi để ký nghiệm thu. Chúng ta có thể dời cuộc họp phối hợp không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Could you please contact the contractor to push our meeting back to 4 PM this afternoon?",
+        "vn": "Bạn có thể liên hệ tổng thầu xin lùi cuộc họp của chúng ta xuống 4 giờ chiều nay được không?"
+      },
+      {
+        "speaker": "Colleague (Sarah)",
+        "side": "left",
+        "en": "I can do that right away. Do you need any assistance with the rack inspection paperwork?",
+        "vn": "Mình làm được ngay. Bạn có cần hỗ trợ gì về hồ sơ giấy tờ nghiệm thu tủ rack không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "If you could print out the single-line power schematic from the server, that would be a huge help.",
+        "vn": "Nếu bạn in giúp mình sơ đồ đơn tuyến cấp nguồn từ máy chủ ra thì tốt quá, đỡ mất thời gian lắm."
+      },
+      {
+        "speaker": "Colleague (Sarah)",
+        "side": "left",
+        "en": "No problem. I will print two copies and bring them directly to the server room.",
+        "vn": "Không vấn đề gì. Mình sẽ in 2 bản và mang thẳng xuống phòng máy chủ cho bạn nhé."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Thank you so much, Sarah. I really appreciate your quick support on this.",
+        "vn": "Cảm ơn Sarah rất nhiều. Mình thật sự rất cảm kích sự hỗ trợ nhanh chóng của bạn."
+      },
+      {
+        "speaker": "Colleague (Sarah)",
+        "side": "left",
+        "en": "You're welcome! Good luck with the inspection, and I will see you at 4 PM for the contractor meeting.",
+        "vn": "Có gì đâu! Chúc bạn nghiệm thu suôn sẻ nhé, hẹn gặp bạn lúc 4 giờ chiều trong cuộc họp nhà thầu."
       }
     ]
   },
   {
     "id": 5,
     "title": "Chủ Đề 05: Kiểm Tra Nguồn Điện & Tủ Rack Với Thầu Cơ Điện MEP",
-    "desc": "Phối hợp với kỹ sư MEP về nguồn điện sạch, tiếp địa cách ly chống ù và nguồn lưu điện UPS.",
+    "desc": "Phối hợp kỹ thuật với thầu Cơ Điện (MEP): kiểm tra công suất CB 32A, tiếp địa sạch cách ly (isolated ground), bộ lưu điện UPS và nhiệt độ giải nhiệt tủ rack.",
     "messages": [
       {
-        "speaker": "Site MEP Engineer",
+        "speaker": "MEP Lead (Mr. Tuan)",
         "side": "left",
-        "en": "Hello AV team. We are finishing the main electrical distribution board on the 3rd floor. What does your rack require?",
-        "vn": "Chào đội AV. Chúng tôi đang hoàn thiện tủ điện phân phối chính tầng 3. Tủ rack của các bạn yêu cầu những gì?"
+        "en": "Good morning Cuong. We finished installing the power feeds for your central equipment rack.",
+        "vn": "Chào buổi sáng Cường. Bên anh đã kéo xong đường nguồn cho tủ rack thiết bị trung tâm của em rồi."
       },
       {
-        "speaker": "You (Site AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "We require two independent 20-amp circuits with dedicated isolated earth, connected to the building UPS.",
-        "vn": "Chúng tôi yêu cầu 2 lộ điện 20A độc lập có tiếp địa cách ly riêng biệt, được cấp nguồn qua UPS tòa nhà."
+        "en": "Good morning Mr. Tuan. Let's inspect the distribution board together before we power up any gear.",
+        "vn": "Chào buổi sáng anh Tuấn. Em với anh cùng kiểm tra tủ điện phân phối trước khi chúng ta bật nguồn thiết bị nhé."
       },
       {
-        "speaker": "Site MEP Engineer",
+        "speaker": "MEP Lead (Mr. Tuan)",
         "side": "left",
-        "en": "Got it. Why is isolated earth specifically needed for your audio equipment?",
-        "vn": "Đã hiểu. Tại sao thiết bị âm thanh của các bạn lại bắt buộc phải có tiếp địa cách ly?"
+        "en": "We provided a dedicated 32-amp single-phase breaker as requested in your shop drawing.",
+        "vn": "Bên anh đã cấp một át-tô-mát 1 pha 32A riêng biệt đúng theo bản vẽ thi công của em yêu cầu."
       },
       {
-        "speaker": "You (Site AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "It prevents ground loop interference and eliminates 50Hz hum from motors and air-conditioning units.",
-        "vn": "Nó ngăn chặn hiện tượng vòng lặp tiếp địa và loại bỏ hoàn toàn tiếng ù xì 50Hz từ động cơ và máy lạnh."
+        "en": "Thank you. Can you also confirm if this circuit is fed directly from the building's online UPS system?",
+        "vn": "Cảm ơn anh. Anh có thể xác nhận đường điện này có được cấp trực tiếp từ hệ thống UPS online của tòa nhà không?"
+      },
+      {
+        "speaker": "MEP Lead (Mr. Tuan)",
+        "side": "left",
+        "en": "Yes, it is connected to the critical UPS bus with 30 minutes of backup runtime in case of power failure.",
+        "vn": "Có chứ, nguồn được nối vào thanh cái UPS ưu tiên với thời gian lưu điện 30 phút phòng khi mất điện lưới."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "That's great. Next, we need to verify the earth grounding resistance for the isolated audio ground bar.",
+        "vn": "Tuyệt vời. Tiếp theo, chúng ta cần đo kiểm tra điện trở tiếp địa cho thanh đồng tiếp địa sạch cách ly của âm thanh."
+      },
+      {
+        "speaker": "MEP Lead (Mr. Tuan)",
+        "side": "left",
+        "en": "Our earthing test showed a resistance of 1.2 Ohms to ground, which complies with your specification.",
+        "vn": "Kết quả đo tiếp địa của bên anh đạt 1.2 Ohm xuống đất, hoàn toàn đáp ứng tiêu chuẩn kỹ thuật của em."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Excellent. Clean earthing below 2 Ohms is essential to prevent audible 50 Hz hum in the amplifiers.",
+        "vn": "Rất chuẩn. Tiếp địa sạch dưới 2 Ohm là điều kiện bắt buộc để triệt tiêu tiếng ù rền 50 Hz trên dàn ampli công suất."
+      },
+      {
+        "speaker": "MEP Lead (Mr. Tuan)",
+        "side": "left",
+        "en": "What about the heat dissipation? Does the room exhaust fan provide enough airflow for your equipment?",
+        "vn": "Còn vấn đề tản nhiệt thì sao? Quạt hút phòng có cung cấp đủ lưu lượng gió cho thiết bị của em không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "With all amplifiers operating at full load, the rack produces roughly 12,000 BTU per hour of heat.",
+        "vn": "Khi tất cả các cục đẩy ampli chạy hết tải, tủ rack tỏa ra nhiệt lượng khoảng 12,000 BTU/giờ."
+      },
+      {
+        "speaker": "MEP Lead (Mr. Tuan)",
+        "side": "left",
+        "en": "We will ensure the precision air conditioner maintains a constant room temperature between 20 and 22 degrees Celsius.",
+        "vn": "Bên anh sẽ đảm bảo điều hòa chính xác duy trì nhiệt độ phòng ổn định từ 20 đến 22 độ C."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Perfect. That temperature range guarantees the long-term reliability of the DSP processors and network switches.",
+        "vn": "Hoàn hảo. Dải nhiệt độ đó đảm bảo độ bền và tính ổn định lâu dài cho các bộ DSP và switch mạng."
+      },
+      {
+        "speaker": "MEP Lead (Mr. Tuan)",
+        "side": "left",
+        "en": "Can we sign the electrical handover checklist today so we can finalize our weekly report?",
+        "vn": "Hôm nay mình ký biên bản bàn giao điện luôn được không để bên anh chốt báo cáo tuần?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, once we verify phase voltage stability with our multimeter, I will gladly sign off on the handover form.",
+        "vn": "Dạ được, đo kiểm tra điện áp các pha ổn định bằng đồng hồ vạn năng xong là em ký xác nhận biên bản ngay."
       }
     ]
   },
   {
     "id": 6,
     "title": "Chủ Đề 06: Bàn Giao Hạ Tầng Cáp Âm Tường & Mạng Với Thầu IT",
-    "desc": "Kiểm tra ống luồn conduit, cáp Cat6A shielded, đầu bấm RJ45 và cấu hình VLAN cho Dante / AES67.",
+    "desc": "Nghiệm thu hạ tầng cáp mạng Cat6A, kiểm tra kết quả đo Fluke, phân tách VLAN cho luồng Dante/Control, nguồn PoE+ và kích hoạt IGMP Snooping.",
     "messages": [
       {
-        "speaker": "IT Site Supervisor",
+        "speaker": "IT Manager (Alex)",
         "side": "left",
-        "en": "Hi Cuong, our cabling crew is terminating network patch panels today. Which zone should we prioritize for AV?",
-        "vn": "Chào Cường, đội kéo cáp của tôi hôm nay bấm đầu thanh đấu nối patch panel. Bạn muốn ưu tiên khu vực nào cho AV trước?"
+        "en": "Hello Cuong. We are ready to inspect the AV structured cabling infrastructure today.",
+        "vn": "Chào Cường. Hôm nay bên IT sẵn sàng kiểm tra nghiệm thu hạ tầng cáp truyền dẫn AV rồi."
       },
       {
-        "speaker": "You (AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Please terminate the boardroom floor box lines first. We need 4 Cat6A drops for Dante microphones and touch panel control.",
-        "vn": "Nhờ bên bạn bấm trước các đường hộp âm sàn phòng họp lớn. Chúng tôi cần 4 nút mạng Cat6A cho mic Dante và màn hình điều khiển."
+        "en": "Hello Alex. We have labeled and terminated all 48 Cat6A drops into patch panel rack unit 12.",
+        "vn": "Chào Alex. Bên mình đã dán nhãn và bấm đầu toàn bộ 48 sợi cáp Cat6A vào thanh patch panel tại U12 của tủ rack."
       },
       {
-        "speaker": "IT Site Supervisor",
+        "speaker": "IT Manager (Alex)",
         "side": "left",
-        "en": "Sure. Have you prepared the VLAN assignment table for your audio multicast streams?",
-        "vn": "Được chứ. Các bạn đã chuẩn bị bảng phân bổ VLAN cho các luồng âm thanh đa hướng (multicast) chưa?"
+        "en": "Did your team conduct permanent link tests according to TIA-568 standards?",
+        "vn": "Đội của bạn đã đo kiểm tra đường truyền cố định (permanent link) theo tiêu chuẩn TIA-568 chưa?"
       },
       {
-        "speaker": "You (AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Yes, I will email the switch configuration matrix right now. We need VLAN 20 dedicated to Dante with QoS enabled.",
-        "vn": "Có, tôi sẽ gửi email ma trận cấu hình switch ngay. Chúng tôi cần VLAN 20 dành riêng cho Dante và bật chế độ QoS."
+        "en": "Yes, here is the full Fluke test report. Every channel achieved a positive margin with zero NEXT failures.",
+        "vn": "Dạ rồi, đây là báo cáo máy đo Fluke chi tiết. Từng kênh đều đạt dung sai an toàn và không bị lỗi xuyên âm đầu gần (NEXT)."
+      },
+      {
+        "speaker": "IT Manager (Alex)",
+        "side": "left",
+        "en": "Great documentation. Which VLANs have you allocated for the Dante digital audio and control network?",
+        "vn": "Hồ sơ rất chuẩn. Các bạn phân bổ những VLAN nào cho mạng âm thanh số Dante và mạng điều khiển?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "We designated VLAN 10 for Dante primary audio, VLAN 11 for Dante secondary redundancy, and VLAN 20 for control.",
+        "vn": "Chúng mình gán VLAN 10 cho âm thanh Dante chính, VLAN 11 cho đường dự phòng và VLAN 20 cho các lệnh điều khiển."
+      },
+      {
+        "speaker": "IT Manager (Alex)",
+        "side": "left",
+        "en": "Have you verified that IGMP Snooping and Fast Leave are enabled on our core network switch?",
+        "vn": "Bạn đã kiểm tra xem tính năng IGMP Snooping và Fast Leave đã được bật trên switch mạng lõi chưa?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, IGMP Snooping is mandatory to manage Dante multicast flows and prevent packet flooding on the network.",
+        "vn": "Dạ rồi, IGMP Snooping là bắt buộc để điều tiết các luồng multicast Dante và chống nghẽn gói tin trên toàn mạng."
+      },
+      {
+        "speaker": "IT Manager (Alex)",
+        "side": "left",
+        "en": "What is your total PoE power budget requirement across all network switches?",
+        "vn": "Tổng mức công suất cấp nguồn PoE yêu cầu trên tất cả các switch của bên bạn là bao nhiêu?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "We have 16 ceiling microphones and 6 touch panels, requiring a total PoE budget of approximately 420 Watts.",
+        "vn": "Bên mình có 16 micro âm trần và 6 màn hình cảm ứng, yêu cầu tổng công suất PoE xấp xỉ 420 Watt."
+      },
+      {
+        "speaker": "IT Manager (Alex)",
+        "side": "left",
+        "en": "Our Cisco switch delivers up to 740 Watts of PoE+, so you have plenty of headroom.",
+        "vn": "Switch Cisco của bên mình cung cấp tới 740 Watt PoE+, vậy là các bạn có khoảng dự trữ công suất rất thoải mái."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "That gives us great stability. Let's patch the uplink cables and verify the switch port status now.",
+        "vn": "Quá an tâm về độ ổn định. Chúng ta cùng cắm dây nhảy uplink và kiểm tra trạng thái các cổng switch ngay nhé."
       }
     ]
   },
   {
     "id": 7,
     "title": "Chủ Đề 07: Xử Lý Sự Cố Âm Thanh Ù Rè & Mất Đồng Bộ Dante Clock",
-    "desc": "Chẩn đoán và khắc phục sự cố tiếng ù loa hoặc xung nhịp Master Clock nhấp nháy đỏ.",
+    "desc": "Xử lý sự cố âm thanh khẩn cấp: tiếng ù mass 50Hz phát sinh do thầu ẩm thực cắm tải, cách ly bằng DI box biến áp và khóa xung đồng hồ Dante PTP Grandmaster.",
     "messages": [
       {
-        "speaker": "Audio Technician",
+        "speaker": "Hotel GM (Client)",
         "side": "left",
-        "en": "We have an emergency. The ceiling speakers in Ballroom B have a severe hum, and Dante Controller shows clock sync errors.",
-        "vn": "Chúng ta gặp ca khẩn cấp rồi. Loa âm trần ở Hội trường B bị ù rất to, và Dante Controller đang báo lỗi mất đồng bộ clock."
+        "en": "Cuong, we have an emergency in the ballroom! There is a loud humming noise coming through all speakers.",
+        "vn": "Cường ơi, hội trường lớn có sự cố khẩn cấp! Đang có tiếng ù rất lớn phát ra từ tất cả các loa."
       },
       {
-        "speaker": "You (Senior AV)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "First, check the network switch. Is Quality of Service enabled and is Green Energy Efficient Ethernet disabled?",
-        "vn": "Trước tiên kiểm tra switch mạng. Đã bật QoS và tắt hẳn tính năng tiết kiệm điện Green Energy Efficient Ethernet chưa?"
+        "en": "I will investigate immediately. When did the humming start, and is there any audio signal passing through?",
+        "vn": "Em xuống kiểm tra ngay đây ạ. Tiếng ù bắt đầu từ lúc nào và hiện có tín hiệu âm thanh nào đang phát không anh?"
       },
       {
-        "speaker": "Audio Technician",
+        "speaker": "Hotel GM (Client)",
         "side": "left",
-        "en": "Checking now... Ah! Green Ethernet was still active on port 16. I just turned it off, and Dante sync is green!",
-        "vn": "Đang kiểm tra... A! Chế độ Green Ethernet vẫn bật ở cổng 16. Tôi vừa tắt đi và Dante đã đồng bộ xanh rồi!"
+        "en": "It started ten minutes ago when the catering team plugged in their portable buffet warming stations.",
+        "vn": "Nó vừa bị cách đây 10 phút, đúng lúc đội tiệc cắm các quầy hâm nóng thức ăn di động vào ổ điện."
       },
       {
-        "speaker": "You (Senior AV)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Great job! Now for the analog hum, let's plug in an audio isolation transformer between the mixer and the power amplifier.",
-        "vn": "Làm tốt lắm! Còn về tiếng ù analog, hãy đấu thêm biến áp cách ly tín hiệu (isolation transformer) giữa mixer và âm ly công suất."
+        "en": "That indicates a ground loop between the audio ground and the temporary catering power circuit.",
+        "vn": "Hiện tượng đó cho thấy đã xảy ra vòng lặp tiếp địa (ground loop) giữa mass âm thanh và nguồn điện tạm của bên tiệc."
+      },
+      {
+        "speaker": "Hotel GM (Client)",
+        "side": "left",
+        "en": "Can we fix it without shutting down the entire sound system before tonight's banquet?",
+        "vn": "Mình có xử lý được ngay mà không cần tắt toàn bộ hệ thống âm thanh trước giờ tiệc tối nay không em?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, I will insert an audio isolation transformer into the stage input lines to break the ground loop immediately.",
+        "vn": "Dạ được, em sẽ gắn biến áp cách ly (DI box cách ly) vào các đường tín hiệu sân khấu để ngắt vòng lặp mass ngay lập tức."
+      },
+      {
+        "speaker": "Hotel GM (Client)",
+        "side": "left",
+        "en": "Also, the technician reported intermittent audio dropouts every few seconds on the wireless microphones.",
+        "vn": "Ngoài ra, kỹ thuật viên báo là micro không dây cứ vài giây lại bị ngắt tiếng chập chờn một lần."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Let me open the Dante Controller software. I see high PTP clock jitter on the stage rack processor.",
+        "vn": "Để em mở phần mềm Dante Controller. Em thấy độ dao động xung nhịp PTP clock đang rất cao trên thiết bị ở tủ sân khấu."
+      },
+      {
+        "speaker": "Hotel GM (Client)",
+        "side": "left",
+        "en": "What does clock jitter mean, and how does it affect our audio playback?",
+        "vn": "Dao động xung nhịp clock jitter là sao em, và nó ảnh hưởng thế nào đến việc phát âm thanh?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "When devices lose clock synchronization, digital packets are dropped, causing clicks and audio muting.",
+        "vn": "Khi các thiết bị mất đồng bộ xung thời gian, các gói tin âm thanh số sẽ bị rớt, gây ra tiếng lách tách và mất tiếng."
+      },
+      {
+        "speaker": "Hotel GM (Client)",
+        "side": "left",
+        "en": "What is the permanent solution to ensure this never happens during live events?",
+        "vn": "Giải pháp dứt điểm là gì để đảm bảo không bao giờ tái diễn trong các sự kiện trực tiếp?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "I just locked the central DSP as the Grandmaster Clock with Priority 1. The clock is now stable, and the hum is completely gone.",
+        "vn": "Em vừa khóa bộ DSP trung tâm làm đồng hồ chủ Grandmaster với độ ưu tiên cao nhất. Xung nhịp đã ổn định và tiếng ù đã hết sạch 100%."
       }
     ]
   },
   {
     "id": 8,
     "title": "Chủ Đề 08: Hướng Dẫn Khách Hàng Thao Tác Màn Hình Cảm Ứng (Touch Panel SOP)",
-    "desc": "Bàn giao phòng họp, hướng dẫn người dùng cuối khởi động hệ thống, chọn nguồn hình và chỉnh âm lượng.",
+    "desc": "Hướng dẫn vận hành (SOP) cho khách hàng và ban thư ký: đánh thức màn hình cảm ứng, chuyển đổi chế độ họp trình chiếu / họp trực tuyến, điều chỉnh micro và xử lý khi treo máy.",
     "messages": [
       {
-        "speaker": "Client Secretary",
+        "speaker": "Board Secretary",
         "side": "left",
-        "en": "Hi Cuong! The board meeting starts in 10 minutes. Can you show me how to present my laptop screen?",
-        "vn": "Chào Cường! 10 phút nữa cuộc họp hội đồng quản trị bắt đầu rồi. Bạn chỉ giúp tôi cách trình chiếu màn hình laptop được không?"
+        "en": "Hi Cuong, could you please show our executive board how to use this new touch screen controller?",
+        "vn": "Chào Cường, em có thể hướng dẫn ban thư ký và hội đồng quản trị cách dùng màn hình cảm ứng điều khiển mới này không?"
       },
       {
-        "speaker": "You (AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Of course! Just tap the screen to wake it up, then press the 'Presentation' button on the main dashboard.",
-        "vn": "Dạ tất nhiên rồi ạ! Chị chỉ cần chạm vào màn hình để bật sáng, sau đó nhấn nút 'Presentation' trên màn hình chính."
+        "en": "With pleasure. Tap the screen anywhere to wake up the system from standby mode.",
+        "vn": "Rất sẵn lòng ạ. Chị chỉ cần chạm nhẹ vào bất kỳ điểm nào trên màn hình để đánh thức hệ thống từ chế độ chờ."
       },
       {
-        "speaker": "Client Secretary",
+        "speaker": "Board Secretary",
         "side": "left",
-        "en": "Do I need to change any input source on the TV display?",
-        "vn": "Tôi có cần phải chỉnh cổng tín hiệu đầu vào nào trên màn hình TV không?"
+        "en": "I see two big buttons: 'Presentation Mode' and 'Video Conference Mode'. What is the difference?",
+        "vn": "Chị thấy có 2 nút lớn: 'Chế độ Trình chiếu' và 'Chế độ Họp trực tuyến'. Hai chế độ này khác nhau thế nào em?"
       },
       {
-        "speaker": "You (AV Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "No need at all! The system automatically turns on the display and switches to your HDMI input instantly.",
-        "vn": "Dạ hoàn toàn không cần ạ! Hệ thống sẽ tự động bật TV và chuyển sang cổng HDMI của chị ngay lập tức."
+        "en": "Presentation Mode lowers the motorized screen and turns on the laser projector for local laptop sharing.",
+        "vn": "Chế độ Trình chiếu sẽ tự động hạ màn chiếu điện và bật máy chiếu laser để chia sẻ nội dung từ máy tính xách tay trong phòng."
+      },
+      {
+        "speaker": "Board Secretary",
+        "side": "left",
+        "en": "And what happens if our chairman selects Video Conference Mode for a Zoom or Teams meeting?",
+        "vn": "Thế nếu Chủ tịch chọn Chế độ Họp trực tuyến để họp Zoom hoặc Microsoft Teams thì hệ thống sẽ chạy thế nào?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "The system powers on the 98-inch dual displays, activates the beamforming ceiling microphones, and tracks the active speaker.",
+        "vn": "Hệ thống sẽ bật cặp màn hình 98 inch, kích hoạt cụm micro âm trần định hướng búp sóng và tự động bám đuổi theo người phát biểu."
+      },
+      {
+        "speaker": "Board Secretary",
+        "side": "left",
+        "en": "How can we adjust the volume of the wireless microphones if a speaker talks too softly?",
+        "vn": "Làm thế nào để chỉnh âm lượng của micro không dây nếu có người nói quá nhỏ trong phòng họp?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Simply tap the 'Audio' icon on the left menu and slide the master volume fader up or down.",
+        "vn": "Chị chỉ cần chạm vào biểu tượng 'Audio' ở menu bên trái rồi kéo thanh trượt âm lượng tổng lên hoặc xuống."
+      },
+      {
+        "speaker": "Board Secretary",
+        "side": "left",
+        "en": "What should we do if an attendee brings an older laptop with only an HDMI connection?",
+        "vn": "Nếu có đại biểu mang máy tính đời cũ chỉ có cổng cắm HDMI thì bên chị xử lý thế nào?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "They can plug directly into the motorized table cubby, and the switcher will detect and route the signal automatically.",
+        "vn": "Đại biểu cắm dây trực tiếp vào hộp ổ cắm điện âm bàn, bộ chuyển mạch sẽ tự động nhận diện và xuất hình ảnh lên màn hình."
+      },
+      {
+        "speaker": "Board Secretary",
+        "side": "left",
+        "en": "If something freezes during an important executive meeting, is there an emergency restart button?",
+        "vn": "Nếu lỡ hệ thống bị treo trong cuộc họp quan trọng của HĐQT thì có nút khởi động lại khẩn cấp không em?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, press and hold the room logo in the top right corner for 5 seconds to perform a silent system reboot.",
+        "vn": "Dạ có, chị nhấn giữ logo phòng ở góc trên bên phải trong 5 giây, hệ thống sẽ tự khởi động lại ngầm trong vòng 20 giây."
       }
     ]
   },
   {
     "id": 9,
     "title": "Chủ Đề 09: Báo Phát Sinh Chi Phí & Thi Công Nẹp Sàn Bán Nguyệt",
-    "desc": "Thảo luận với Quản lý Dự án về việc kéo cáp nổi trên sàn, nẹp bán nguyệt chống vấp ngã và thủ tục Variation Order (VO).",
+    "desc": "Báo phát sinh chi phí (Variation Order) khi khách hàng dời vị trí bàn họp cách xa tường 3 mét, không có ống âm sàn, bắt buộc thi công nẹp sàn bán nguyệt chịu lực chống vấp ngã.",
     "messages": [
       {
         "speaker": "Project Manager (Client)",
@@ -2445,82 +3172,238 @@
       {
         "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Since there is no underfloor conduit here, we must install heavy-duty half-round floor trunking to protect the cables and prevent trip hazards.",
-        "vn": "Vì ở đây không có ống âm sàn, chúng ta bắt buộc phải lắp nẹp sàn bán nguyệt chịu lực để bảo vệ dây và chống nguy cơ vấp ngã."
+        "en": "Since there is no underfloor conduit here, running loose cables across the carpet creates a severe trip hazard and violates site safety rules.",
+        "vn": "Vì ở đây không có ống âm sàn, việc để dây lòng thòng trên thảm tạo ra nguy cơ vấp ngã nguy hiểm và vi phạm an toàn công trường."
       },
       {
         "speaker": "Project Manager (Client)",
         "side": "left",
-        "en": "Understood. Will this installation incur any additional cost for our project?",
-        "vn": "Đã rõ. Vậy việc lắp đặt này có phát sinh thêm chi phí nào cho dự án của chúng ta không?"
+        "en": "I understand the hazard. What is your proposed solution to make it both safe and aesthetically acceptable for the executive board?",
+        "vn": "Anh hiểu rủi ro đó. Vậy giải pháp đề xuất của em là gì để vừa an toàn vừa đảm bảo thẩm mỹ cho phòng họp ban lãnh đạo?"
       },
       {
         "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Yes, this modification is out of our original contract scope. I will submit a variation order with the trunking material quote for your approval.",
-        "vn": "Dạ có, phần điều chỉnh này nằm ngoài phạm vi hợp đồng ban đầu. Em sẽ gửi phiếu phát sinh (VO) kèm báo giá vật tư nẹp sàn để anh phê duyệt."
+        "en": "We must install heavy-duty aluminum half-round floor trunking with chamfered edges to protect the cables and prevent people from tripping.",
+        "vn": "Chúng ta bắt buộc phải lắp nẹp sàn bán nguyệt bằng nhôm chịu lực có mép vát hai bên để bảo vệ dây cáp và chống vấp ngã khi đi lại."
+      },
+      {
+        "speaker": "Project Manager (Client)",
+        "side": "left",
+        "en": "That sounds reasonable. Can this trunking accommodate all our required lines, including the backup network and power cords?",
+        "vn": "Nghe rất hợp lý. Loại nẹp này có đủ sức chứa toàn bộ các đường dây cần thiết, bao gồm cả dây mạng dự phòng và dây nguồn không em?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, we will select a multi-compartment trunking model to keep signal lines isolated from AC power, eliminating electromagnetic interference.",
+        "vn": "Dạ được, em sẽ chọn loại nẹp có vách ngăn nhiều khoang để cách ly dây tín hiệu với nguồn điện 220V, triệt tiêu nhiễu điện từ."
+      },
+      {
+        "speaker": "Project Manager (Client)",
+        "side": "left",
+        "en": "Understood. Will this modification incur any additional cost for our project budget?",
+        "vn": "Đã rõ. Vậy việc điều chỉnh này có phát sinh thêm chi phí nào cho ngân sách dự án của bên anh không?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Yes, because this routing change is outside our original contract scope, it will require an official variation order for the trunking materials and floor mounting labor.",
+        "vn": "Dạ có, vì thay đổi tuyến dây này nằm ngoài phạm vi hợp đồng ban đầu, nên sẽ cần lập phiếu phát sinh (VO) cho vật tư nẹp và nhân công lắp đặt sàn."
+      },
+      {
+        "speaker": "Project Manager (Client)",
+        "side": "left",
+        "en": "How soon can you provide the quotation and technical data sheet for our procurement team to review?",
+        "vn": "Bao lâu nữa thì em có thể gửi báo giá và tài liệu kỹ thuật datasheet để phòng mua hàng bên anh duyệt?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "I will submit the formal variation order with the catalog cut sheets and price breakdown by 3 PM today.",
+        "vn": "Em sẽ nộp phiếu phát sinh chính thức kèm catalogue mẫu nẹp và bảng bóc tách chi tiết đơn giá trước 3 giờ chiều nay."
+      },
+      {
+        "speaker": "Project Manager (Client)",
+        "side": "left",
+        "en": "Great. If management approves the cost tomorrow morning, when can your team complete the installation?",
+        "vn": "Tốt lắm. Nếu ban giám đốc phê duyệt chi phí vào sáng mai, thì khi nào đội của em có thể thi công xong?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Once approved, our site technicians can procure the trunking and complete the floor installation within 4 hours without delaying the room handover.",
+        "vn": "Ngay khi được duyệt, kỹ thuật viên bên em sẽ lấy vật tư và hoàn thành thi công lắp nẹp trong vòng 4 tiếng, không làm trễ hạn bàn giao phòng."
+      },
+      {
+        "speaker": "Project Manager (Client)",
+        "side": "left",
+        "en": "Perfect. Please prepare the paperwork and coordinate with our interior design contractor regarding carpet color matching.",
+        "vn": "Tuyệt vời. Em chuẩn bị giấy tờ thủ tục và phối hợp với bên nhà thầu nội thất để chọn màu nẹp tệp với màu thảm sàn nhé."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Understood. We will ensure the trunking finish matches the room aesthetic and passes all safety sign-offs.",
+        "vn": "Dạ em đã rõ. Bên em sẽ đảm bảo lớp sơn hoàn thiện của nẹp hài hòa với thẩm mỹ phòng họp và đạt đầy đủ các biên bản nghiệm thu an toàn."
       }
     ]
   },
   {
     "id": 10,
     "title": "Chủ Đề 10: Đàm Phán Báo Giá, Tồn Kho & Lead Time Với Hãng Phân Phối",
-    "desc": "Trao đổi với Quản lý Bán hàng vùng (Regional Sales) về chiết khấu đăng ký dự án và thời gian giao hàng.",
+    "desc": "Đàm phán thương mại với nhà phân phối thiết bị AV: hỏi tình trạng tồn kho ma trận 4K, thời gian giao hàng (lead time), xin chiết khấu dự án 25% và chính sách bảo hành đổi mới.",
     "messages": [
       {
-        "speaker": "Regional Vendor Rep",
-        "side": "left",
-        "en": "Good afternoon Cuong. Thanks for inquiring about our DSP processors. Are you finalizing the resort project tender?",
-        "vn": "Chào buổi chiều Cường. Cảm ơn bạn đã hỏi về các bộ xử lý DSP. Bạn đang chốt thầu dự án khu nghỉ dưỡng phải không?"
-      },
-      {
-        "speaker": "You (Pre-sales Consultant)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Yes, exactly. Could you confirm stock availability and project registration pricing for 12 units of the Core processor?",
-        "vn": "Vâng, chính xác ạ. Nhờ bạn xác nhận tình trạng tồn kho và giá đăng ký dự án cho 12 bộ vi xử lý Core nhé."
+        "en": "Good afternoon. I am calling from the AV installation contractor regarding our project bill of materials.",
+        "vn": "Xin chào buổi chiều. Tôi gọi từ phía nhà thầu thi công AV liên quan đến bảng danh mục vật tư thiết bị của dự án."
       },
       {
-        "speaker": "Regional Vendor Rep",
+        "speaker": "Distributor Sales",
         "side": "left",
-        "en": "We have 4 units in Singapore warehouse, and 8 units have a 4-week factory lead time. We can grant a 10% project discount.",
-        "vn": "Chúng tôi có sẵn 4 chiếc ở kho Singapore, còn 8 chiếc có thời gian đặt hàng 4 tuần từ nhà máy. Hãng sẽ hỗ trợ chiết khấu dự án 10%."
+        "en": "Good afternoon Cuong. How can I assist you with your equipment order today?",
+        "vn": "Chào buổi chiều Cường. Hôm nay tôi có thể hỗ trợ gì cho đơn đặt hàng thiết bị của bạn?"
       },
       {
-        "speaker": "You (Pre-sales Consultant)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Four weeks matches our delivery schedule perfectly. Please send over the formal proforma invoice with CIF Haiphong shipping terms.",
-        "vn": "4 tuần hoàn toàn khớp với tiến độ giao hàng của chúng tôi. Nhờ bạn gửi hóa đơn chiếu lệ chính thức theo điều kiện giao CIF Hải Phòng nhé."
+        "en": "We need to order six units of the 16x16 4K60 HDMI modular matrix switcher for the hotel project.",
+        "vn": "Chúng tôi cần đặt 6 bộ chuyển mạch ma trận HDMI module 16x16 chuẩn 4K60 cho dự án khách sạn."
+      },
+      {
+        "speaker": "Distributor Sales",
+        "side": "left",
+        "en": "Let me check our warehouse inventory. Currently, we have two units in stock in our regional warehouse.",
+        "vn": "Để tôi kiểm tra tồn kho tại kho hàng. Hiện tại chúng tôi có sẵn 2 bộ tại kho khu vực."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Only two units? What is the estimated lead time for the remaining four units if we issue a purchase order today?",
+        "vn": "Chỉ có 2 bộ thôi sao? Thời gian giao hàng (lead time) dự kiến cho 4 bộ còn lại là bao lâu nếu chúng tôi phát hành đơn đặt hàng (PO) hôm nay?"
+      },
+      {
+        "speaker": "Distributor Sales",
+        "side": "left",
+        "en": "The factory manufacturing and air shipping lead time is approximately four to six weeks from factory dispatch.",
+        "vn": "Thời gian sản xuất tại nhà máy và vận chuyển đường hàng không là khoảng 4 đến 6 tuần kể từ ngày xuất xưởng."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Six weeks is too long for our milestone. Can the factory expedite the shipment if we cover the express courier surcharge?",
+        "vn": "Sáu tuần là quá dài so với cột mốc bàn giao dự án. Hãng có thể đẩy nhanh tiến độ nếu chúng tôi trả thêm phụ phí chuyển phát nhanh không?"
+      },
+      {
+        "speaker": "Distributor Sales",
+        "side": "left",
+        "en": "Yes, with express courier, we can compress the delivery window down to three weeks guaranteed.",
+        "vn": "Được chứ, nếu đi dịch vụ chuyển phát nhanh, chúng tôi cam kết rút ngắn thời gian giao hàng xuống còn 3 tuần."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "That works for our schedule. Could you also apply our registered project partner discount to this quote?",
+        "vn": "Thời gian đó phù hợp với tiến độ của chúng tôi. Bạn có thể áp dụng mức chiết khấu đối tác dự án đã đăng ký vào báo giá này không?"
+      },
+      {
+        "speaker": "Distributor Sales",
+        "side": "left",
+        "en": "Since this project is officially registered, I can grant you an additional 25 percent commercial discount on the entire order.",
+        "vn": "Vì dự án này đã đăng ký chính thức với hãng, tôi sẽ áp dụng thêm mức chiết khấu thương mại 25% cho toàn bộ đơn hàng."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Thank you. Please send the revised formal proforma invoice with warranty terms by email.",
+        "vn": "Cảm ơn bạn. Vui lòng gửi email hóa đơn chiếu lệ (proforma invoice) cập nhật kèm các điều khoản bảo hành giúp tôi."
+      },
+      {
+        "speaker": "Distributor Sales",
+        "side": "left",
+        "en": "I will issue the proforma invoice right away with full three-year advance replacement warranty terms.",
+        "vn": "Tôi sẽ xuất hóa đơn chiếu lệ ngay lập tức kèm chính sách bảo hành 3 năm đổi mới linh kiện trước khi thu hồi."
       }
     ]
   },
   {
     "id": 11,
     "title": "Chủ Đề 11: Yêu Cầu Hỗ Trợ Kỹ Thuật (Tech Support) Khi Thiết Bị Lỗi Firmware",
-    "desc": "Liên hệ bộ phận hỗ trợ kỹ thuật quốc tế khi bộ xử lý DSP bị treo hoặc đèn trạng thái nhấp nháy đỏ.",
+    "desc": "Gọi hỗ trợ kỹ thuật quốc tế (Tech Support) khi bộ xử lý DSP bị treo sau nâng cấp firmware, kiểm tra đèn LED, nhập lệnh khôi phục cứu hộ TFTP và phục hồi thành công.",
     "messages": [
       {
-        "speaker": "Tier-2 Tech Support (Vendor)",
+        "speaker": "Tech Support (Kevin)",
         "side": "left",
-        "en": "Hello Tech Support here. I received your urgent ticket regarding the Dante processor. What is the current device status?",
-        "vn": "Xin chào, hỗ trợ kỹ thuật đây. Tôi nhận được ticket khẩn cấp của bạn về bộ xử lý Dante. Trạng thái thiết bị hiện tại thế nào?"
+        "en": "Thank you for calling Technical Support. My name is Kevin. How can I help you today?",
+        "vn": "Cảm ơn bạn đã gọi tới bộ phận Hỗ trợ Kỹ thuật. Tôi tên là Kevin. Hôm nay tôi có thể hỗ trợ gì cho bạn?"
       },
       {
-        "speaker": "You (AV Field Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "The device is unresponsive on the local network, and the front status LED is flashing red after a firmware upgrade.",
-        "vn": "Thiết bị không phản hồi trên mạng nội bộ, và đèn LED trạng thái phía trước đang nhấp nháy đỏ sau khi nâng cấp firmware."
+        "en": "Hi Kevin, our main DSP audio core has become completely unresponsive after upgrading to firmware version 2.4.",
+        "vn": "Chào Kevin, bộ xử lý âm thanh số DSP trung tâm của bên tôi bị treo hoàn toàn sau khi nâng cấp lên phiên bản firmware 2.4."
       },
       {
-        "speaker": "Tier-2 Tech Support (Vendor)",
+        "speaker": "Tech Support (Kevin)",
         "side": "left",
-        "en": "Understood. The bootloader might be corrupted. Can you connect a USB console cable and launch our recovery tool?",
-        "vn": "Đã rõ. Trình khởi động bootloader có thể đã bị lỗi. Bạn có thể cắm cáp console USB và mở công cụ khôi phục của chúng tôi không?"
+        "en": "I am sorry to hear that. Could you please provide the device model and serial number from the rear chassis?",
+        "vn": "Rất tiếc vì sự cố bạn đang gặp phải. Bạn có thể đọc mã model và số sê-ri ở mặt sau khung máy được không?"
       },
       {
-        "speaker": "You (AV Field Engineer)",
+        "speaker": "You (AV Lead)",
         "side": "right",
-        "en": "Yes, I have the recovery cable ready. Please provide the firmware recovery image and command line instructions.",
-        "vn": "Vâng, tôi đã chuẩn bị sẵn cáp khôi phục. Nhờ bạn gửi file ảnh firmware cứu hộ và các bước dòng lệnh hướng dẫn nhé."
+        "en": "The model is DSP-Core-64, and the serial number is SN-98234-AVX. It was installed six months ago.",
+        "vn": "Model máy là DSP-Core-64, và số sê-ri là SN-98234-AVX. Thiết bị được lắp đặt cách đây 6 tháng."
+      },
+      {
+        "speaker": "Tech Support (Kevin)",
+        "side": "left",
+        "en": "What is the current status of the front panel LED indicators?",
+        "vn": "Hiện tại trạng thái các đèn LED ở mặt trước thiết bị đang báo như thế nào?"
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "The power LED is solid red, the status LED is blinking rapidly in amber, and the network port shows no link activity.",
+        "vn": "Đèn nguồn đứng màu đỏ, đèn trạng thái nhấp nháy vàng cam rất nhanh và cổng mạng LAN không sáng đèn kết nối."
+      },
+      {
+        "speaker": "Tech Support (Kevin)",
+        "side": "left",
+        "en": "That indicates the firmware update interrupted the bootloader partition during the flash writing process.",
+        "vn": "Hiện tượng đó cho thấy quá trình cập nhật firmware đã làm gián đoạn phân vùng khởi động bootloader trong lúc ghi bộ nhớ flash."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Is there a hardware recovery procedure or emergency TFTP restore mode we can perform on-site?",
+        "vn": "Có quy trình khôi phục phần cứng hay chế độ nạp cứu hộ khẩn cấp qua TFTP nào mà chúng tôi có thể tự xử lý tại chỗ không?"
+      },
+      {
+        "speaker": "Tech Support (Kevin)",
+        "side": "left",
+        "en": "Yes. Power down the unit, hold down the recessed pinhole reset button, and power it back up for 15 seconds.",
+        "vn": "Có chứ. Bạn hãy tắt nguồn, lấy tăm nhấn giữ nút reset chìm trong lỗ nhỏ, rồi bật nguồn lại và giữ nguyên trong 15 giây."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "Hold on, let me try that right now... Okay, the status LED has turned into slow blinking blue.",
+        "vn": "Chờ tôi thao tác ngay nhé... Được rồi, đèn trạng thái vừa chuyển sang nhấp nháy chậm màu xanh dương."
+      },
+      {
+        "speaker": "Tech Support (Kevin)",
+        "side": "left",
+        "en": "Great, the unit is now in factory bootloader recovery mode. Assign your laptop the IP address 192.168.1.100 and push the rescue image.",
+        "vn": "Tuyệt, máy đã vào chế độ cứu hộ bootloader. Bạn đặt IP máy tính là 192.168.1.100 và nạp file ảnh cứu hộ rescue image vào là xong."
+      },
+      {
+        "speaker": "You (AV Lead)",
+        "side": "right",
+        "en": "The rescue image uploaded successfully! The DSP has rebooted cleanly into operational mode. Thank you for your excellent guidance, Kevin.",
+        "vn": "File cứu hộ đã nạp thành công rồi! Bộ DSP đã tự khởi động lại về trạng thái hoạt động bình thường. Cảm ơn sự hướng dẫn tuyệt vời của bạn, Kevin."
       }
     ]
   }
@@ -3294,128 +4177,6 @@
     "meaning": "Hiệu quả về mặt chi phí, tiết kiệm ngân sách mà vẫn đảm bảo tính năng",
     "exampleEn": "Using Cat6 Video-over-IP is much more cost-effective than dedicated matrix switchers.",
     "exampleVn": "Sử dụng truyền dẫn Video-over-IP qua cáp mạng Cat6 tiết kiệm chi phí hơn ma trận chuyên dụng."
-  }
-];
-    const QUIZ_DATA = [
-  {
-    "id": 1,
-    "question": "We ______ the entire Q-SYS DSP configuration yesterday afternoon.",
-    "options": [
-      "save",
-      "are saving",
-      "saved",
-      "will save"
-    ],
-    "correct": 2,
-    "explanation": "Có dấu hiệu thời gian 'yesterday afternoon' (chiều hôm qua) trong quá khứ đã chấm dứt, bắt buộc chia thì Quá Khứ Đơn (Past Simple): 'saved'."
-  },
-  {
-    "id": 2,
-    "question": "Right now, the technicians ______ the laser projector's geometry grid.",
-    "options": [
-      "calibrate",
-      "are calibrating",
-      "calibrated",
-      "have calibrated"
-    ],
-    "correct": 1,
-    "explanation": "Có trạng từ 'Right now' (ngay lúc này) chỉ hành động đang diễn ra tại thời điểm nói -> chia thì Hiện Tại Tiếp Diễn (Present Continuous): 'are calibrating'."
-  },
-  {
-    "id": 3,
-    "question": "The audio matrix ______ all microphone inputs to the power amplifier zones every day.",
-    "options": [
-      "routes",
-      "routing",
-      "is routing",
-      "routed"
-    ],
-    "correct": 0,
-    "explanation": "Chỉ chức năng hoạt động hiển nhiên hằng ngày ('every day') của thiết bị -> dùng thì Hiện Tại Đơn (Present Simple), chủ ngữ số ít thêm 's': 'routes'."
-  },
-  {
-    "id": 4,
-    "question": "I guarantee that our team ______ the revised single-line diagram before 5 PM today.",
-    "options": [
-      "sent",
-      "will send",
-      "have sent",
-      "sending"
-    ],
-    "correct": 1,
-    "explanation": "'I guarantee that...' đưa ra một cam kết hành động trong tương lai ('before 5 PM today') -> dùng thì Tương Lai Đơn: 'will send'."
-  },
-  {
-    "id": 5,
-    "question": "Mr. Cuong ______ in the professional Audio Visual industry for over eight years.",
-    "options": [
-      "works",
-      "worked",
-      "has worked",
-      "is working"
-    ],
-    "correct": 2,
-    "explanation": "Có cụm 'for over eight years' (suốt hơn 8 năm nay) chỉ kinh nghiệm bắt đầu từ quá khứ và kéo dài đến hiện tại -> dùng thì Hiện Tại Hoàn Thành (Present Perfect): 'has worked'."
-  },
-  {
-    "id": 6,
-    "question": "The speaker audio sounds ______. We need to lower the preamp gain to avoid clipping.",
-    "options": [
-      "distorted",
-      "distorting",
-      "distortion",
-      "distort"
-    ],
-    "correct": 0,
-    "explanation": "Sau động từ nối 'sounds' cần một tính từ miêu tả trạng thái âm thanh bị méo tiếng: 'distorted'."
-  },
-  {
-    "id": 7,
-    "question": "Please make sure all Cat6 cables are properly ______ before closing the rack panel.",
-    "options": [
-      "terminate",
-      "terminated",
-      "terminating",
-      "termination"
-    ],
-    "correct": 1,
-    "explanation": "Cấu trúc bị động: 'are properly + V3/ed' -> chọn 'terminated' (được bấm đầu rắc chuẩn xác)."
-  },
-  {
-    "id": 8,
-    "question": "We require an ______ technical ground to eliminate the 50Hz ground loop hum.",
-    "options": [
-      "isolated",
-      "isolating",
-      "isolation",
-      "isolate"
-    ],
-    "correct": 0,
-    "explanation": "Cần một tính từ đứng trước cụm danh từ 'technical ground' để bổ nghĩa cho 'tiếp địa cách ly sạch': 'isolated'."
-  },
-  {
-    "id": 9,
-    "question": "While the MEP team was pulling cables, we ______ the equipment rack.",
-    "options": [
-      "assemble",
-      "were assembling",
-      "will assemble",
-      "are assembling"
-    ],
-    "correct": 1,
-    "explanation": "Cấu trúc hai hành động song song trong quá khứ kết nối bằng 'While': 'was pulling ... were assembling' (Trong khi đội MEP đang kéo cáp thì chúng tôi đang lắp ráp tủ rack)."
-  },
-  {
-    "id": 10,
-    "question": "Is it technically ______ to hang this 250kg LED display on a lightweight gypsum wall?",
-    "options": [
-      "feasible",
-      "feasibly",
-      "feasibility",
-      "feasibleness"
-    ],
-    "correct": 0,
-    "explanation": "Sau cấu trúc 'Is it technically + Adj...' cần một tính từ chỉ sự 'khả thi': 'feasible'."
   }
 ];
     const DRILL_DATA = [
@@ -4328,9 +5089,248 @@
     "av": "During the daily standup, we review pending cable pulls."
   }
 };
+    const TENSE_QUIZ_DATA = [
+  {
+    "id": 1,
+    "question": "Look at the network switch! The amber LED [...] rapidly right now.",
+    "options": [
+      "blinks",
+      "is blinking",
+      "blinked",
+      "have blinked"
+    ],
+    "answer": 1,
+    "tense": "Present Continuous (Hiện tại tiếp diễn)",
+    "explain": "Dấu hiệu 'right now' và câu mệnh lệnh 'Look at...!' diễn tả hành động đang diễn ra tại hiện trường -> dùng Thì Hiện tại tiếp diễn: S + is/are + V-ing."
+  },
+  {
+    "id": 2,
+    "question": "Yesterday afternoon, our team [...] all the Cat6A cables into patch panel U12.",
+    "options": [
+      "terminated",
+      "terminates",
+      "is terminating",
+      "will terminate"
+    ],
+    "answer": 0,
+    "tense": "Past Simple (Quá khứ đơn)",
+    "explain": "Dấu hiệu 'Yesterday afternoon' là thời điểm xác định đã kết thúc trong quá khứ -> dùng Thì Quá khứ đơn: S + V2/ed."
+  },
+  {
+    "id": 3,
+    "question": "We [...] the formal variation order for the floor trunking by 3 PM today.",
+    "options": [
+      "submitted",
+      "will submit",
+      "are submitting",
+      "submits"
+    ],
+    "answer": 1,
+    "tense": "Future Simple (Tương lai đơn)",
+    "explain": "Dấu hiệu mốc cam kết trong tương lai với chủ đầu tư 'by 3 PM today' -> dùng Thì Tương lai đơn: S + will + V-inf."
+  },
+  {
+    "id": 4,
+    "question": "The open-architecture DSP [...] acoustic echo cancellation on all microphone channels.",
+    "options": [
+      "executes",
+      "executed",
+      "is executing",
+      "will execute"
+    ],
+    "answer": 0,
+    "tense": "Present Simple (Hiện tại đơn)",
+    "explain": "Diễn tả nguyên lý hoạt động, tính năng kỹ thuật cố định và tiêu chuẩn SOP của thiết bị -> dùng Thì Hiện tại đơn: S + V(s/es)."
+  },
+  {
+    "id": 5,
+    "question": "We have already [...] the Fluke permanent link certification tests with zero crosstalk.",
+    "options": [
+      "complete",
+      "completed",
+      "completing",
+      "completes"
+    ],
+    "answer": 1,
+    "tense": "Present Perfect (Hiện tại hoàn thành)",
+    "explain": "Cấu trúc S + have already + V3/ed diễn tả công việc vừa hoàn thành xong, để lại kết quả sẵn sàng cho việc nghiệm thu."
+  },
+  {
+    "id": 6,
+    "question": "If the client moves the table 3 meters away, it [...] additional installation costs.",
+    "options": [
+      "incurs",
+      "incurred",
+      "will incur",
+      "is incurring"
+    ],
+    "answer": 2,
+    "tense": "Conditional Type 1 (Câu điều kiện loại 1)",
+    "explain": "Câu điều kiện loại 1 dùng trong đàm phán phát sinh chi phí: Mệnh đề If (Hiện tại đơn), Mệnh đề chính dùng 'will + V-inf'."
+  },
+  {
+    "id": 7,
+    "question": "While Cuong [...] the audio frequency sweep, the power breaker tripped unexpectedly.",
+    "options": [
+      "measured",
+      "was measuring",
+      "will measure",
+      "measures"
+    ],
+    "answer": 1,
+    "tense": "Past Continuous (Quá khứ tiếp diễn)",
+    "explain": "Hành động đang diễn ra trong quá khứ ('was measuring') thì có một hành động khác xen vào ('tripped')."
+  },
+  {
+    "id": 8,
+    "question": "The contractor [...] this convention center sound system since January 2024.",
+    "options": [
+      "maintains",
+      "maintained",
+      "has maintained",
+      "is maintaining"
+    ],
+    "answer": 2,
+    "tense": "Present Perfect (Hiện tại hoàn thành)",
+    "explain": "Dấu hiệu 'since January 2024' diễn tả hành động bắt đầu trong quá khứ và vẫn đang tiếp tục kéo dài đến hiện tại -> S + have/has + V3/ed."
+  },
+  {
+    "id": 9,
+    "question": "All 16 HDMI transmitters [...] powered via PoE+ directly from the network switch.",
+    "options": [
+      "is",
+      "are",
+      "was",
+      "will"
+    ],
+    "answer": 1,
+    "tense": "Passive Voice - Present Simple (Bị động hiện tại đơn)",
+    "explain": "Thể bị động kỹ thuật miêu tả sơ đồ kết nối phần cứng: Chủ ngữ số nhiều 'All 16 HDMI transmitters' đi với 'are + V3/ed'."
+  },
+  {
+    "id": 10,
+    "question": "Could you please [...] the delivery schedule for the Dante modular matrix?",
+    "options": [
+      "clarify",
+      "clarified",
+      "clarifying",
+      "clarifies"
+    ],
+    "answer": 0,
+    "tense": "Polite Request (Mẫu câu yêu cầu lịch thiệp)",
+    "explain": "Sau cấu trúc yêu cầu trang trọng 'Could you please / Would you please' luôn là động từ nguyên mẫu không 'to' (V-inf)."
+  }
+];
+    const TENSE_TRANSFORM_ITEMS = [
+  {
+    "title": "1. Cấu hình bộ xử lý âm thanh DSP (Configure the DSP)",
+    "forms": [
+      {
+        "tense": "Hiện Tại Đơn (SOP)",
+        "en": "We configure the DSP according to the room acoustic profile.",
+        "vn": "Chúng tôi cấu hình bộ DSP theo đặc tính âm học phòng."
+      },
+      {
+        "tense": "Hiện Tại Tiếp Diễn (Đang làm)",
+        "en": "We are currently configuring the DSP in the rack room.",
+        "vn": "Chúng tôi đang cấu hình bộ DSP trong phòng tủ rack ngay lúc này."
+      },
+      {
+        "tense": "Quá Khứ Đơn (Đã làm)",
+        "en": "We configured the DSP yesterday afternoon.",
+        "vn": "Chúng tôi đã cấu hình bộ DSP vào chiều hôm qua."
+      },
+      {
+        "tense": "Hiện Tại Hoàn Thành (Nghiệm thu)",
+        "en": "We have successfully configured the DSP for all 16 zones.",
+        "vn": "Chúng tôi đã cấu hình thành công bộ DSP cho toàn bộ 16 vùng âm thanh."
+      },
+      {
+        "tense": "Tương Lai Đơn (Cam kết)",
+        "en": "We will configure the DSP tomorrow once network drops are active.",
+        "vn": "Chúng tôi sẽ cấu hình bộ DSP vào ngày mai ngay khi các đầu cáp mạng sẵn sàng."
+      },
+      {
+        "tense": "Bị Động Kỹ Thuật",
+        "en": "The DSP is configured with automatic microphone mixing (AMM).",
+        "vn": "Bộ DSP được cấu hình với tính năng tự động hòa trộn micro."
+      }
+    ]
+  },
+  {
+    "title": "2. Thi công nẹp sàn bán nguyệt (Install floor trunking)",
+    "forms": [
+      {
+        "tense": "Hiện Tại Đơn (SOP)",
+        "en": "We install half-round floor trunking to protect cables and avoid trip hazards.",
+        "vn": "Chúng tôi lắp nẹp sàn bán nguyệt để bảo vệ cáp và chống vấp ngã."
+      },
+      {
+        "tense": "Hiện Tại Tiếp Diễn (Đang làm)",
+        "en": "We are installing heavy-duty aluminum trunking across the walkway now.",
+        "vn": "Chúng tôi đang lắp nẹp nhôm chịu lực qua lối đi ngay lúc này."
+      },
+      {
+        "tense": "Quá Khứ Đơn (Đã làm)",
+        "en": "We installed 12 meters of floor trunking yesterday morning.",
+        "vn": "Chúng tôi đã lắp 12 mét nẹp sàn vào sáng hôm qua."
+      },
+      {
+        "tense": "Hiện Tại Hoàn Thành (Nghiệm thu)",
+        "en": "We have already installed the floor trunking flush with the carpet.",
+        "vn": "Chúng tôi đã hoàn thành việc lắp nẹp sàn phẳng phiu với mặt thảm."
+      },
+      {
+        "tense": "Tương Lai Đơn (Cam kết)",
+        "en": "We will install the floor trunking within 4 hours upon approval.",
+        "vn": "Chúng tôi sẽ thi công nẹp sàn trong vòng 4 tiếng ngay sau khi được phê duyệt."
+      },
+      {
+        "tense": "Bị Động Kỹ Thuật",
+        "en": "The cables are protected by heavy-duty multi-compartment trunking.",
+        "vn": "Dây cáp được bảo vệ bởi nẹp chịu lực nhiều khoang cách ly."
+      }
+    ]
+  },
+  {
+    "title": "3. Kéo cáp truyền dẫn Cat6A (Pull Cat6A cables)",
+    "forms": [
+      {
+        "tense": "Hiện Tại Đơn (SOP)",
+        "en": "The cabling crew pulls shielded Cat6A cables through dedicated conduit.",
+        "vn": "Đội kéo cáp luồn cáp Cat6A bọc giáp qua ống ghen chuyên dụng."
+      },
+      {
+        "tense": "Hiện Tại Tiếp Diễn (Đang làm)",
+        "en": "The technicians are pulling cables into meeting rooms 101 and 102.",
+        "vn": "Các kỹ thuật viên đang kéo cáp vào phòng họp 101 và 102."
+      },
+      {
+        "tense": "Quá Khứ Đơn (Đã làm)",
+        "en": "They pulled all 48 cable drops on schedule yesterday.",
+        "vn": "Họ đã kéo xong toàn bộ 48 đầu chờ cáp đúng tiến độ hôm qua."
+      },
+      {
+        "tense": "Hiện Tại Hoàn Thành (Nghiệm thu)",
+        "en": "We have pulled and labeled every cable run accurately.",
+        "vn": "Chúng tôi đã kéo và dán nhãn chính xác từng tuyến cáp."
+      },
+      {
+        "tense": "Tương Lai Đơn (Cam kết)",
+        "en": "We will pull the remaining backbone fiber cables next Monday.",
+        "vn": "Chúng tôi sẽ kéo các tuyến cáp quang trục chính còn lại vào thứ Hai tới."
+      },
+      {
+        "tense": "Bị Động Kỹ Thuật",
+        "en": "All signal cables are pulled through isolated metal conduits.",
+        "vn": "Toàn bộ cáp tín hiệu được kéo luồn qua ống kim loại cách ly."
+      }
+    ]
+  }
+];
 
     /* Application State */
-    let currentTopicIndex = 8; // Default to Topic 09 (Half-round trunking) for immediate wow
+    let currentTopicIndex = 8; // Default to Topic 09 (Floor trunking)
     let currentLineIndex = 0;
     let isPlaying = false;
     let isLooping = false;
@@ -4348,7 +5348,7 @@
       savedWords = [];
     }
 
-    // Web Speech API references
+    // Web Speech API
     let synth = window.speechSynthesis;
     let speechRecognition = null;
     let isRecording = false;
@@ -4385,7 +5385,6 @@
           osc.start(now);
           osc.stop(now + 0.05);
         } else if (type === 'success') {
-          // Cheerful chime
           const notes = [523.25, 659.25, 783.99, 1046.50];
           notes.forEach((freq, idx) => {
             const o = ctx.createOscillator();
@@ -4407,9 +5406,7 @@
           osc.start(now);
           osc.stop(now + 0.15);
         }
-      } catch (err) {
-        // audio context blocked by policy
-      }
+      } catch (err) {}
     }
 
     /* Initialize Application */
@@ -4423,6 +5420,9 @@
       setupKeyboardShortcuts();
       renderFlashcards();
       renderGrammarView();
+      renderVerbsTable();
+      renderTenseTransformers();
+      initQuiz();
       renderDrillItem();
     });
 
@@ -4491,10 +5491,6 @@
       return DIALOGUES_DATA[currentTopicIndex] || DIALOGUES_DATA[0];
     }
 
-    function getCurrentTopicInfo() {
-      return TOPICS_BANK[currentTopicIndex] || TOPICS_BANK[0];
-    }
-
     function loadTopic(idx) {
       const topic = TOPICS_BANK[idx];
       const dialogue = DIALOGUES_DATA[idx];
@@ -4502,7 +5498,6 @@
       document.getElementById('topicSelect').value = idx;
       document.getElementById('badgeCategory').textContent = topic.category || 'GIAO TIẾP AV';
       
-      // Update scene backdrop: Topic 09 uses floor_trunking_av.jpg
       const sceneImg = document.getElementById('sceneImage');
       if (topic.id === 9 || idx === 8) {
         sceneImg.classList.add('visible');
@@ -4516,7 +5511,7 @@
       resetPracticeTabsForNewTopic();
     }
 
-    /* Rendering Active Line */
+    /* Active Line Rendering */
     function updateActiveLine(lineIdx, speak = false) {
       const dialogue = getCurrentDialogue();
       if (!dialogue || !dialogue.messages || dialogue.messages.length === 0) return;
@@ -4527,7 +5522,7 @@
 
       const msg = dialogue.messages[currentLineIndex];
 
-      // Counter
+      // Counter: shows 01 / 14 for 10-15 turn dialogues
       document.getElementById('badgeLineProgress').textContent = 
         String(currentLineIndex + 1).padStart(2, '0') + ' / ' + String(dialogue.messages.length).padStart(2, '0');
 
@@ -4561,7 +5556,7 @@
       // Timeline segments
       updateTimelineSegments();
 
-      // Transcript list highlight
+      // Transcript highlight & auto-scroll
       updateTranscriptHighlight();
 
       // Update right-side practice tabs
@@ -4575,7 +5570,7 @@
       }
     }
 
-    /* Word Tokenization with Click-To-Translate */
+    /* Tokenization with Click-To-Translate */
     function renderTokenizedText(text) {
       const tokens = text.match(/([a-zA-Z0-9\-]+|[^a-zA-Z0-9\-]+)/g) || [text];
       return tokens.map(token => {
@@ -4599,6 +5594,7 @@
       dialogue.messages.forEach((_, i) => {
         const seg = document.createElement('div');
         seg.className = 'timeline-seg' + (i === currentLineIndex ? ' active' : '');
+        seg.title = 'Lượt thoại ' + (i + 1);
         seg.onclick = () => {
           updateActiveLine(i, isPlaying);
           playSound('click');
@@ -4630,7 +5626,7 @@
 
         item.innerHTML = `
           <div class="transcript-top">
-            <span class="transcript-speaker ${msg.side === 'right' ? 'side-right' : 'side-left'}">${msg.speaker}</span>
+            <span class="transcript-speaker ${msg.side === 'right' ? 'side-right' : 'side-left'}">${idx + 1}. ${msg.speaker}</span>
             <div class="transcript-actions">
               <button class="btn-item-action" onclick="event.stopPropagation(); playSingleLine(${idx})" title="Phát câu này">🔊</button>
               <button class="btn-item-action" onclick="event.stopPropagation(); copyLineText('${msg.en.replace(/'/g, "\\'")}')" title="Sao chép">📋</button>
@@ -4670,9 +5666,7 @@
       showToast('Đã sao chép câu vào bộ nhớ đệm');
     }
 
-    /* ==========================================================================
-       8. ONE-TAP CLICK-TO-TRANSLATE POPUP LOGIC
-       ========================================================================== */
+    /* Word Popup Logic */
     function normalizeWord(raw) {
       if (!raw) return '';
       return raw.toLowerCase().replace(/[^a-z0-9\-]/g, '').trim();
@@ -4682,10 +5676,8 @@
       const w = normalizeWord(rawWord);
       if (!w) return null;
 
-      // Exact match in dictionary
       if (OFFLINE_DICT[w]) return { word: w, ...OFFLINE_DICT[w] };
 
-      // Plural / verb ending heuristics
       const candidates = [];
       if (w.endsWith('s') && !w.endsWith('ss')) candidates.push(w.slice(0, -1));
       if (w.endsWith('es')) candidates.push(w.slice(0, -2));
@@ -4701,13 +5693,12 @@
         }
       }
 
-      // Contextual fallback
       return {
         word: rawWord,
         pos: "term",
         ipa: "/" + rawWord.toLowerCase() + "/",
         vn: "Thuật ngữ / từ vựng xuất hiện trong đối thoại kỹ thuật dự án AV.",
-        av: "Xuất hiện trong câu: " + (getCurrentDialogue().messages[currentLineIndex]?.en || "")
+        av: "Xuất hiện trong kịch bản: " + (getCurrentDialogue().messages[currentLineIndex]?.en || "")
       };
     }
 
@@ -4730,7 +5721,6 @@
       document.getElementById('popWordMeaning').textContent = def.vn;
       document.getElementById('popWordAvNote').innerHTML = '<strong>Ngữ cảnh AV:</strong> ' + (def.av || 'Thường dùng trong văn cảnh lắp đặt và vận hành hệ thống âm thanh, hình ảnh.');
 
-      // Check if already saved
       const saveBtn = document.getElementById('popBtnSave');
       const isSaved = savedWords.some(item => normalizeWord(item.word) === normalizeWord(def.word));
       if (isSaved) {
@@ -4741,7 +5731,6 @@
         saveBtn.innerHTML = '<span>⭐</span> <span>Lưu Thẻ</span>';
       }
 
-      // Position popup intelligently near target
       const rect = targetEl.getBoundingClientRect();
       let top = rect.bottom + 8;
       let left = rect.left;
@@ -4791,7 +5780,6 @@
       localStorage.setItem('av_saved_words', JSON.stringify(savedWords));
       updateSavedCountBadge();
 
-      // Update button state
       const saveBtn = document.getElementById('popBtnSave');
       const isSaved = savedWords.some(item => normalizeWord(item.word) === clean);
       if (isSaved) {
@@ -4810,9 +5798,7 @@
       if (badge) badge.textContent = savedWords.length;
     }
 
-    /* ==========================================================================
-       9. SPEECH SYNTHESIS & PLAYBACK CONTROLS
-       ========================================================================== */
+    /* Speech Synthesis & Playback */
     function speakText(text, rate = playbackSpeed, onEnd = null) {
       if (!synth) return;
       synth.cancel();
@@ -4826,7 +5812,6 @@
         if (onEnd) onEnd();
       };
       utter.onerror = (e) => {
-        console.warn('Speech error', e);
         if (onEnd) onEnd();
       };
 
@@ -4851,7 +5836,6 @@
               nextSentence(true);
             }, 800);
           } else {
-            // Reached end of dialogue
             isPlaying = false;
             updatePlayPauseUI();
           }
@@ -4968,9 +5952,7 @@
       playSound('click');
     }
 
-    /* ==========================================================================
-       10. PRACTICE TABS IMPLEMENTATION
-       ========================================================================== */
+    /* Practice Tabs Management */
     function switchTab(tabId) {
       currentTab = tabId;
       document.querySelectorAll('.practice-tab-btn').forEach(btn => {
@@ -4982,7 +5964,6 @@
         if (pane.id === 'tab-' + tabId) pane.classList.add('active');
       });
 
-      // Update active state in sidebar rail too
       document.querySelectorAll('.rail-btn').forEach(b => b.classList.remove('active'));
       const railMap = {
         'subtitles': 'rail-btn-studio',
@@ -4994,7 +5975,6 @@
       if (railMap[tabId]) {
         document.getElementById(railMap[tabId]).classList.add('active');
       }
-
       playSound('click');
     }
 
@@ -5008,7 +5988,7 @@
       }
     }
 
-    /* --- TAB 2: SHADOWING (SPEECH RECOGNITION) --- */
+    /* TAB 2: SHADOWING */
     function initSpeechRecognition() {
       const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
       if (SpeechRec) {
@@ -5019,8 +5999,7 @@
 
         speechRecognition.onstart = () => {
           isRecording = true;
-          const btn = document.getElementById('btnMicRecord');
-          btn.classList.add('recording');
+          document.getElementById('btnMicRecord').classList.add('recording');
           document.getElementById('labelMic').textContent = 'Đang nghe...';
         };
 
@@ -5029,10 +6008,9 @@
           evaluateShadowing(transcript);
         };
 
-        speechRecognition.onerror = (e) => {
-          console.warn('SpeechRec error', e);
+        speechRecognition.onerror = () => {
           stopShadowRecording();
-          showToast('Không nhận diện được âm thanh hoặc quyền Micro bị chặn.');
+          showToast('Chưa nhận diện được giọng nói hoặc quyền Micro bị chặn.');
         };
 
         speechRecognition.onend = () => {
@@ -5043,8 +6021,7 @@
 
     function toggleShadowRecording() {
       if (!speechRecognition) {
-        // Fallback for browsers without Web Speech Recognition: Prompt self-assessment
-        const userSpoken = prompt('Trình duyệt chưa kích hoạt micro nhận diện tự động. Bạn hãy nhập câu vừa tự đọc để đối chiếu:', '');
+        const userSpoken = prompt('Trình duyệt chưa bật nhận diện giọng nói tự động. Bạn hãy gõ câu vừa đọc để kiểm tra đối chiếu:', '');
         if (userSpoken) evaluateShadowing(userSpoken);
         return;
       }
@@ -5060,8 +6037,7 @@
 
     function stopShadowRecording() {
       isRecording = false;
-      const btn = document.getElementById('btnMicRecord');
-      btn.classList.remove('recording');
+      document.getElementById('btnMicRecord').classList.remove('recording');
       document.getElementById('labelMic').textContent = 'Nói';
     }
 
@@ -5121,7 +6097,7 @@
       }
     }
 
-    /* --- TAB 3: DICTATION (LISTEN & TYPE) --- */
+    /* TAB 3: DICTATION */
     function updateDictationTab(msg) {
       document.getElementById('dictationInput').value = '';
       document.getElementById('dictationResultBox').style.display = 'none';
@@ -5130,7 +6106,7 @@
     function checkDictation() {
       const input = document.getElementById('dictationInput').value.trim();
       if (!input) {
-        showToast('Vui lòng gõ nội dung câu bạn nghe được');
+        showToast('Vui lòng gõ câu bạn nghe được');
         return;
       }
 
@@ -5181,7 +6157,7 @@
       checkDictation();
     }
 
-    /* --- TAB 4: FILL BLANKS (CLOZE TEST) --- */
+    /* TAB 4: FILL BLANKS */
     let clozeState = {
       tokens: [],
       missingIndices: [],
@@ -5194,7 +6170,6 @@
       clozeState.tokens = words;
       clozeState.userAnswers = {};
 
-      // Select 1 to 3 words as blanks (prioritize technical words or length >= 5)
       const eligible = [];
       words.forEach((w, i) => {
         const clean = normalizeWord(w);
@@ -5204,12 +6179,10 @@
       });
 
       if (eligible.length === 0) eligible.push(0);
-      // Pick up to 2 blanks
       clozeState.missingIndices = eligible.slice(0, 2);
 
-      // Prepare word bank (missing words + 2 distractors from dictionary)
       const correctWords = clozeState.missingIndices.map(idx => normalizeWord(words[idx]));
-      const distractors = ['conduit', 'trunking', 'isolated', 'variation', 'approval', 'latency', 'matrix']
+      const distractors = ['conduit', 'trunking', 'isolated', 'variation', 'approval', 'latency', 'matrix', 'breaker']
         .filter(d => !correctWords.includes(d))
         .slice(0, 2);
 
@@ -5236,12 +6209,10 @@
           };
           sentenceBox.appendChild(blank);
         } else {
-          const text = document.createTextNode(token + ' ');
-          sentenceBox.appendChild(text);
+          sentenceBox.appendChild(document.createTextNode(token + ' '));
         }
       });
 
-      // Word Bank
       const bankBox = document.getElementById('clozeWordBank');
       bankBox.innerHTML = '';
       clozeState.wordBank.forEach(word => {
@@ -5250,7 +6221,6 @@
         chip.className = 'chip-bank' + (isUsed ? ' used' : '');
         chip.textContent = word;
         chip.onclick = () => {
-          // Fill first empty blank
           for (const blankIdx of clozeState.missingIndices) {
             if (!clozeState.userAnswers[blankIdx]) {
               clozeState.userAnswers[blankIdx] = word;
@@ -5283,7 +6253,7 @@
         document.querySelectorAll('.cloze-blank').forEach(b => b.classList.add('correct'));
       } else {
         playSound('error');
-        showToast('Có từ chưa chính xác, hãy bấm vào ô để xóa và chọn lại.');
+        showToast('Có từ chưa chính xác, nhấp vào ô để xóa và chọn lại.');
       }
     }
 
@@ -5293,7 +6263,7 @@
       playSound('click');
     }
 
-    /* --- TAB 5: AI CONVERSATION (ROLE-PLAY) --- */
+    /* TAB 5: AI CONVERSATION */
     let selectedRoleplayOption = 0;
 
     function updateConversationTab(msg) {
@@ -5301,19 +6271,17 @@
       container.innerHTML = '';
 
       const dialogue = getCurrentDialogue();
-      // Render messages up to currentLineIndex
       dialogue.messages.slice(0, currentLineIndex + 1).forEach((m, idx) => {
         const bubble = document.createElement('div');
         bubble.className = 'chat-bubble ' + (m.side === 'right' ? 'user' : 'partner');
         bubble.innerHTML = `
-          <span class="chat-speaker-label">${m.speaker}</span>
+          <span class="chat-speaker-label">${idx + 1}. ${m.speaker}</span>
           <span class="chat-text-en">${m.en}</span>
           <span class="chat-text-vn">${m.vn}</span>
         `;
         container.appendChild(bubble);
       });
 
-      // Roleplay Options
       renderRoleplayOptions();
     }
 
@@ -5323,8 +6291,6 @@
 
       const dialogue = getCurrentDialogue();
       const currentMsg = dialogue.messages[currentLineIndex];
-
-      // Strategy options for next reply
       const sampleReply = dialogue.messages[currentLineIndex + 1] ? dialogue.messages[currentLineIndex + 1].en : currentMsg.en;
 
       const options = [
@@ -5376,7 +6342,7 @@
     }
 
     function submitRoleplayChoice() {
-      showToast('Đã ghi nhận phản hồi! Tuyệt vời.');
+      showToast('Đã ghi nhận phản hồi! Rất tự nhiên.');
       playSound('success');
       if (currentLineIndex < getCurrentDialogue().messages.length - 1) {
         setTimeout(() => {
@@ -5386,7 +6352,7 @@
     }
 
     /* ==========================================================================
-       11. SECONDARY VIEWS: FLASHCARDS, GRAMMAR MATRIX, REFLEX DRILLS
+       8. SECONDARY VIEWS MANAGEMENT
        ========================================================================== */
     function switchView(viewId) {
       currentView = viewId;
@@ -5408,7 +6374,7 @@
       filterCards('saved');
     }
 
-    /* Flashcards */
+    /* Flashcards View */
     let cardFilter = 'all';
 
     function filterCards(filter) {
@@ -5429,7 +6395,6 @@
       if (cardFilter === 'saved') {
         list = [...savedWords];
       } else {
-        // Merge core dictionary entries + saved
         list = Object.keys(OFFLINE_DICT).map(k => ({ word: k, ...OFFLINE_DICT[k] }));
         if (cardFilter === 'trunking') {
           list = list.filter(i => ['trunking', 'half-round', 'conduit', 'underfloor', 'hazard', 'trip', 'floor', 'cable'].includes(i.word));
@@ -5478,7 +6443,153 @@
       });
     }
 
-    /* Grammar Matrix View */
+    /* ==========================================================================
+       9. GRAMMAR & TENSES MATRIX VIEW (WITH REVIEW & PRACTICE FEATURE)
+       ========================================================================== */
+    function switchGrammarView(subViewId, btnEl) {
+      document.querySelectorAll('.grammar-view').forEach(v => v.classList.remove('active'));
+      document.querySelectorAll('.grammar-sub-btn').forEach(b => b.classList.remove('active'));
+
+      const target = document.getElementById(subViewId);
+      if (target) target.classList.add('active');
+      if (btnEl) btnEl.classList.add('active');
+      playSound('click');
+    }
+
+    function previewTenseDetail(tenseKey) {
+      const coreBtn = document.querySelectorAll('.grammar-sub-btn')[1];
+      switchGrammarView('view-core', coreBtn);
+    }
+
+    /* Interactive Tense Recognition Quiz */
+    let currentQuizIndex = 0;
+    let quizScore = 0;
+    let quizAnswered = false;
+
+    function initQuiz() {
+      currentQuizIndex = 0;
+      quizScore = 0;
+      renderQuizQuestion();
+    }
+
+    function renderQuizQuestion() {
+      const q = TENSE_QUIZ_DATA[currentQuizIndex];
+      quizAnswered = false;
+
+      document.getElementById('quizProgressBadge').textContent = 'Câu ' + String(currentQuizIndex + 1).padStart(2, '0') + ' / ' + String(TENSE_QUIZ_DATA.length).padStart(2, '0');
+      document.getElementById('quizQuestionText').textContent = q.question;
+      document.getElementById('quizScoreText').textContent = 'Điểm: ' + quizScore + ' / ' + currentQuizIndex;
+      document.getElementById('quizExplainBox').style.display = 'none';
+
+      const grid = document.getElementById('quizOptionsGrid');
+      grid.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = 'btn-quiz-opt';
+        btn.innerHTML = '<strong>' + String.fromCharCode(65 + idx) + '.</strong> ' + opt;
+        btn.onclick = () => selectQuizAnswer(idx);
+        grid.appendChild(btn);
+      });
+    }
+
+    function selectQuizAnswer(selectedIndex) {
+      if (quizAnswered) return;
+      quizAnswered = true;
+
+      const q = TENSE_QUIZ_DATA[currentQuizIndex];
+      const buttons = document.querySelectorAll('.btn-quiz-opt');
+
+      if (selectedIndex === q.answer) {
+        buttons[selectedIndex].classList.add('correct');
+        quizScore++;
+        playSound('success');
+        document.getElementById('quizResultTitle').textContent = 'Chính xác! ✓';
+        document.getElementById('quizResultTitle').style.color = '#10b981';
+      } else {
+        buttons[selectedIndex].classList.add('wrong');
+        buttons[q.answer].classList.add('correct');
+        playSound('error');
+        document.getElementById('quizResultTitle').textContent = 'Chưa chính xác!';
+        document.getElementById('quizResultTitle').style.color = '#f43f5e';
+      }
+
+      document.getElementById('quizTenseTag').textContent = q.tense;
+      document.getElementById('quizExplainText').textContent = q.explain;
+      document.getElementById('quizExplainBox').style.display = 'flex';
+      document.getElementById('quizScoreText').textContent = 'Điểm: ' + quizScore + ' / ' + (currentQuizIndex + 1);
+    }
+
+    function nextQuizQuestion() {
+      if (currentQuizIndex < TENSE_QUIZ_DATA.length - 1) {
+        currentQuizIndex++;
+        renderQuizQuestion();
+        playSound('click');
+      } else {
+        alert('Chúc mừng bạn đã hoàn thành bài ôn tập 12 thì AV! Điểm số: ' + quizScore + ' / ' + TENSE_QUIZ_DATA.length);
+        initQuiz();
+      }
+    }
+
+    function resetQuiz() {
+      initQuiz();
+      playSound('click');
+    }
+
+    /* Tense Transformers (Interactive Practice) */
+    function renderTenseTransformers() {
+      const container = document.getElementById('transformerContainer');
+      container.innerHTML = '';
+
+      TENSE_TRANSFORM_ITEMS.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'transformer-card';
+        
+        let rowsHtml = '';
+        item.forms.forEach(f => {
+          rowsHtml += `
+            <div class="transformer-row">
+              <span class="transformer-tense-tag">${f.tense}</span>
+              <div style="flex: 1;">
+                <div style="font-size: 13.5px; font-weight: 600; color: #fff;">${f.en}</div>
+                <div style="font-size: 11.5px; color: var(--text-dim);">${f.vn}</div>
+              </div>
+              <button class="btn-item-action" onclick="speakText('${f.en.replace(/'/g, "\\'")}')" title="Nghe phát âm">🔊</button>
+            </div>
+          `;
+        });
+
+        card.innerHTML = `
+          <h4 style="font-size: 1.05rem; font-weight: 700; color: #38bdf8;">${item.title}</h4>
+          <div style="display: flex; flex-direction: column; gap: 6px;">${rowsHtml}</div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    /* Action Verbs Table */
+    function renderVerbsTable() {
+      const tbody = document.getElementById('verbsTableBody');
+      tbody.innerHTML = '';
+
+      VERBS_DATA.forEach(v => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td style="font-weight: 700; color: #fff;">
+            ${v.v1} <button class="btn-item-action" onclick="speakText('${v.v1}')">🔊</button>
+          </td>
+          <td style="color: var(--accent-cyan); font-weight: 600;">${v.v2}</td>
+          <td style="color: var(--accent-indigo); font-weight: 600;">${v.v3}</td>
+          <td style="color: #cbd5e1;">${v.vn || v.meaning}</td>
+          <td style="font-size: 12px; color: #94a3b8; font-style: italic;">
+            "${v.exampleEn || v.v1 + ' the system'}"
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    /* 6 Architectural Formulas */
     function renderGrammarView() {
       const container = document.getElementById('grammarContainer');
       container.innerHTML = '';
@@ -5486,42 +6597,42 @@
       const formulas = [
         {
           id: 1,
-          title: "Khung 1: Hiện Tại Đơn (Present Simple) Cho Tiêu Chuẩn & SOP Kỹ Thuật",
+          title: "Khung 1: Hiện Tại Đơn Cho Tiêu Chuẩn & SOP Kỹ Thuật",
           formula: "The system / equipment + VERB (s/es) + Technical Standard.",
           example: "The Dante master clock synchronizes all audio packets within 1 microsecond.",
           desc: "Dùng để diễn tả nguyên lý hoạt động cố định, tiêu chuẩn kỹ thuật hoặc quy trình SOP bất biến."
         },
         {
           id: 2,
-          title: "Khung 2: Hiện Tại Tiếp Diễn (Present Continuous) Cho Thao Tác Trực Tiếp Tại Hiện Trường",
+          title: "Khung 2: Hiện Tại Tiếp Diễn Cho Thao Tác Trực Tiếp Tại Hiện Trường",
           formula: "We are currently + VERB-ing + Component + Location / Target.",
-          example: "We are currently installing half-round floor trunking across the conference walkway.",
+          example: "We are currently installing heavy-duty floor trunking across the conference walkway.",
           desc: "Báo cáo nhanh với PM, Tư vấn hoặc MEP các công việc đang diễn ra ngay lúc nói."
         },
         {
           id: 3,
-          title: "Khung 3: Hiện Tại Hoàn Thành (Present Perfect) Cho Cột Mốc Nghiệm Thu",
+          title: "Khung 3: Hiện Tại Hoàn Thành Cho Cột Mốc Nghiệm Thu",
           formula: "We have successfully + VERB-ed (V3) + Milestone.",
-          example: "We have successfully terminated all Cat6 cable drops in the boardroom rack.",
+          example: "We have successfully terminated all Cat6A cable drops in the boardroom rack.",
           desc: "Dùng để thông báo các hạng mục đã hoàn tất và sẵn sàng để nghiệm thu."
         },
         {
           id: 4,
-          title: "Khung 4: Thể Bị Động Kỹ Thuật (Passive Voice) Cho Yêu Cầu Thiết Kế & Quy Chuẩn",
+          title: "Khung 4: Thể Bị Động Kỹ Thuật Cho Yêu Cầu Thiết Kế",
           formula: "Subject + is / are + VERB-ed (V3) + by / according to standard.",
-          example: "All HDMI transmitters are powered via PoE directly from the network switch.",
+          example: "All HDMI transmitters are powered via PoE+ directly from the network switch.",
           desc: "Tạo phong thái văn bản kỹ thuật khách quan, trang trọng của tư vấn quốc tế."
         },
         {
           id: 5,
-          title: "Khung 5: Câu Điều Kiện Kỹ Thuật (Conditional IF / UNLESS) Cho Rủi Ro & Phát Sinh Chi Phí",
+          title: "Khung 5: Câu Điều Kiện Kỹ Thuật Cho Rủi Ro & Phát Sinh Chi Phí",
           formula: "If + Condition (Present Simple), it will + incur / cause + Technical Consequence.",
           example: "If the table is moved 3 meters away, it will incur additional trunking cost.",
           desc: "Dùng khi thương thảo với Chủ đầu tư về các thay đổi ngoài phạm vi hợp đồng ban đầu."
         },
         {
           id: 6,
-          title: "Khung 6: Yêu Cầu Lịch Thiệp (Polite Inquiries) Với Đối Tác & Hãng",
+          title: "Khung 6: Yêu Cầu Lịch Thiệp Với Đối Tác & Hãng",
           formula: "Could you please clarify / confirm + Technical Item + by + Deadline?",
           example: "Could you please confirm the lead time and project quotation for the 4K matrix?",
           desc: "Mẫu câu gửi email hoặc trao đổi trực tiếp với hãng phân phối thiết bị."
@@ -5531,10 +6642,18 @@
       formulas.forEach(f => {
         const card = document.createElement('div');
         card.className = 'formula-card';
+        card.style.background = 'var(--bg-surface)';
+        card.style.border = '1px solid var(--border-subtle)';
+        card.style.borderRadius = 'var(--radius-lg)';
+        card.style.padding = '1.25rem 1.5rem';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        card.style.gap = '0.65rem';
+
         card.innerHTML = `
-          <div class="formula-badge">Công thức 0${f.id}</div>
+          <div style="font-size: 11px; font-weight: 800; color: var(--accent-cyan); text-transform: uppercase;">Công thức 0${f.id}</div>
           <div style="font-size: 1.05rem; font-weight: 700; color: #fff;">${f.title}</div>
-          <div class="formula-code">${f.formula}</div>
+          <div style="font-family: var(--font-mono); background: rgba(0,0,0,0.4); padding: 8px 14px; border-radius: var(--radius-sm); color: #38bdf8; font-size: 13.5px; border-left: 3px solid var(--accent-cyan);">${f.formula}</div>
           <div style="font-size: 13.5px; color: #34d399; font-weight: 600;">${f.example}</div>
           <div style="font-size: 12px; color: var(--text-muted);">${f.desc}</div>
         `;
@@ -5549,7 +6668,6 @@
     function renderDrillItem() {
       const card = document.getElementById('drillCard');
       const item = DRILL_DATA[currentDrillIdx] || DRILL_DATA[0];
-
       const enWords = item.en.replace(/[.,?!]/g, '').split(' ').sort(() => Math.random() - 0.5);
 
       card.innerHTML = `
@@ -5652,20 +6770,18 @@
     }
 
     /* ==========================================================================
-       12. PROCEDURAL CANVAS VISUALIZER (DARK AV STUDIO ENGINE)
+       10. CANVAS PROCEDURAL AV STUDIO ENGINE
        ========================================================================== */
     function setupCanvasAnimation() {
       const canvas = document.getElementById('sceneCanvas');
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
-
       let waveOffset = 0;
 
       function renderFrame() {
         const w = canvas.width;
         const h = canvas.height;
 
-        // Gradient dark studio background
         const grad = ctx.createLinearGradient(0, 0, w, h);
         grad.addColorStop(0, '#0a0f1d');
         grad.addColorStop(0.5, '#080c18');
@@ -5673,90 +6789,63 @@
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, w, h);
 
-        // If Topic 09 image is visible, canvas serves as overlay/ambient
         if (currentTopicIndex !== 8) {
-          // Draw technical studio grid
           ctx.strokeStyle = 'rgba(6, 182, 212, 0.05)';
           ctx.lineWidth = 1;
           const gridSize = 40;
           for (let x = 0; x < w; x += gridSize) {
-            ctx.beginPath();
-            ctx.moveTo(x, 0);
-            ctx.lineTo(x, h);
-            ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
           }
           for (let y = 0; y < h; y += gridSize) {
-            ctx.beginPath();
-            ctx.moveTo(0, y);
-            ctx.lineTo(w, y);
-            ctx.stroke();
+            ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
           }
 
-          // Isometric Boardroom Table & Technical Hub Illustration
           ctx.save();
           ctx.translate(w / 2, h / 2 + 30);
 
-          // Subtle radial glow
           const radial = ctx.createRadialGradient(0, 0, 10, 0, 0, 320);
           radial.addColorStop(0, 'rgba(6, 182, 212, 0.15)');
           radial.addColorStop(1, 'rgba(6, 182, 212, 0)');
           ctx.fillStyle = radial;
-          ctx.beginPath();
-          ctx.arc(0, 0, 320, 0, Math.PI * 2);
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(0, 0, 320, 0, Math.PI * 2); ctx.fill();
 
-          // Boardroom Conference Table Top
           ctx.fillStyle = '#0f172a';
           ctx.strokeStyle = '#38bdf8';
           ctx.lineWidth = 2;
           ctx.beginPath();
           ctx.ellipse(0, 40, 380, 110, 0, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.stroke();
+          ctx.fill(); ctx.stroke();
 
-          // Inner Table Inset
           ctx.strokeStyle = 'rgba(56, 189, 248, 0.3)';
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.ellipse(0, 40, 340, 85, 0, 0, Math.PI * 2);
           ctx.stroke();
 
-          // Floor Cable Trunking Axis line (Simulating Trunking)
           ctx.strokeStyle = '#06b6d4';
           ctx.lineWidth = 4;
           ctx.beginPath();
-          ctx.moveTo(-250, 40);
-          ctx.lineTo(250, 40);
-          ctx.stroke();
+          ctx.moveTo(-250, 40); ctx.lineTo(250, 40); ctx.stroke();
 
-          // Cable Cubby / Pop-up Box in center
           ctx.fillStyle = '#1e293b';
           ctx.strokeStyle = '#06b6d4';
           ctx.lineWidth = 2;
           ctx.fillRect(-45, 25, 90, 30);
           ctx.strokeRect(-45, 25, 90, 30);
 
-          // Blinking LED status dots
           const time = Date.now() * 0.003;
           ctx.fillStyle = Math.sin(time) > 0 ? '#10b981' : '#059669';
-          ctx.beginPath();
-          ctx.arc(-25, 40, 3, 0, Math.PI * 2);
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(-25, 40, 3, 0, Math.PI * 2); ctx.fill();
 
           ctx.fillStyle = Math.sin(time + 1) > 0 ? '#06b6d4' : '#0284c7';
-          ctx.beginPath();
-          ctx.arc(0, 40, 3, 0, Math.PI * 2);
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(0, 40, 3, 0, Math.PI * 2); ctx.fill();
 
           ctx.fillStyle = Math.sin(time + 2) > 0 ? '#f59e0b' : '#d97706';
-          ctx.beginPath();
-          ctx.arc(25, 40, 3, 0, Math.PI * 2);
-          ctx.fill();
+          ctx.beginPath(); ctx.arc(25, 40, 3, 0, Math.PI * 2); ctx.fill();
 
           ctx.restore();
         }
 
-        // Live Audio Waveform Bars at bottom of canvas
         const barsCount = 64;
         const barWidth = w / barsCount;
         const speaking = synth && synth.speaking;
@@ -5788,12 +6877,9 @@
       renderFrame();
     }
 
-    /* ==========================================================================
-       13. KEYBOARD SHORTCUTS & HELP MODAL
-       ========================================================================== */
+    /* Keyboard Shortcuts */
     function setupKeyboardShortcuts() {
       window.addEventListener('keydown', (e) => {
-        // Ignore shortcuts if typing in input or textarea
         if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) {
           if (e.ctrlKey && e.code === 'Space') {
             e.preventDefault();
@@ -5841,7 +6927,7 @@
       }
     }
 
-    /* Toast Notification System */
+    /* Toast */
     function showToast(message) {
       const container = document.getElementById('toastContainer');
       const toast = document.createElement('div');
