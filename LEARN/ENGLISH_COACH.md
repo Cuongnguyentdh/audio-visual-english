@@ -31,7 +31,7 @@ Ví dụ:
 - Cho học viên điền từ hoặc tự tạo 2 - 3 câu dựa trên khung mẫu.
 
 ### Bước 3: Hội thoại 1 câu đối 1 câu (Turn-by-turn Role-play)
-- Gia sư hỏi 1 câu ngắn $\rightarrow$ Học viên trả lời 1 câu ngắn $\rightarrow$ Lặp lại 3 lượt.
+- Gia sư hỏi 1 câu ngắn -> Học viên trả lời 1 câu ngắn -> Lặp lại 3 lượt.
 
 ### Bước 4: Sửa lỗi chi tiết
 Bảng phản hồi cố định cho mỗi câu học viên viết/nói:

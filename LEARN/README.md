@@ -42,7 +42,7 @@ File HTML tra cứu và luyện phản xạ nội bộ trên máy tính cá nhâ
 Thay vì phụ thuộc vào trang web hay kết nối phức tạp bên ngoài, cách học hiệu quả và nhanh tiến bộ nhất là **đối thoại 1-1 trực tiếp với Gia sư AI** trong từng lượt hỏi - đáp ngắn:
 
 1. **Chọn chủ đề**: Mở [CONVERSATION_TOPICS.md](file:///d:/Workflow/Chi%20Cuong%20Antigravity/CHI%20CUONG%20WORKSPACE/LEARN/CONVERSATION_TOPICS.md) và chọn tình huống bạn muốn thực hành hôm nay.
-2. **Đối thoại từng câu (Turn-by-turn)**: AI hỏi 1 câu ngắn $\rightarrow$ bạn trả lời 1 câu ngắn.
+2. **Đối thoại từng câu (Turn-by-turn)**: AI hỏi 1 câu ngắn -> bạn trả lời 1 câu ngắn.
 3. **Sửa lỗi tức thì**: AI chỉ ra điểm sai ngữ pháp, cách dùng từ tự nhiên và cung cấp câu chuẩn để bạn ghi nhớ ngay.
 
 ---
