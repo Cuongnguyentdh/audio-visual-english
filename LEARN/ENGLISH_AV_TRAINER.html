@@ -1482,6 +1482,111 @@
       background: rgba(255, 255, 255, 0.02);
     }
 
+    /* Sub-view: Parts of Speech (Từ loại & Cú pháp câu) */
+    .pos-concept-banner {
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(6, 182, 212, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .pos-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .pos-card {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      transition: var(--transition-fast);
+      position: relative;
+      overflow: hidden;
+    }
+    .pos-card:hover {
+      border-color: rgba(6, 182, 212, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+    .pos-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pos-tag {
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .pos-tag-noun { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4); }
+    .pos-tag-verb { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .pos-tag-adj  { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .pos-tag-adv  { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+    .pos-tag-prep { background: rgba(6, 182, 212, 0.2);  color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.4); }
+
+    .pos-token-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      background: rgba(255, 255, 255, 0.05);
+    }
+    .pos-token-btn:hover, .pos-token-btn.active {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .token-noun { color: #93c5fd; border-color: rgba(59, 130, 246, 0.5); background: rgba(59, 130, 246, 0.15); }
+    .token-verb { color: #6ee7b7; border-color: rgba(16, 185, 129, 0.5); background: rgba(16, 185, 129, 0.15); }
+    .token-adj  { color: #fde047; border-color: rgba(245, 158, 11, 0.5); background: rgba(245, 158, 11, 0.15); }
+    .token-adv  { color: #d8b4fe; border-color: rgba(168, 85, 247, 0.5); background: rgba(168, 85, 247, 0.15); }
+    .token-prep { color: #67e8f9; border-color: rgba(6, 182, 212, 0.5);  background: rgba(6, 182, 212, 0.15); }
+    .token-det  { color: #cbd5e1; border-color: rgba(148, 163, 184, 0.3); background: rgba(148, 163, 184, 0.1); }
+
+    .anatomy-box {
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+    .anatomy-tokens-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: var(--radius-md);
+      margin: 1rem 0;
+      align-items: center;
+    }
+    .anatomy-inspector-card {
+      background: rgba(30, 41, 59, 0.7);
+      border-left: 4px solid var(--accent-cyan);
+      border-radius: var(--radius-md);
+      padding: 1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      animation: toastIn 0.2s ease;
+    }
+
     /* View 4: Reflex Drills */
     #view-drills {
       flex-direction: column;
@@ -1966,6 +2071,7 @@
           <button class="grammar-sub-btn" onclick="switchGrammarView('view-core', this)">🎯 4 Thì Trọng Tâm (A1 - A2)</button>
           <button class="grammar-sub-btn" onclick="switchGrammarView('view-quiz', this)">🧠 Ôn Tập & Trắc Nghiệm Thì (Quiz)</button>
           <button class="grammar-sub-btn" onclick="switchGrammarView('view-transform', this)">🔄 Bộ Chuyển Đổi Thì Thực Chiến</button>
+          <button class="grammar-sub-btn" onclick="switchGrammarView('view-parts-of-speech', this)">🧩 Từ Loại & Cú Pháp Câu (Parts of Speech)</button>
           <button class="grammar-sub-btn" onclick="switchGrammarView('view-verbs', this)">⚡ Động Từ Hành Động (Action Verbs)</button>
           <button class="grammar-sub-btn" onclick="switchGrammarView('view-formulas', this)">📐 6 Khung Câu Thực Chiến</button>
         </div>
@@ -2257,6 +2363,227 @@
           <div style="display: flex; flex-direction: column; gap: 1rem;" id="grammarContainer">
             <!-- Injected by JS -->
           </div>
+        </div>
+
+        <!-- SUB-VIEW 7: 🧩 TỪ LOẠI & CÚ PHÁP CÂU (PARTS OF SPEECH & SYNTAX ARCHITECTURE) -->
+        <div class="grammar-view" id="view-parts-of-speech">
+          
+          <!-- Concept Banner -->
+          <div class="pos-concept-banner">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+              <h3 style="font-size: 1.2rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+                <span>🧩</span> Kiến Trúc Từ Loại & Vị Trí Cú Pháp Trong Câu
+              </h3>
+              <span class="badge-pill" style="background: rgba(6,182,212,0.2); border: 1px solid var(--accent-cyan); color: var(--accent-cyan); font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 700;">
+                MÔ HÌNH HỆ THỐNG AV
+              </span>
+            </div>
+            <p style="font-size: 13px; color: #cbd5e1; line-height: 1.5; margin: 0;">
+              Liên tưởng câu tiếng Anh như một <strong>Hệ Thống Audio-Visual</strong>: 
+              <span style="color: #60a5fa; font-weight: 700;">Danh từ (Noun)</span> là Thiết bị phần cứng; 
+              <span style="color: #34d399; font-weight: 700;">Động từ (Verb)</span> là Nguồn điện tạo hành động; 
+              <span style="color: #fbbf24; font-weight: 700;">Tính từ (Adjective)</span> là Bảng thông số kỹ thuật & Đèn báo trạng thái; 
+              <span style="color: #c084fc; font-weight: 700;">Trạng từ (Adverb)</span> là Fader âm lượng / Núm xoay EQ tinh chỉnh; và 
+              <span style="color: #22d3ee; font-weight: 700;">Giới từ (Preposition)</span> là Đầu giắc cắm & Tuyến đi dây không gian.
+            </p>
+          </div>
+
+          <!-- 5 Metaphor Cards -->
+          <div class="pos-cards-grid">
+            
+            <!-- Card 1: Noun -->
+            <div class="pos-card" style="border-top: 3px solid #3b82f6;">
+              <div class="pos-card-header">
+                <span style="font-size: 14px; font-weight: 800; color: #93c5fd;">1. DANH TỪ (NOUN)</span>
+                <span class="pos-tag pos-tag-noun">[ N ]</span>
+              </div>
+              <div style="font-size: 12px; font-weight: 700; color: #60a5fa;">🖥️ Phần Cứng & Đối Tượng (Hardware / Entity)</div>
+              <div style="font-size: 12px; color: #cbd5e1;"><strong>Hỏi:</strong> <em>Ai? Cái gì?</em> (Who? What?)</div>
+              <div style="background: rgba(0,0,0,0.3); padding: 8px 10px; border-radius: 6px; font-size: 11px; color: #94a3b8; line-height: 1.4;">
+                📌 <strong>Vị trí trong câu:</strong><br>
+                • Làm <strong>Chủ ngữ (S)</strong>: <code>[Noun] + Verb</code><br>
+                • Làm <strong>Tân ngữ (O)</strong>: <code>Verb + [Noun]</code><br>
+                • Đứng sau Giới từ: <code>Preposition + [Noun]</code>
+              </div>
+              <div style="font-size: 11px; color: #e2e8f0; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 6px;">
+                <strong>Ví dụ AV:</strong> "The <span style="color: #93c5fd; font-weight: 700;">technician</span> mounted the <span style="color: #93c5fd; font-weight: 700;">loudspeaker</span>." 
+                <button class="btn-item-action" onclick="speakText('The technician mounted the loudspeaker.')">🔊</button>
+              </div>
+            </div>
+
+            <!-- Card 2: Verb -->
+            <div class="pos-card" style="border-top: 3px solid #10b981;">
+              <div class="pos-card-header">
+                <span style="font-size: 14px; font-weight: 800; color: #6ee7b7;">2. ĐỘNG TỪ (VERB)</span>
+                <span class="pos-tag pos-tag-verb">[ V ]</span>
+              </div>
+              <div style="font-size: 12px; font-weight: 700; color: #34d399;">⚡ Nguồn Điện & Luồng Tín Hiệu (Power & Action)</div>
+              <div style="font-size: 12px; color: #cbd5e1;"><strong>Hỏi:</strong> <em>Làm gì? Trạng thái nào?</em> (Action / State)</div>
+              <div style="background: rgba(0,0,0,0.3); padding: 8px 10px; border-radius: 6px; font-size: 11px; color: #94a3b8; line-height: 1.4;">
+                📌 <strong>Vị trí trong câu:</strong><br>
+                • Đứng ngay sau Chủ ngữ: <code>S + [Verb]</code><br>
+                • Sau Modal Verbs: <code>must/will/can + [V-inf]</code><br>
+                • To-be nối tính từ: <code>S + [is/are] + Adj</code>
+              </div>
+              <div style="font-size: 11px; color: #e2e8f0; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 6px;">
+                <strong>Ví dụ AV:</strong> "We <span style="color: #6ee7b7; font-weight: 700;">terminate</span> and <span style="color: #6ee7b7; font-weight: 700;">test</span> the Dante link." 
+                <button class="btn-item-action" onclick="speakText('We terminate and test the Dante link.')">🔊</button>
+              </div>
+            </div>
+
+            <!-- Card 3: Adjective -->
+            <div class="pos-card" style="border-top: 3px solid #f59e0b;">
+              <div class="pos-card-header">
+                <span style="font-size: 14px; font-weight: 800; color: #fde047;">3. TÍNH TỪ (ADJECTIVE)</span>
+                <span class="pos-tag pos-tag-adj">[ ADJ ]</span>
+              </div>
+              <div style="font-size: 12px; font-weight: 700; color: #fbbf24;">📊 Bảng Thông Số & Đèn Trạng Thái (Specs / Condition)</div>
+              <div style="font-size: 12px; color: #cbd5e1;"><strong>Hỏi:</strong> <em>Như thế nào? Loại nào?</em> (What kind? Status?)</div>
+              <div style="background: rgba(0,0,0,0.3); padding: 8px 10px; border-radius: 6px; font-size: 11px; color: #94a3b8; line-height: 1.4;">
+                📌 <strong>Vị trí trong câu:</strong><br>
+                • Đứng TRƯỚC Danh từ: <code>[Adj] + Noun</code><br>
+                • Đứng SAU to-be / linking verb: <code>S + is/are + [Adj]</code><br>
+                • Miêu tả trạng thái thiết bị hoặc mặt bằng
+              </div>
+              <div style="font-size: 11px; color: #e2e8f0; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 6px;">
+                <strong>Ví dụ AV:</strong> "We need <span style="color: #fde047; font-weight: 700;">clean</span> power and an <span style="color: #fde047; font-weight: 700;">isolated</span> ground." 
+                <button class="btn-item-action" onclick="speakText('We need clean power and an isolated ground.')">🔊</button>
+              </div>
+            </div>
+
+            <!-- Card 4: Adverb -->
+            <div class="pos-card" style="border-top: 3px solid #a855f7;">
+              <div class="pos-card-header">
+                <span style="font-size: 14px; font-weight: 800; color: #d8b4fe;">4. TRẠNG TỪ (ADVERB)</span>
+                <span class="pos-tag pos-tag-adv">[ ADV ]</span>
+              </div>
+              <div style="font-size: 12px; font-weight: 700; color: #c084fc;">🎛️ Fader Âm Lượng & Núm EQ Tinh Chỉnh (Fine-Tuning)</div>
+              <div style="font-size: 12px; color: #cbd5e1;"><strong>Hỏi:</strong> <em>Như thế nào? Mức độ nào?</em> (How? Degree?)</div>
+              <div style="background: rgba(0,0,0,0.3); padding: 8px 10px; border-radius: 6px; font-size: 11px; color: #94a3b8; line-height: 1.4;">
+                📌 <strong>Vị trí trong câu:</strong><br>
+                • Bổ nghĩa Động từ: <code>Verb + [Adv]</code> (run smoothly)<br>
+                • Bổ nghĩa Tính từ: <code>[Adv] + Adj</code> (completely dust-free)<br>
+                • Bổ nghĩa cả câu: <code>[Adv], S + V</code> (Fortunately, ...)
+              </div>
+              <div style="font-size: 11px; color: #e2e8f0; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 6px;">
+                <strong>Ví dụ AV:</strong> "The camera <span style="color: #d8b4fe; font-weight: 700;">automatically</span> tracks speakers <span style="color: #d8b4fe; font-weight: 700;">accurately</span>." 
+                <button class="btn-item-action" onclick="speakText('The camera automatically tracks speakers accurately.')">🔊</button>
+              </div>
+            </div>
+
+            <!-- Card 5: Preposition -->
+            <div class="pos-card" style="border-top: 3px solid #06b6d4;">
+              <div class="pos-card-header">
+                <span style="font-size: 14px; font-weight: 800; color: #67e8f9;">5. GIỚI TỪ (PREPOSITION)</span>
+                <span class="pos-tag pos-tag-prep">[ PREP ]</span>
+              </div>
+              <div style="font-size: 12px; font-weight: 700; color: #22d3ee;">🔌 Giắc Cắm & Tuyến Đi Dây Không Gian (Pinout / Routing)</div>
+              <div style="font-size: 12px; color: #cbd5e1;"><strong>Hỏi:</strong> <em>Ở đâu? Khi nào?</em> (Where? When? Destination?)</div>
+              <div style="background: rgba(0,0,0,0.3); padding: 8px 10px; border-radius: 6px; font-size: 11px; color: #94a3b8; line-height: 1.4;">
+                📌 <strong>Vị trí trong câu:</strong><br>
+                • Đứng TRƯỚC Danh từ: <code>[Prep] + Noun Phrase</code><br>
+                • Chỉ vị trí: <em>inside, under, on, above, between</em><br>
+                • Chỉ thời gian: <em>before, after, by</em>
+              </div>
+              <div style="font-size: 11px; color: #e2e8f0; border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 6px;">
+                <strong>Ví dụ AV:</strong> "Route cables <span style="color: #67e8f9; font-weight: 700;">under</span> the floor <span style="color: #67e8f9; font-weight: 700;">to</span> the rack." 
+                <button class="btn-item-action" onclick="speakText('Route cables under the floor to the rack.')">🔊</button>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Interactive Sentence Anatomy Visualizer -->
+          <div class="anatomy-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 0.75rem;">
+              <div>
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 6px;">
+                  <span>🔍</span> Bộ Phân Tích Giải Phẫu Cú Pháp Câu (Sentence Anatomy Visualizer)
+                </h4>
+                <p style="font-size: 12px; color: var(--text-dim);">Chọn một câu thực tế dưới đây và nhấp vào từng khối từ để xem vị trí cú pháp và giải thích chi tiết</p>
+              </div>
+              <div style="display: flex; gap: 6px;">
+                <select id="anatomySentenceSelect" class="voice-select" onchange="loadAnatomySentence(this.value)" style="min-width: 280px; font-weight: 600;">
+                  <!-- Injected by JS -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Legend Bar -->
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; padding: 8px 12px; background: rgba(0,0,0,0.25); border-radius: 8px; font-size: 11px; align-items: center;">
+              <span style="color: var(--text-dim); font-weight: 700;">Bảng Màu:</span>
+              <span class="pos-tag pos-tag-noun">Danh Từ (Noun)</span>
+              <span class="pos-tag pos-tag-verb">Động Từ (Verb)</span>
+              <span class="pos-tag pos-tag-adj">Tính Từ (Adj)</span>
+              <span class="pos-tag pos-tag-adv">Trạng Từ (Adv)</span>
+              <span class="pos-tag pos-tag-prep">Giới Từ (Prep)</span>
+              <span style="color: #94a3b8; margin-left: auto;">Nhấp vào từ để mổ xẻ vai trò ⬇️</span>
+            </div>
+
+            <!-- Clickable Word Tokens -->
+            <div class="anatomy-tokens-row" id="anatomyTokensContainer">
+              <!-- Injected by JS -->
+            </div>
+
+            <!-- Vietnamese translation & Audio -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.8rem; background: rgba(0,0,0,0.2); padding: 8px 12px; border-radius: 6px;">
+              <span id="anatomyVnText" style="font-size: 13px; color: #e2e8f0; font-weight: 600;">🇻🇳 Bản dịch tiếng Việt...</span>
+              <button class="btn-action-secondary" id="anatomySpeakBtn" style="padding: 4px 10px; font-size: 12px;">🔊 Nghe câu mẫu</button>
+            </div>
+
+            <!-- Inspector Details Panel -->
+            <div class="anatomy-inspector-card" id="anatomyInspector">
+              <!-- Details injected by JS -->
+            </div>
+          </div>
+
+          <!-- AV Word Families (Biến đổi họ từ vựng) -->
+          <div class="card-practice" style="margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 0.5rem;">
+              <div>
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: #fff;">🔄 Bảng Chuyển Đổi Họ Từ Vựng AV (Word Families Transformation)</h4>
+                <p style="font-size: 12px; color: var(--text-dim);">Làm chủ 1 gốc từ để suy ra cả 4 từ loại, giúp câu nói biến hóa linh hoạt giữa giao tiếp và viết báo cáo kỹ thuật</p>
+              </div>
+            </div>
+
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Gốc Từ</th>
+                  <th>🟢 Động Từ (V)</th>
+                  <th>🔵 Danh Từ (N)</th>
+                  <th>🟡 Tính Từ (Adj)</th>
+                  <th>🟣 Trạng Từ (Adv)</th>
+                  <th>Ứng Dụng Thực Tế Trong Dự Án AV</th>
+                </tr>
+              </thead>
+              <tbody id="posWordFamilyBody">
+                <!-- Injected by JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Rapid POS Identifier Quiz -->
+          <div class="card-practice">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; margin-bottom: 0.5rem;">
+              <div>
+                <h4 style="font-size: 1.1rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 6px;">
+                  <span>🎯</span> Trắc Nghiệm Nhận Diện Từ Loại Tức Thì (Parts of Speech Quiz)
+                </h4>
+                <p style="font-size: 12px; color: var(--text-dim);">Kiểm tra phản xạ nhận diện từ loại và vai trò cú pháp trong các câu giao tiếp công trường và đời sống</p>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span id="posQuizScoreBadge" style="font-size: 12px; font-weight: 700; color: #34d399; background: rgba(16,185,129,0.15); padding: 4px 10px; border-radius: 12px; border: 1px solid rgba(16,185,129,0.3);">
+                  Điểm: 0 / 8
+                </span>
+              </div>
+            </div>
+
+            <div id="posQuizCard" style="background: rgba(0,0,0,0.3); padding: 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); display: flex; flex-direction: column; gap: 1rem;">
+              <!-- Injected by JS -->
+            </div>
+          </div>
+
         </div>
 
       </section>
@@ -5440,6 +5767,7 @@
       renderTenseTransformers();
       initQuiz();
       renderDrillItem();
+      initPartsOfSpeechView();
     });
 
     /* Speech Synthesis Voices */
@@ -6463,6 +6791,7 @@
       const target = document.getElementById(subViewId);
       if (target) target.classList.add('active');
       if (btnEl) btnEl.classList.add('active');
+      if (subViewId === 'view-parts-of-speech') initPartsOfSpeechView();
       playSound('click');
     }
 
@@ -7017,6 +7346,465 @@
       const list = getFilteredDrillList();
       currentDrillIdx = (currentDrillIdx - 1 + list.length) % list.length;
       renderDrillItem();
+      playSound('click');
+    }
+
+    /* ==========================================================================
+       9.5. PARTS OF SPEECH & SENTENCE ANATOMY ENGINE
+       ========================================================================== */
+    const SENTENCE_ANATOMY_DATA = [
+      {
+        id: "daily_01",
+        title: "GIAO TIẾP: Rủ đồng nghiệp đi ăn trưa (Daily Life)",
+        sentence: "My friendly colleague quickly booked a popular restaurant for lunch.",
+        vn: "Người đồng nghiệp thân thiện của tôi đã nhanh chóng đặt một nhà hàng nổi tiếng cho bữa trưa.",
+        tokens: [
+          { text: "My", pos: "det", posName: "Từ hạn định (Determiner / Possessive)", role: "Bổ ngữ sở hữu cho 'colleague'", tip: "Đứng trước danh từ để chỉ quyền sở hữu (của tôi)." },
+          { text: "friendly", pos: "adj", posName: "Tính từ (Adjective)", role: "Bổ nghĩa cho 'colleague'", tip: "Đứng TRƯỚC danh từ để miêu tả phẩm chất (thân thiện)." },
+          { text: "colleague", pos: "noun", posName: "Danh từ (Noun)", role: "Chủ ngữ chính (Subject)", tip: "Là đối tượng con người thực hiện hành động chính của câu." },
+          { text: "quickly", pos: "adv", posName: "Trạng từ (Adverb)", role: "Bổ nghĩa cho động từ 'booked'", tip: "Chỉ cách thức hành động diễn ra (nhanh chóng), thường kết thúc bằng đuôi -ly." },
+          { text: "booked", pos: "verb", posName: "Động từ quá khứ (Past Verb)", role: "Vị ngữ chính (Main Predicate)", tip: "Trái tim của câu: thể hiện hành động đã hoàn thành trong quá khứ." },
+          { text: "a", pos: "det", posName: "Mạo từ (Article)", role: "Từ hạn định danh từ", tip: "Đứng trước danh từ đếm được số ít (một nhà hàng)." },
+          { text: "popular", pos: "adj", posName: "Tính từ (Adjective)", role: "Bổ nghĩa cho 'restaurant'", tip: "Đứng TRƯỚC danh từ để miêu tả đặc điểm (được ưa chuộng, nổi tiếng)." },
+          { text: "restaurant", pos: "noun", posName: "Danh từ (Noun)", role: "Tân ngữ trực tiếp (Direct Object)", tip: "Là đối tượng tiếp nhận hành động đặt chỗ của chủ ngữ." },
+          { text: "for", pos: "prep", posName: "Giới từ (Preposition)", role: "Giới từ chỉ mục đích", tip: "Đứng trước danh từ 'lunch' tạo thành cụm giới từ chỉ mục đích (cho bữa trưa)." },
+          { text: "lunch", pos: "noun", posName: "Danh từ (Noun)", role: "Bổ ngữ cho giới từ (Prepositional Object)", tip: "Danh từ chỉ bữa ăn trong ngày." }
+        ]
+      },
+      {
+        id: "av_01",
+        title: "KỸ THUẬT AV: Thi công nẹp sàn bán nguyệt bàn họp",
+        sentence: "The site engineer carefully installed heavy-duty floor trunking across the walkway.",
+        vn: "Kỹ sư công trường đã cẩn thận lắp đặt nẹp sàn chịu lực băng qua lối đi bộ.",
+        tokens: [
+          { text: "The", pos: "det", posName: "Mạo từ xác định (Definite Article)", role: "Xác định danh từ 'site engineer'", tip: "Chỉ người kỹ sư cụ thể mà người nói và người nghe đều biết." },
+          { text: "site", pos: "noun", posName: "Danh từ làm định ngữ (Noun Adjunct)", role: "Bổ nghĩa cho 'engineer'", tip: "Danh từ đứng trước danh từ khác để làm rõ chuyên môn (kỹ sư công trường)." },
+          { text: "engineer", pos: "noun", posName: "Danh từ chính (Main Noun)", role: "Chủ ngữ (Subject)", tip: "Đối tượng con người thực hiện thao tác lắp đặt." },
+          { text: "carefully", pos: "adv", posName: "Trạng từ chỉ cách thức (Adverb of Manner)", role: "Bổ nghĩa cho 'installed'", tip: "Diễn tả thao tác cẩn thận, an toàn trên công trường." },
+          { text: "installed", pos: "verb", posName: "Động từ hành động (Action Verb)", role: "Vị ngữ chính (Main Predicate)", tip: "Hành động thi công lắp đặt phần cứng AV." },
+          { text: "heavy-duty", pos: "adj", posName: "Tính từ ghép (Compound Adjective)", role: "Bổ nghĩa cho 'trunking'", tip: "Đứng TRƯỚC danh từ để chỉ phẩm chất kỹ thuật chịu lực cao, chống va đập." },
+          { text: "floor", pos: "noun", posName: "Danh từ làm định ngữ (Noun Adjunct)", role: "Bổ nghĩa cho 'trunking'", tip: "Xác định loại nẹp (nẹp dùng dưới sàn nhà)." },
+          { text: "trunking", pos: "noun", posName: "Danh từ kỹ thuật (Technical Noun)", role: "Tân ngữ trực tiếp (Direct Object)", tip: "Vật tư thiết bị chịu tác động lắp đặt (máng/nẹp luồn cáp)." },
+          { text: "across", pos: "prep", posName: "Giới từ không gian (Preposition of Place)", role: "Chỉ hướng đi dây", tip: "Chỉ hướng băng ngang qua một khu vực." },
+          { text: "the", pos: "det", posName: "Mạo từ xác định (Article)", role: "Xác định danh từ 'walkway'", tip: "Đứng trước danh từ chỉ lối đi cụ thể." },
+          { text: "walkway", pos: "noun", posName: "Danh từ (Noun)", role: "Bổ ngữ cho giới từ", tip: "Địa điểm không gian nơi cáp đi qua." }
+        ]
+      },
+      {
+        id: "av_02",
+        title: "KỸ THUẬT AV: Cấu hình Switch mạng Dante & Q-SYS",
+        sentence: "We must configure dedicated VLANs to prevent excessive multicast flooding.",
+        vn: "Chúng ta phải cấu hình các VLAN riêng biệt để ngăn chặn hiện tượng tràn gói tin multicast quá mức.",
+        tokens: [
+          { text: "We", pos: "noun", posName: "Đại từ nhân xưng (Subject Pronoun)", role: "Chủ ngữ (Subject)", tip: "Đại từ đóng vai trò như danh từ chỉ nhóm kỹ sư chúng tôi." },
+          { text: "must", pos: "verb", posName: "Động từ khuyết thiếu (Modal Verb)", role: "Trợ động từ chỉ sự bắt buộc", tip: "Đi kèm động từ nguyên thể để diễn đạt yêu cầu kỹ thuật bắt buộc." },
+          { text: "configure", pos: "verb", posName: "Động từ hành động (Action Verb)", role: "Động từ chính (Main Verb)", tip: "Thao tác cài đặt, cấu hình thông số thiết bị mạng." },
+          { text: "dedicated", pos: "adj", posName: "Tính từ (Adjective)", role: "Bổ nghĩa cho danh từ 'VLANs'", tip: "Miêu tả tính chất đường truyền riêng biệt, độc lập cho AV." },
+          { text: "VLANs", pos: "noun", posName: "Danh từ kỹ thuật số nhiều (Noun)", role: "Tân ngữ trực tiếp (Direct Object)", tip: "Mạng LAN ảo (Virtual Local Area Networks)." },
+          { text: "to", pos: "prep", posName: "Tiểu từ chỉ mục đích (Infinitive Marker)", role: "Nối mệnh đề mục đích", tip: "Dẫn xuất mục đích của hành động cấu hình." },
+          { text: "prevent", pos: "verb", posName: "Động từ (Verb)", role: "Động từ chỉ mục đích (Verb of Purpose)", tip: "Hành động phòng ngừa sự cố mạng." },
+          { text: "excessive", pos: "adj", posName: "Tính từ (Adjective)", role: "Bổ nghĩa cho 'flooding'", tip: "Chỉ mức độ quá tải, vượt quá ngưỡng chịu đựng của Switch." },
+          { text: "multicast", pos: "noun", posName: "Danh từ kỹ thuật (Technical Noun)", role: "Định ngữ cho 'flooding'", tip: "Luồng truyền thông đa hướng trong Dante/AES67." },
+          { text: "flooding", pos: "noun", posName: "Danh từ (Gerund/Noun)", role: "Tân ngữ của 'prevent'", tip: "Hiện tượng nghẽn mạng do tràn gói tin." }
+        ]
+      },
+      {
+        id: "daily_02",
+        title: "GIAO TIẾP: Xin lỗi và xin dời lịch họp nghiệm thu",
+        sentence: "Unfortunately, the client was extremely busy with an urgent meeting yesterday.",
+        vn: "Thật không may, khách hàng đã cực kỳ bận rộn với một cuộc họp khẩn cấp ngày hôm qua.",
+        tokens: [
+          { text: "Unfortunately", pos: "adv", posName: "Trạng từ liên kết (Sentence Adverb)", role: "Bổ nghĩa cho cả câu", tip: "Đứng đầu câu có dấu phẩy để thể hiện cảm xúc tiếc nuối / không may." },
+          { text: "the", pos: "det", posName: "Mạo từ (Article)", role: "Xác định danh từ 'client'", tip: "Chỉ vị khách hàng cụ thể của dự án." },
+          { text: "client", pos: "noun", posName: "Danh từ (Noun)", role: "Chủ ngữ (Subject)", tip: "Đối tượng Chủ đầu tư / Khách hàng." },
+          { text: "was", pos: "verb", posName: "Động từ To-be quá khứ (Linking Verb)", role: "Liên động từ (Linking Verb)", tip: "Nối chủ ngữ với tính từ miêu tả trạng thái trong quá khứ." },
+          { text: "extremely", pos: "adv", posName: "Trạng từ chỉ mức độ (Adverb of Degree)", role: "Bổ nghĩa cho tính từ 'busy'", tip: "Đứng TRƯỚC tính từ để tăng cường mức độ (cực kỳ bận)." },
+          { text: "busy", pos: "adj", posName: "Tính từ (Adjective)", role: "Vị ngữ tính từ (Subject Complement)", tip: "Đứng sau to-be 'was' để miêu tả trạng thái bận rộn của khách hàng." },
+          { text: "with", pos: "prep", posName: "Giới từ (Preposition)", role: "Chỉ mối liên hệ", tip: "Đi kèm tính từ 'busy with' (bận rộn với việc gì)." },
+          { text: "an", pos: "det", posName: "Mạo từ (Article)", role: "Xác định danh từ số ít", tip: "Dùng 'an' vì từ tiếp theo 'urgent' bắt đầu bằng nguyên âm." },
+          { text: "urgent", pos: "adj", posName: "Tính từ (Adjective)", role: "Bổ nghĩa cho 'meeting'", tip: "Đứng TRƯỚC danh từ để chỉ tính chất khẩn cấp." },
+          { text: "meeting", pos: "noun", posName: "Danh từ (Noun)", role: "Bổ ngữ cho giới từ 'with'", tip: "Sự kiện cuộc họp." },
+          { text: "yesterday", pos: "adv", posName: "Trạng từ chỉ thời gian (Adverb of Time)", role: "Trạng ngữ thời gian", tip: "Đứng cuối câu để xác định thời điểm xảy ra sự việc." }
+        ]
+      }
+    ];
+
+    const POS_WORD_FAMILIES = [
+      {
+        root: "connect",
+        verb: "connect /kəˈnekt/",
+        noun: "connection /kəˈnekʃn/",
+        adj: "connected /kəˈnektɪd/",
+        adv: "connectively /kəˈnektɪvli/",
+        vn: "Kết nối / Đấu nối dây tín hiệu",
+        ex: "All microphones are connected to the central DSP processor."
+      },
+      {
+        root: "isolate",
+        verb: "isolate /ˈaɪsəleɪt/",
+        noun: "isolation /ˌaɪsəˈleɪʃn/",
+        adj: "isolated /ˈaɪsəleɪtɪd/",
+        adv: "isolatedly /ˌaɪsəˈleɪtɪdli/",
+        vn: "Cách ly / Tiếp địa chống ù mass",
+        ex: "An isolated ground eliminates ground loop interference."
+      },
+      {
+        root: "operate",
+        verb: "operate /ˈɒpəreɪt/",
+        noun: "operation /ˌɒpəˈreɪʃn/",
+        adj: "operational /ˌɒpəˈreɪʃənl/",
+        adv: "operationally /ˌɒpəˈreɪʃənəli/",
+        vn: "Vận hành / Hoạt động hệ thống",
+        ex: "The boardroom AV system is fully operational after testing."
+      },
+      {
+        root: "vary",
+        verb: "vary /ˈveəri/",
+        noun: "variation /ˌveəriˈeɪʃn/",
+        adj: "variable /ˈveəriəbl/",
+        adv: "variably /ˈveəriəbli/",
+        vn: "Biến đổi / Phát sinh khối lượng (VO)",
+        ex: "This extra trunking requires a formal variation order."
+      },
+      {
+        root: "configure",
+        verb: "configure /kənˈfɪɡər/",
+        noun: "configuration /kənˌfɪɡjəˈreɪʃn/",
+        adj: "configurable /kənˈfɪɡjərəbl/",
+        adv: "configurably /kənˈfɪɡjərəbli/",
+        vn: "Cấu hình / Thiết lập thông số mạng",
+        ex: "The network switch configuration is saved to backup."
+      },
+      {
+        root: "amplify",
+        verb: "amplify /ˈæmplɪfaɪ/",
+        noun: "amplifier / amplification",
+        adj: "amplified /ˈæmplɪfaɪd/",
+        adv: "amplifyingly",
+        vn: "Khuếch đại công suất âm thanh",
+        ex: "The 4-channel amplifier powers all ceiling speaker zones."
+      }
+    ];
+
+    const POS_QUIZ_DATA = [
+      {
+        q: "Trong câu: 'We need to install heavy-duty floor trunking here.', từ 'heavy-duty' đóng vai trò gì?",
+        options: [
+          "Noun (Danh từ làm chủ ngữ)",
+          "Verb (Động từ hành động)",
+          "Adjective (Tính từ bổ nghĩa cho danh từ)",
+          "Adverb (Trạng từ chỉ cách thức)"
+        ],
+        correct: 2,
+        explain: "'heavy-duty' (chịu lực cao) là Tính Từ (Adjective) đứng TRƯỚC cụm danh từ 'floor trunking' để miêu tả đặc tính kỹ thuật chịu tải của nẹp sàn."
+      },
+      {
+        q: "Trong câu: 'The camera automatically tracks the speaker.', từ 'automatically' giữ vai trò gì?",
+        options: [
+          "Adverb (Trạng từ bổ nghĩa cho động từ 'tracks')",
+          "Adjective (Tính từ bổ nghĩa cho danh từ 'camera')",
+          "Noun (Danh từ làm tân ngữ)",
+          "Preposition (Giới từ chỉ hướng)"
+        ],
+        correct: 0,
+        explain: "'automatically' (tự động) là Trạng Từ (Adverb) có đuôi -ly, đứng trước động từ chính 'tracks' để chỉ cách thức hoạt động của camera."
+      },
+      {
+        q: "Trong câu: 'Please route the audio cable inside the conduit.', từ 'inside' thuộc từ loại nào?",
+        options: [
+          "Adjective (Tính từ)",
+          "Preposition (Giới từ chỉ không gian)",
+          "Verb (Động từ nguyên thể)",
+          "Noun (Danh từ chỉ thiết bị)"
+        ],
+        correct: 1,
+        explain: "'inside' (bên trong) là Giới Từ (Preposition) đứng trước danh từ 'the conduit' để chỉ không gian định tuyến của dây cáp."
+      },
+      {
+        q: "Trong câu: 'The sound in this meeting room is crystal clear.', từ 'clear' đứng ở vị trí nào trong cấu trúc câu?",
+        options: [
+          "Đứng trước danh từ làm định ngữ",
+          "Đứng sau to-be 'is' làm vị ngữ tính từ (Subject Complement)",
+          "Làm tân ngữ trực tiếp của hành động",
+          "Làm trạng ngữ chỉ thời gian"
+        ],
+        correct: 1,
+        explain: "'clear' là Tính từ đứng sau động từ to-be 'is' để miêu tả phẩm chất âm thanh trong phòng họp (Cấu trúc: S + Linking Verb + Adj)."
+      },
+      {
+        q: "Trong câu: 'I will definitely join you for lunch today.', từ 'definitely' bổ nghĩa cho thành phần nào?",
+        options: [
+          "Bổ nghĩa cho danh từ 'lunch'",
+          "Bổ nghĩa cho đại từ 'you'",
+          "Bổ nghĩa cho động từ 'join' thể hiện sự chắc chắn",
+          "Bổ nghĩa cho trạng từ 'today'"
+        ],
+        correct: 2,
+        explain: "'definitely' (chắc chắn) là Trạng từ chỉ mức độ chắc chắn, đứng giữa trợ động từ 'will' và động từ chính 'join' để khẳng định cam kết."
+      },
+      {
+        q: "Trong câu: 'The site survey revealed a major clash between pipes and cables.', từ 'clash' là từ loại gì?",
+        options: [
+          "Động từ quá khứ",
+          "Danh từ làm tân ngữ trực tiếp của 'revealed'",
+          "Tính từ miêu tả sự cố",
+          "Giới từ nối hai thành phần"
+        ],
+        correct: 1,
+        explain: "'clash' (sự xung đột / giao cắt không gian) là Danh Từ đứng sau tính từ 'major' và làm tân ngữ cho động từ 'revealed'."
+      },
+      {
+        q: "Trong câu: 'Could MEP provide an isolated technical ground?', từ 'ground' đóng vai trò gì?",
+        options: [
+          "Động từ hành động nghĩa là tiếp đất",
+          "Danh từ kỹ thuật nghĩa là điểm tiếp địa / mass",
+          "Tính từ miêu tả nguồn điện",
+          "Trạng từ chỉ nơi chốn"
+        ],
+        correct: 1,
+        explain: "'ground' ở đây là Danh từ kỹ thuật (điểm tiếp địa/dây mass), đứng sau các tính từ bổ nghĩa 'isolated technical'."
+      },
+      {
+        q: "Trong câu: 'The fit-out team must finish plastering before we start.', từ 'plastering' là gì?",
+        options: [
+          "Tính từ chỉ thời gian",
+          "Danh từ danh động từ (Gerund) làm tân ngữ của 'finish'",
+          "Động từ thì hiện tại tiếp diễn",
+          "Giới từ liên kết"
+        ],
+        correct: 1,
+        explain: "'plastering' (công tác trát tường) là Danh động từ (Gerund đóng vai trò danh từ), làm tân ngữ trực tiếp sau động từ 'finish'."
+      }
+    ];
+
+    let currentAnatomyIdx = 0;
+    let currentPosQuizIdx = 0;
+    let posQuizScore = 0;
+    let posQuizAnswered = false;
+
+    function initPartsOfSpeechView() {
+      // 1. Populate Sentence Selector
+      const sel = document.getElementById('anatomySentenceSelect');
+      if (sel) {
+        sel.innerHTML = '';
+        SENTENCE_ANATOMY_DATA.forEach((s, idx) => {
+          const opt = document.createElement('option');
+          opt.value = idx;
+          opt.textContent = s.title;
+          sel.appendChild(opt);
+        });
+      }
+      loadAnatomySentence(0);
+
+      // 2. Render Word Families Table
+      renderWordFamiliesTable();
+
+      // 3. Render Quiz
+      renderPosQuiz();
+    }
+
+    function loadAnatomySentence(idx) {
+      currentAnatomyIdx = parseInt(idx, 10) || 0;
+      const data = SENTENCE_ANATOMY_DATA[currentAnatomyIdx];
+      if (!data) return;
+
+      const container = document.getElementById('anatomyTokensContainer');
+      const vnText = document.getElementById('anatomyVnText');
+      const speakBtn = document.getElementById('anatomySpeakBtn');
+
+      if (vnText) vnText.textContent = '🇻🇳 ' + data.vn;
+      if (speakBtn) {
+        speakBtn.onclick = () => speakText(data.sentence);
+      }
+
+      if (container) {
+        container.innerHTML = '';
+        data.tokens.forEach((t, i) => {
+          const btn = document.createElement('button');
+          btn.className = 'pos-token-btn token-' + t.pos;
+          btn.innerHTML = `<span>${t.text}</span> <span class="pos-tag pos-tag-${t.pos}" style="font-size: 9px; padding: 1px 4px;">${t.pos.toUpperCase()}</span>`;
+          btn.onclick = () => inspectAnatomyToken(i);
+          container.appendChild(btn);
+        });
+      }
+
+      // Automatically inspect the first token
+      inspectAnatomyToken(0);
+    }
+
+    function inspectAnatomyToken(tokenIdx) {
+      const data = SENTENCE_ANATOMY_DATA[currentAnatomyIdx];
+      if (!data || !data.tokens[tokenIdx]) return;
+      const t = data.tokens[tokenIdx];
+
+      // Highlight active token button
+      const buttons = document.querySelectorAll('#anatomyTokensContainer .pos-token-btn');
+      buttons.forEach((b, i) => b.classList.toggle('active', i === tokenIdx));
+
+      const inspector = document.getElementById('anatomyInspector');
+      if (!inspector) return;
+
+      inspector.style.borderLeftColor = getPosColor(t.pos);
+      inspector.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 6px;">
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <span style="font-size: 18px; font-weight: 800; color: #fff;">"${t.text}"</span>
+            <button class="btn-item-action" onclick="speakText('${t.text}')" title="Phát âm từ">🔊</button>
+            <span class="pos-tag pos-tag-${t.pos}">${t.posName}</span>
+          </div>
+          <span style="font-size: 12px; color: var(--text-dim);">Từ thứ ${tokenIdx + 1} trong câu</span>
+        </div>
+
+        <div style="font-size: 13px; color: #38bdf8; font-weight: 700; margin-top: 4px;">
+          🎯 Vai trò trong câu: ${t.role}
+        </div>
+
+        <div style="font-size: 12px; color: #cbd5e1; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px; margin-top: 4px; line-height: 1.5;">
+          💡 <strong>Quy tắc nhận diện & Mẹo nhớ:</strong> ${t.tip}
+        </div>
+      `;
+    }
+
+    function getPosColor(pos) {
+      switch(pos) {
+        case 'noun': return '#3b82f6';
+        case 'verb': return '#10b981';
+        case 'adj':  return '#f59e0b';
+        case 'adv':  return '#a855f7';
+        case 'prep': return '#06b6d4';
+        default:     return '#94a3b8';
+      }
+    }
+
+    function renderWordFamiliesTable() {
+      const tbody = document.getElementById('posWordFamilyBody');
+      if (!tbody) return;
+      tbody.innerHTML = '';
+
+      POS_WORD_FAMILIES.forEach(w => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong style="color: #fff;">${w.root}</strong><div style="font-size: 11px; color: var(--text-dim);">${w.vn}</div></td>
+          <td><span style="color: #6ee7b7; font-weight: 700;">${w.verb}</span></td>
+          <td><span style="color: #93c5fd; font-weight: 700;">${w.noun}</span></td>
+          <td><span style="color: #fde047; font-weight: 700;">${w.adj}</span></td>
+          <td><span style="color: #d8b4fe; font-weight: 700;">${w.adv}</span></td>
+          <td>
+            <div style="font-size: 12px; color: #e2e8f0; font-style: italic;">"${w.ex}"</div>
+            <button class="btn-item-action" onclick="speakText('${w.ex.replace(/'/g, "\\'")}')" style="margin-top: 4px;">🔊 Nghe ví dụ</button>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderPosQuiz() {
+      const card = document.getElementById('posQuizCard');
+      if (!card) return;
+
+      if (currentPosQuizIdx >= POS_QUIZ_DATA.length) {
+        card.innerHTML = `
+          <div style="text-align: center; padding: 2rem 1rem;">
+            <div style="font-size: 40px; margin-bottom: 0.5rem;">🎉</div>
+            <h4 style="font-size: 1.2rem; font-weight: 800; color: #34d399;">XUẤT SẮC! BẠN ĐÃ HOÀN THÀNH BÀI ÔN TẬP TỪ LOẠI!</h4>
+            <p style="font-size: 13px; color: #cbd5e1; margin-top: 6px;">Tổng điểm đạt được: <strong>${posQuizScore} / ${POS_QUIZ_DATA.length}</strong> câu chính xác.</p>
+            <button class="btn-action-primary" onclick="restartPosQuiz()" style="margin-top: 1rem; padding: 8px 20px;">🔄 Làm Lại Từ Đầu</button>
+          </div>
+        `;
+        return;
+      }
+
+      const q = POS_QUIZ_DATA[currentPosQuizIdx];
+      posQuizAnswered = false;
+
+      card.innerHTML = `
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+          <span style="font-size: 12px; font-weight: 800; color: var(--accent-cyan);">Câu Hỏi ${currentPosQuizIdx + 1} / ${POS_QUIZ_DATA.length}</span>
+          <span style="font-size: 11px; color: var(--text-dim);">Chọn 1 đáp án chính xác</span>
+        </div>
+
+        <div style="font-size: 15px; font-weight: 700; color: #fff; line-height: 1.5; margin: 4px 0;">
+          ${q.q}
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 8px;">
+          ${q.options.map((opt, i) => `
+            <button class="quiz-opt-btn" id="posOpt_${i}" onclick="answerPosQuiz(${i})" style="text-align: left; padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1px solid var(--border-subtle); background: rgba(255,255,255,0.04); color: #fff; transition: var(--transition-fast);">
+              ${String.fromCharCode(65 + i)}. ${opt}
+            </button>
+          `).join('')}
+        </div>
+
+        <div id="posQuizFeedback" style="display: none; padding: 10px 14px; border-radius: 8px; font-size: 13px; line-height: 1.5;"></div>
+
+        <div id="posQuizNextRow" style="display: none; justify-content: flex-end; margin-top: 6px;">
+          <button class="btn-action-primary" onclick="nextPosQuizItem()" style="padding: 8px 18px;">
+            <span>Câu Tiếp Theo ⏭</span>
+          </button>
+        </div>
+      `;
+    }
+
+    function answerPosQuiz(chosenIdx) {
+      if (posQuizAnswered) return;
+      posQuizAnswered = true;
+
+      const q = POS_QUIZ_DATA[currentPosQuizIdx];
+      const feedback = document.getElementById('posQuizFeedback');
+      const nextRow = document.getElementById('posQuizNextRow');
+      const scoreBadge = document.getElementById('posQuizScoreBadge');
+
+      const isCorrect = (chosenIdx === q.correct);
+      if (isCorrect) {
+        posQuizScore++;
+        playSound('success');
+        if (scoreBadge) scoreBadge.textContent = `Điểm: ${posQuizScore} / ${POS_QUIZ_DATA.length}`;
+      } else {
+        playSound('error');
+      }
+
+      // Highlight buttons
+      q.options.forEach((_, i) => {
+        const btn = document.getElementById('posOpt_' + i);
+        if (!btn) return;
+        btn.style.pointerEvents = 'none';
+        if (i === q.correct) {
+          btn.style.background = 'rgba(16, 185, 129, 0.25)';
+          btn.style.borderColor = '#10b981';
+          btn.style.color = '#34d399';
+        } else if (i === chosenIdx && !isCorrect) {
+          btn.style.background = 'rgba(239, 68, 68, 0.25)';
+          btn.style.borderColor = '#ef4444';
+          btn.style.color = '#f87171';
+        }
+      });
+
+      if (feedback) {
+        feedback.style.display = 'block';
+        feedback.style.background = isCorrect ? 'rgba(16, 185, 129, 0.12)' : 'rgba(239, 68, 68, 0.12)';
+        feedback.style.border = isCorrect ? '1px solid rgba(16, 185, 129, 0.4)' : '1px solid rgba(239, 68, 68, 0.4)';
+        feedback.style.color = isCorrect ? '#34d399' : '#f87171';
+        feedback.innerHTML = `
+          <strong>${isCorrect ? '✓ CHÍNH XÁC!' : '✗ CHƯA ĐÚNG!'}</strong><br>
+          <span style="color: #cbd5e1;">${q.explain}</span>
+        `;
+      }
+
+      if (nextRow) nextRow.style.display = 'flex';
+    }
+
+    function nextPosQuizItem() {
+      currentPosQuizIdx++;
+      renderPosQuiz();
+      playSound('click');
+    }
+
+    function restartPosQuiz() {
+      currentPosQuizIdx = 0;
+      posQuizScore = 0;
+      const scoreBadge = document.getElementById('posQuizScoreBadge');
+      if (scoreBadge) scoreBadge.textContent = `Điểm: 0 / ${POS_QUIZ_DATA.length}`;
+      renderPosQuiz();
       playSound('click');
     }
 

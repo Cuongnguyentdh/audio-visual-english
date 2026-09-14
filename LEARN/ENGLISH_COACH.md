@@ -54,7 +54,111 @@ graph LR
 
 ---
 
+# PHẦN 2.2: KIẾN TRÚC TỪ LOẠI & VỊ TRÍ CÚ PHÁP TRONG CÂU (PARTS OF SPEECH & SYNTAX ARCHITECTURE)
+
+## 💡 1. Mô Hình Liên Tưởng "Hệ Thống AV" Cho 5 Từ Loại Cốt Lõi
+
+Thay vì học ngữ pháp một cách khô khan, hãy liên tưởng một câu tiếng Anh hoàn chỉnh giống như một **Hệ Thống Tích Hợp Audio-Visual**:
+
+```
++---------------------------------------------------------------------------------------------------+
+|                                     HỆ THỐNG CÂU TIẾNG ANH                                       |
++---------------------------------------------------------------------------------------------------+
+|  🔵 DANH TỪ (Noun - N)      | 🖥️ THIẾT BỊ PHẦN CỨNG (Loa, DSP, Switch, Kỹ sư, Khách hàng, Ngân sách) |
+|  🟢 ĐỘNG TỪ (Verb - V)      | ⚡ NGUỒN ĐIỆN & TÍN HIỆU (Kéo cáp, đo đạc, cấu hình, vận hành, kiểm tra) |
+|  🟡 TÍNH TỪ (Adjective - Adj)| 📊 BẢNG THÔNG SỐ & ĐÈN BÁO (Sạch, cách ly, chịu lực, méo tiếng, 4K, bận)   |
+|  🟣 TRẠNG TỪ (Adverb - Adv) | 🎛️ FADER ÂM LƯỢNG & NÚM EQ (Nhanh, cẩn thận, tự động, hoàn toàn, cực kỳ) |
+|  ⚪ GIỚI TỪ (Preposition - Prep)| 🔌 ĐẦU GIẮC CẮM & TUYẾN ĐI DÂY (Bên trong, dưới sàn, trên trần, tới tủ rack) |
++---------------------------------------------------------------------------------------------------+
+```
+
+---
+
+## 📐 2. Bảng Ma Trận 5 Từ Loại: Bản Chất, Vị Trí Trong Câu & Ví Dụ Thực Chiến
+
+| Từ Loại & Ký Hiệu | Bản Chất & Liên Tưởng AV | Vị Trí Chuẩn Trong Cấu Trúc Câu | Ví Dụ Giao Tiếp Hằng Ngày | Ví Dụ Kỹ Thuật AV Công Trường |
+| :--- | :--- | :--- | :--- | :--- |
+| **🔵 DANH TỪ<br/>(Noun - N)** | **Phần cứng & Nhân sự**<br/>• Là người, vật, thiết bị, địa điểm hoặc khái niệm trừu tượng.<br/>• Trả lời câu hỏi: *Ai? Cái gì?* | 1. Đứng đầu câu làm **Chủ ngữ (S)**:<br/>`[Noun] + Verb`<br/>2. Đứng sau động từ làm **Tân ngữ (O)**:<br/>`Verb + [Noun]`<br/>3. Đứng sau giới từ:<br/>`Preposition + [Noun]` | *"**The manager** ordered **lunch** for **the team**."*<br/>*(Quản lý đã đặt bữa trưa cho cả đội)* | *"**The technician** measured **the SPL** at **the rack**."*<br/>*(Kỹ thuật viên đo mức áp suất âm tại tủ rack)* |
+| **🟢 ĐỘNG TỪ<br/>(Verb - V)** | **Nguồn điện & Luồng tín hiệu**<br/>• Tạo ra hành động hoặc biểu thị trạng thái tồn tại.<br/>• Thiếu động từ, câu chết như hệ thống AV mất nguồn! | 1. Đứng ngay sau Chủ ngữ:<br/>`[Subject] + [Main Verb]`<br/>2. Đứng sau Modal Verbs:<br/>`can / must / will + [V-inf]`<br/>3. Nối Chủ ngữ với Tính từ:<br/>`S + [is / are / look] + Adj` | *"I **will call** you when I **arrive** at the café."*<br/>*(Tôi sẽ gọi bạn khi tôi đến quán cà phê)* | *"We **must terminate** the cable and **verify** the Dante clock."*<br/>*(Chúng ta phải bấm đầu cáp và kiểm tra xung đồng hồ Dante)* |
+| **🟡 TÍNH TỪ<br/>(Adjective - Adj)** | **Bảng thông số & Đèn trạng thái**<br/>• Miêu tả đặc tính, kích thước, phẩm chất hoặc tình trạng của Danh từ.<br/>• Trả lời câu hỏi: *Như thế nào? Loại nào?* | 1. Đứng **TRƯỚC** Danh từ để bổ nghĩa:<br/>`[Adj] + [Noun]`<br/>2. Đứng **SAU** Linking Verbs (to-be, sound, look):<br/>`S + [be / sound] + [Adj]` | *"Today is a **busy** day, but the coffee is **delicious**."*<br/>*(Hôm nay là ngày bận rộn nhưng cà phê rất ngon)* | *"We need **clean** power and an **isolated** ground."*<br/>*(Chúng tôi cần nguồn điện sạch và tiếp địa cách ly)* |
+| **🟣 TRẠNG TỪ<br/>(Adverb - Adv)** | **Fader âm lượng & Núm xoay EQ**<br/>• Tinh chỉnh mức độ, tần suất, cách thức hoặc thời gian.<br/>• Trả lời: *Làm thế nào? Mức độ nào? Khi nào?* | 1. Bổ nghĩa Động từ (đứng sau V hoặc cuối câu):<br/>`[Verb] + [Adv]`<br/>2. Bổ nghĩa Tính từ (đứng trước Adj):<br/>`[Adv] + [Adj]`<br/>3. Bổ nghĩa cả câu (đứng đầu câu):<br/>`[Adv], [Sentence]` | *"Could you speak **slowly**? I am **extremely** tired today."*<br/>*(Bạn nói chậm được không? Tôi đang cực kỳ mệt mỏi hôm nay)* | *"The system **automatically** switches shots **smoothly**."*<br/>*(Hệ thống tự động chuyển góc quay một cách mượt mà)* |
+| **⚪ GIỚI TỪ<br/>(Preposition - Prep)** | **Đầu giắc cắm & Tuyến đi cáp**<br/>• Kết nối danh từ với phần còn lại của câu theo không gian hoặc thời gian.<br/>• Trả lời: *Ở đâu? Khi nào? Hướng nào?* | • Luôn đứng **TRƯỚC** Danh từ hoặc Cụm danh từ:<br/>`[Prep] + [Noun Phrase]`<br/>*(inside, under, across, between, before, after)* | *"Let's meet **at** the lobby **before** noon."*<br/>*(Hãy gặp nhau ở sảnh trước buổi trưa)* | *"Route all cables **under** the floor **to** the main rack."*<br/>*(Kéo toàn bộ dây dưới mặt sàn về tủ rack trung tâm)* |
+
+---
+
+## 🏗️ 3. 5 Khung Cấu Trúc Vị Trí Cốt Lõi Trong Giao Tiếp (Syntax Slot Blueprints)
+
+Mỗi khi muốn đặt một câu tiếng Anh trong công việc hoặc đời sống, hãy lắp các từ loại vào đúng 5 "khay" (slots) dưới đây:
+
+### Khung 1: Câu Hành Động Tiêu Chuẩn (Action Blueprint)
+```
+[ CHỦ NGỮ (S) ]   +   [ ĐỘNG TỪ (V) ]   +   [ TÂN NGỮ (O) ]   +   [ GIỚI TỪ + NƠI CHỐN/THỜI GIAN ]
+(Noun Phrase)         (Action Verb)         (Noun Phrase)         (Prepositional Phrase)
+```
+* *Giao tiếp đời sống:* `[Our manager] + [booked] + [a table] + [at the restaurant].`
+* *Kỹ thuật AV:* `[The installer] + [mounted] + [the ceiling speakers] + [inside Meeting Room 3].`
+
+### Khung 2: Câu Miêu Tả Tình Trạng & Thông Số (Status Blueprint)
+```
+[ CHỦ NGỮ (S) ]   +   [ TO-BE / LINKING VERB ]   +   [ TRẠNG TỪ ĐỘ ]   +   [ TÍNH TỪ (ADJ) ]
+(Noun Phrase)         (is / are / was / sound)       (Adverb)            (Condition / Status)
+```
+* *Giao tiếp đời sống:* `[The meeting schedule] + [is] + [extremely] + [tight].`
+* *Kỹ thuật AV:* `[The Dante touch panel] + [is] + [currently] + [offline].`
+
+### Khung 3: Cụm Danh Từ Bổ Nghĩa Đa Tầng (Multi-Layer Noun Phrase)
+```
+[ MẠO TỪ / SỞ HỮU ]   +   [ TRẠNG TỪ ]   +   [ TÍNH TỪ ]   +   [ DANH TỪ PHỤ ]   +   [ DANH TỪ CHÍNH ]
+(a / the / our)           (Adverb)           (Adjective)       (Noun Adjunct)       (Core Noun)
+```
+* *Ví dụ:* `our` + `extremely` + `reliable` + `network` + `switch` *(Bộ chuyển mạch mạng cực kỳ tin cậy của chúng tôi)*.
+* *Ví dụ:* `a` + `heavy-duty` + `floor` + `trunking` *(Nẹp sàn kỹ thuật chịu lực cao)*.
+
+### Khung 4: Câu Yêu Cầu Kỹ Thuật Với Modal Verb (Requirement Blueprint)
+```
+[ CHỦ NGỮ (S) ]   +   [ MODAL VERB ]   +   [ ĐỘNG TỪ NGUYÊN THỂ ]   +   [ CỤM TÂN NGỮ (O) ]
+(We / MEP / Client)   (must / should / can)  (V-inf)                      (Noun Phrase)
+```
+* *Ví dụ:* `[We] + [must isolate] + [the audio ground] + [to eliminate noise].`
+* *Ví dụ:* `[Could you] + [reschedule] + [the sign-off meeting] + [to 2 PM]?`
+
+---
+
+## 🔄 4. Bảng Chuyển Đổi Họ Từ Vựng Kỹ Thuật AV (AV Word Families)
+
+Học 1 gốc từ, làm chủ cả 4 từ loại giúp bạn nói câu tự nhiên và viết email / hồ sơ thầu chuyên nghiệp:
+
+| Gốc Từ | 🟢 Động Từ (Verb) | 🔵 Danh Từ (Noun) | 🟡 Tính Từ (Adjective) | 🟣 Trạng Từ (Adverb) | Câu Ứng Dụng Thực Chiến AV |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **connect** | connect *(kết nối)* | connection *(mối nối)* | connected *(đã nối)* | connectively | *"Ensure all wireless receivers are properly **connected** to the switch."* |
+| **isolate** | isolate *(cách ly)* | isolation *(sự cách ly)* | isolated *(biệt lập/cách ly)*| isolatedly | *"We specified an **isolated** technical ground for the main rack."* |
+| **operate** | operate *(vận hành)* | operation *(sự vận hành)* | operational *(sẵn sàng chạy)*| operationally | *"The conference room AV system is now fully **operational**."* |
+| **configure** | configure *(cấu hình)*| configuration *(cấu hình)* | configurable *(tùy biến)* | configurably | *"Please backup the DSP **configuration** file before updating firmware."* |
+| **vary** | vary *(thay đổi)* | variation *(phát sinh VO)* | variable *(biến thiên)* | variably | *"Any site clash will result in a cost **variation**."* |
+| **amplify** | amplify *(khuếch đại)*| amplifier *(cục đẩy công suất)*| amplified *(được khuếch đại)*| amplifyingly | *"The multi-zone power **amplifier** drives all 70V ceiling speakers."* |
+
+---
+
+## 🎯 5. Bộ 4 Quy Tắc Vàng Tránh Lỗi Vị Trí Từ Loại Trong Giao Tiếp
+
+1. **Quy tắc Tính từ đứng trước Danh từ:**
+   - ❌ *Sai:* "We need power clean and trunking floor."
+   - ✅ *Đúng:* "We need **clean power** and **floor trunking**." *(Tính từ và danh từ phụ luôn đứng TRƯỚC danh từ chính)*.
+2. **Quy tắc Động từ to-be đi với Tính từ, Động từ thường đi với Trạng từ:**
+   - ❌ *Sai:* "The system works good" hoặc "The signal is clearly."
+   - ✅ *Đúng:* "The system works **well** / **smoothly**." *(Trạng từ bổ nghĩa cho động từ thường works)*.
+   - ✅ *Đúng:* "The signal is **clear**." *(Tính từ bổ nghĩa cho chủ ngữ sau to-be is)*.
+3. **Quy tắc Trạng từ chỉ mức độ đứng TRƯỚC Tính từ:**
+   - ❌ *Sai:* "The room is dust-free completely."
+   - ✅ *Đúng:* "The room is **completely dust-free**." *(completely đứng trước tính từ dust-free)*.
+4. **Quy tắc Giới từ luôn đòi hỏi một Danh từ phía sau:**
+   - ❌ *Sai:* "We pull cables inside." *(thiếu tân ngữ không gian)*
+   - ✅ *Đúng:* "We pull cables **inside the conduit**." *(inside + danh từ the conduit)*.
+
+---
+
 # PHẦN 3: NGÂN HÀNG 11 CHỦ ĐỀ GIAO TIẾP (10 - 15 LƯỢT THOẠI)
+
 
 ---
 
