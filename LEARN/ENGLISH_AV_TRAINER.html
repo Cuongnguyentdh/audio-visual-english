@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4You AV Studio - Nền Tảng Luyện Tiếng Anh AV Tương Tác & Luyện Nói Qua Video</title>
+  <title>Audio Visual English Daily | By Chí Cường - Nền Tảng Luyện Tiếng Anh AV Tương Tác</title>
   <style>
     /* ==========================================================================
        1. 4YOU.STUDY DESIGN SYSTEM & MODERN DARK THEME
@@ -257,6 +257,44 @@
       padding: 0 1.25rem;
       gap: 1rem;
       z-index: 50;
+    }
+
+    .brand-header-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      padding-right: 12px;
+      border-right: 1px solid var(--border-subtle);
+    }
+    .brand-header-title .brand-name {
+      font-weight: 900;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      background: linear-gradient(135deg, #38bdf8, #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+    }
+    .brand-header-title .brand-author {
+      font-size: 11px;
+      font-weight: 700;
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      padding: 2px 8px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+    @media (max-width: 1080px) {
+      .brand-header-title .brand-name {
+        font-size: 12px;
+      }
+    }
+    @media (max-width: 880px) {
+      .brand-header-title .brand-name {
+        display: none;
+      }
     }
 
     .top-left {
@@ -1691,12 +1729,12 @@
          LEFT ICON SIDEBAR (4YOU NAVIGATION RAIL)
          ====================================================================== -->
     <nav id="sidebar-rail">
-      <div class="brand-logo" onclick="switchView('studio')" title="4You AV Studio">
-        <span>4Y</span>
+      <div class="brand-logo" onclick="switchView('studio')" title="Audio Visual English Daily - By Chí Cường">
         <span>AV</span>
+        <span>DAILY</span>
       </div>
 
-      <button class="rail-btn active" id="rail-btn-studio" onclick="switchView('studio')" data-tooltip="Studio Luyện Nói & Video (10-15 Lượt Thoại)">
+      <button class="rail-btn active" id="rail-btn-studio" onclick="switchView('studio')" data-tooltip="Audio Visual English Studio (10-15 Lượt Thoại)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
         <span class="rail-label">Studio</span>
       </button>
@@ -1763,6 +1801,10 @@
       <!-- TOP BAR -->
       <header id="top-bar">
         <div class="top-left">
+          <div class="brand-header-title">
+            <span class="brand-name">AUDIO VISUAL ENGLISH DAILY</span>
+            <span class="brand-author">By Chí Cường</span>
+          </div>
           <div class="topic-select-wrapper">
             <select class="topic-select" id="topicSelect" onchange="onTopicChanged(this.value)">
               <!-- Options populated by JS -->
@@ -1819,7 +1861,7 @@
             <div class="canvas-hud-bottom">
               <div class="live-status">
                 <span class="pulse-dot"></span>
-                <span>4YOU AV STUDIO</span>
+                <span>AUDIO VISUAL ENGLISH DAILY • BY CHÍ CƯỜNG</span>
               </div>
               <span id="canvasSpeedTag" style="font-size: 11px; font-weight: 700; color: #94a3b8; background: rgba(0,0,0,0.6); padding: 2px 8px; border-radius: 6px;">1.0x</span>
             </div>
@@ -2674,7 +2716,7 @@
           <h3 style="font-size: 1.1rem; font-weight: 800; color: #fff;">Phím Tắt & Trợ Giúp Nhanh</h3>
           <button class="popup-close-btn" onclick="toggleHelpModal(false)">✕</button>
         </div>
-        <p style="font-size: 12.5px; color: var(--text-muted);">Thao tác thuận tiện tương tự 4You.study và YouTube Player:</p>
+        <p style="font-size: 12.5px; color: var(--text-muted);">Nền tảng <strong>Audio Visual English Daily</strong> (By Chí Cường). Phím tắt & thao tác chuẩn xác:</p>
 
         <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px;">
           <div style="display: flex; justify-content: space-between;">
