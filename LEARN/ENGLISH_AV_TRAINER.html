@@ -1503,9 +1503,30 @@
       padding: 1.5rem 2rem;
       gap: 1.25rem;
       overflow-y: auto;
-      max-width: 900px;
+      max-width: 960px;
       margin: 0 auto;
       width: 100%;
+    }
+    .drill-cat-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: var(--transition-fast);
+    }
+    .drill-cat-chip:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .drill-cat-chip.active {
+      background: rgba(6, 182, 212, 0.2);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
     }
 
     /* Toast Container */
@@ -2260,9 +2281,20 @@
            VIEW 4: REFLEX DRILLS
            ==================================================================== -->
       <section class="view-panel" id="view-drills">
-        <div>
-          <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff;">Luyện Phản Xạ Ghép Câu Kỹ Thuật AV</h2>
-          <p style="font-size: 12px; color: var(--text-muted);">Sắp xếp các từ khóa tiếng Anh thành câu hoàn chỉnh theo yêu cầu kỹ thuật</p>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px; margin-bottom: 0.5rem;">
+          <div>
+            <h2 style="font-size: 1.35rem; font-weight: 800; color: #fff; display: flex; align-items: center; gap: 8px;">
+              <span>⚡</span> Luyện Phản Xạ Ghép Câu Kỹ Thuật AV (Reflex Drills)
+            </h2>
+            <p style="font-size: 13px; color: var(--text-muted); margin-top: 3px;">
+              Rèn luyện phản xạ ghép câu tiếng Anh theo yêu cầu kỹ thuật thực tế công trường (Hỗ trợ 2 cấp độ: Căn Bản và Chuyên Gia AV Pro)
+            </p>
+          </div>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+            <button class="drill-cat-chip active" data-cat="all" onclick="setDrillCategory('all')">Tất cả (20)</button>
+            <button class="drill-cat-chip" data-cat="av" onclick="setDrillCategory('av')">Kỹ thuật AV (12)</button>
+            <button class="drill-cat-chip" data-cat="daily" onclick="setDrillCategory('daily')">Giao tiếp & Công trường (8)</button>
+          </div>
         </div>
 
         <div class="card-practice" id="drillCard">
@@ -6366,6 +6398,7 @@
       if (targetRail) targetRail.classList.add('active');
 
       if (viewId === 'flashcards') renderFlashcards();
+      if (viewId === 'drills') renderDrillItem();
       playSound('click');
     }
 
@@ -6661,44 +6694,164 @@
       });
     }
 
-    /* Reflex Drills View */
+    /* ==========================================================================
+       9. REFLEX DRILLS ENGINE (AV TECHNICAL SENTENCE RECONSTRUCTION)
+       ========================================================================== */
     let currentDrillIdx = 0;
+    let drillLevel = 'basic'; // 'basic' | 'pro'
+    let drillCategoryFilter = 'all';
     let drillUserTokens = [];
+
+    function getFilteredDrillList() {
+      if (drillCategoryFilter === 'all') return DRILL_DATA;
+      return DRILL_DATA.filter(d => d.category === drillCategoryFilter);
+    }
+
+    function setDrillCategory(cat) {
+      drillCategoryFilter = cat;
+      currentDrillIdx = 0;
+      document.querySelectorAll('.drill-cat-chip').forEach(c => {
+        c.classList.toggle('active', c.dataset.cat === cat);
+      });
+      renderDrillItem();
+      playSound('click');
+    }
+
+    function setDrillLevel(lvl) {
+      drillLevel = lvl;
+      renderDrillItem();
+      playSound('click');
+    }
+
+    function getDrillTargetSentence(item) {
+      if (drillLevel === 'pro' && item.proEn) return item.proEn;
+      return item.basicEn || item.en || item.proEn || '';
+    }
+
+    function tokenizeSentence(text) {
+      // Remove trailing periods, commas, quotes and split by whitespace
+      return text.trim()
+        .replace(/[.,?!;:"]/g, '')
+        .split(/\s+/)
+        .filter(w => w.length > 0);
+    }
 
     function renderDrillItem() {
       const card = document.getElementById('drillCard');
-      const item = DRILL_DATA[currentDrillIdx] || DRILL_DATA[0];
-      const enWords = item.en.replace(/[.,?!]/g, '').split(' ').sort(() => Math.random() - 0.5);
+      if (!card) return;
+
+      const list = getFilteredDrillList();
+      if (!list || list.length === 0) {
+        card.innerHTML = '<div style="text-align: center; color: var(--text-dim); padding: 2rem;">Không tìm thấy câu phản xạ phù hợp.</div>';
+        return;
+      }
+
+      if (currentDrillIdx >= list.length) currentDrillIdx = 0;
+      const item = list[currentDrillIdx];
+      const targetSentence = getDrillTargetSentence(item);
+      const rawWords = tokenizeSentence(targetSentence);
+
+      // Create shuffled words
+      const shuffledWords = [...rawWords].sort(() => Math.random() - 0.5);
 
       card.innerHTML = `
-        <div style="display: flex; justify-content: space-between;">
-          <span style="font-size: 12px; font-weight: 700; color: var(--accent-cyan);">Phản xạ ${currentDrillIdx + 1} / ${DRILL_DATA.length}</span>
-          <span class="badge-pill badge-category">${item.category}</span>
+        <!-- Category and Controls Bar -->
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.75rem;">
+          <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+            <span style="font-size: 13px; font-weight: 800; color: var(--accent-cyan);">Phản xạ ${currentDrillIdx + 1} / ${list.length}</span>
+            <span class="badge-pill" style="background: rgba(99,102,241,0.2); border: 1px solid rgba(99,102,241,0.4); color: #a5b4fc; font-size: 11px; padding: 2px 8px; border-radius: 12px; font-weight: 700;">${item.categoryLabel || item.category.toUpperCase()}</span>
+          </div>
+
+          <!-- Level Switcher Toggle -->
+          <div style="display: inline-flex; background: rgba(0,0,0,0.4); padding: 3px; border-radius: 8px; border: 1px solid var(--border-subtle);">
+            <button class="btn-subnav ${drillLevel === 'basic' ? 'active' : ''}" onclick="setDrillLevel('basic')" style="font-size: 11px; padding: 4px 10px; border-radius: 6px; border: none; cursor: pointer; color: ${drillLevel === 'basic' ? '#080c14' : 'var(--text-muted)'}; background: ${drillLevel === 'basic' ? 'var(--accent-cyan)' : 'transparent'}; font-weight: 700;">
+              🟢 Căn Bản (A1-A2)
+            </button>
+            <button class="btn-subnav ${drillLevel === 'pro' ? 'active' : ''}" onclick="setDrillLevel('pro')" style="font-size: 11px; padding: 4px 10px; border-radius: 6px; border: none; cursor: pointer; color: ${drillLevel === 'pro' ? '#080c14' : 'var(--text-muted)'}; background: ${drillLevel === 'pro' ? '#38bdf8' : 'transparent'}; font-weight: 700;">
+              ⚡ Chuyên Gia AV Pro
+            </button>
+          </div>
         </div>
 
-        <div style="font-size: 16px; font-weight: 700; color: #fff; background: rgba(0,0,0,0.3); padding: 1rem; border-radius: var(--radius-md);">
-          🇻🇳 "${item.vn}"
+        <!-- Vietnamese Meaning & Context -->
+        <div style="background: linear-gradient(135deg, rgba(15,23,42,0.8), rgba(30,41,59,0.5)); border: 1px solid rgba(6,182,212,0.2); border-radius: var(--radius-md); padding: 1.1rem; display: flex; flex-direction: column; gap: 6px;">
+          <div style="font-size: 11px; font-weight: 700; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 6px;">
+            <span>🇻🇳 Ý NGHĨA KỸ THUẬT CẦN DIỄN ĐẠT:</span>
+          </div>
+          <div style="font-size: 16px; font-weight: 700; color: #fff; line-height: 1.5;">
+            "${item.vn}"
+          </div>
+          ${item.context ? `<div style="font-size: 12px; color: #94a3b8; margin-top: 4px; border-top: 1px dashed rgba(255,255,255,0.08); padding-top: 6px;">📋 ${item.context}</div>` : ''}
         </div>
 
-        <div style="font-size: 12px; font-weight: 700; color: var(--text-dim);">Câu trả lời của bạn:</div>
-        <div id="drillDropZone" style="min-height: 48px; background: rgba(255,255,255,0.03); border: 1px dashed var(--border-subtle); border-radius: var(--radius-md); padding: 8px; display: flex; flex-wrap: wrap; gap: 6px;"></div>
-
-        <div style="font-size: 12px; font-weight: 700; color: var(--text-dim); margin-top: 0.5rem;">Kho từ vựng:</div>
-        <div id="drillWordBank" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
-
-        <div style="display: flex; gap: 8px; margin-top: 1rem;">
-          <button class="btn-action-primary" onclick="checkDrillAnswer()"><span>✓</span> <span>Kiểm Tra</span></button>
-          <button class="btn-action-secondary" onclick="resetDrillCurrent()"><span>🔄</span> <span>Làm Lại</span></button>
-          <button class="btn-action-secondary" onclick="nextDrillItem()"><span>⏭</span> <span>Câu Tiếp</span></button>
+        <!-- Drop Zone (User's sentence construction) -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-main);">Câu ghép của bạn (Nhấp từ để gỡ bỏ):</span>
+            <span id="drillCountStatus" style="font-size: 11px; color: var(--text-dim);">0 / ${rawWords.length} từ</span>
+          </div>
+          <div id="drillDropZone" style="min-height: 52px; background: rgba(0,0,0,0.35); border: 1px dashed var(--accent-cyan); border-radius: var(--radius-md); padding: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;">
+            <span style="color: var(--text-dim); font-size: 12px; font-style: italic;">(Nhấp chọn các từ khóa ở kho bên dưới để ghép câu hoàn chỉnh)</span>
+          </div>
         </div>
+
+        <!-- Word Bank -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 12px; font-weight: 700; color: var(--text-muted);">Kho từ vựng (Nhấp để đưa lên):</span>
+            <button onclick="shuffleDrillBank()" style="background: none; border: none; color: var(--accent-cyan); font-size: 11px; font-weight: 700; cursor: pointer;">🔀 Đảo từ</button>
+          </div>
+          <div id="drillWordBank" style="display: flex; flex-wrap: wrap; gap: 8px; min-height: 44px; padding: 4px 0;"></div>
+        </div>
+
+        <!-- Action Toolbar -->
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; margin-top: 0.5rem; padding-top: 0.75rem; border-top: 1px solid var(--border-subtle);">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn-action-primary" onclick="checkDrillAnswer()" style="padding: 8px 18px; font-weight: 700;">
+              <span>✓</span> <span>Kiểm Tra</span>
+            </button>
+            <button class="btn-action-secondary" onclick="hintDrillWord()" style="padding: 8px 14px; border-color: rgba(234, 179, 8, 0.4); color: #facc15;">
+              <span>💡</span> <span>Gợi Ý 1 Từ</span>
+            </button>
+            <button class="btn-action-secondary" onclick="revealDrillAnswer()" style="padding: 8px 14px;">
+              <span>👁</span> <span>Xem Đáp Án</span>
+            </button>
+            <button class="btn-action-secondary" onclick="resetDrillCurrent()" style="padding: 8px 14px;">
+              <span>🔄</span> <span>Làm Lại</span>
+            </button>
+          </div>
+
+          <div style="display: flex; gap: 6px; align-items: center;">
+            <button class="btn-action-secondary" onclick="prevDrillItem()" style="padding: 8px 12px;" title="Câu trước">
+              <span>⏮</span>
+            </button>
+            <button class="btn-action-secondary" onclick="speakText(getDrillTargetSentence(DRILL_DATA[currentDrillIdx]))" style="padding: 8px 12px;" title="Nghe phát âm chuẩn">
+              <span>🔊</span>
+            </button>
+            <button class="btn-action-primary" onclick="nextDrillItem()" style="padding: 8px 14px;" title="Câu tiếp theo">
+              <span>⏭ Câu Tiếp</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Feedback & Detail Explanation Box -->
+        <div id="drillFeedbackBox" style="display: none; margin-top: 1rem; border-radius: var(--radius-md); padding: 1rem; border: 1px solid transparent;"></div>
       `;
 
       drillUserTokens = [];
+      renderDrillBankChips(shuffledWords);
+    }
+
+    function renderDrillBankChips(words) {
       const bank = document.getElementById('drillWordBank');
-      enWords.forEach(w => {
+      if (!bank) return;
+      bank.innerHTML = '';
+
+      words.forEach((w, idx) => {
         const chip = document.createElement('button');
         chip.className = 'chip-bank';
         chip.textContent = w;
+        chip.dataset.word = w;
         chip.onclick = () => {
           drillUserTokens.push(w);
           chip.classList.add('used');
@@ -6709,19 +6862,50 @@
       });
     }
 
+    function shuffleDrillBank() {
+      const bank = document.getElementById('drillWordBank');
+      if (!bank) return;
+      const chips = Array.from(bank.children);
+      chips.sort(() => Math.random() - 0.5);
+      chips.forEach(c => bank.appendChild(c));
+      playSound('click');
+    }
+
     function updateDrillDropZone() {
       const zone = document.getElementById('drillDropZone');
+      if (!zone) return;
+
+      const list = getFilteredDrillList();
+      const item = list[currentDrillIdx];
+      const rawWords = tokenizeSentence(getDrillTargetSentence(item));
+
+      const countStatus = document.getElementById('drillCountStatus');
+      if (countStatus) {
+        countStatus.textContent = `${drillUserTokens.length} / ${rawWords.length} từ`;
+      }
+
+      if (drillUserTokens.length === 0) {
+        zone.innerHTML = '<span style="color: var(--text-dim); font-size: 12px; font-style: italic;">(Nhấp chọn các từ khóa ở kho bên dưới để ghép câu hoàn chỉnh)</span>';
+        return;
+      }
+
       zone.innerHTML = '';
       drillUserTokens.forEach((w, i) => {
         const chip = document.createElement('button');
         chip.className = 'chip-bank';
-        chip.style.background = 'rgba(6, 182, 212, 0.2)';
-        chip.style.color = '#38bdf8';
-        chip.textContent = w;
+        chip.style.background = 'rgba(6, 182, 212, 0.25)';
+        chip.style.border = '1px solid rgba(6, 182, 212, 0.5)';
+        chip.style.color = '#67e8f9';
+        chip.style.display = 'inline-flex';
+        chip.style.alignItems = 'center';
+        chip.style.gap = '4px';
+        chip.innerHTML = `<span>${w}</span> <span style="font-size: 10px; opacity: 0.6;">✕</span>`;
+        chip.title = 'Nhấp để gỡ từ này';
         chip.onclick = () => {
           drillUserTokens.splice(i, 1);
           resetDrillBankUsed();
           updateDrillDropZone();
+          playSound('click');
         };
         zone.appendChild(chip);
       });
@@ -6733,7 +6917,7 @@
       drillUserTokens.forEach(t => counts[t] = (counts[t] || 0) + 1);
 
       bankChips.forEach(bc => {
-        const word = bc.textContent;
+        const word = bc.dataset.word;
         if (counts[word] && counts[word] > 0) {
           bc.classList.add('used');
           counts[word]--;
@@ -6744,27 +6928,117 @@
     }
 
     function checkDrillAnswer() {
-      const item = DRILL_DATA[currentDrillIdx];
-      const targetClean = item.en.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const list = getFilteredDrillList();
+      const item = list[currentDrillIdx];
+      const targetSentence = getDrillTargetSentence(item);
+      const targetWords = tokenizeSentence(targetSentence);
+
+      const targetClean = targetSentence.toLowerCase().replace(/[^a-z0-9]/g, '');
       const userClean = drillUserTokens.join('').toLowerCase().replace(/[^a-z0-9]/g, '');
+
+      const feedbackBox = document.getElementById('drillFeedbackBox');
+      feedbackBox.style.display = 'block';
 
       if (targetClean === userClean) {
         playSound('success');
-        showToast('Chính xác 100%! Bạn phản xạ rất nhanh! 🎉');
+        showToast('Chính xác 100%! Bạn phản xạ rất chuẩn xác! 🎉');
+
+        feedbackBox.style.background = 'rgba(16, 185, 129, 0.12)';
+        feedbackBox.style.borderColor = 'rgba(16, 185, 129, 0.4)';
+        feedbackBox.innerHTML = `
+          <div style="display: flex; align-items: flex-start; gap: 10px;">
+            <div style="font-size: 24px;">🎉</div>
+            <div style="flex: 1;">
+              <div style="font-size: 14px; font-weight: 800; color: #34d399; margin-bottom: 4px;">CHÍNH XÁC HOÀN TOÀN!</div>
+              <div style="font-size: 15px; font-weight: 700; color: #fff; line-height: 1.5; margin-bottom: 6px;">
+                "${targetSentence}"
+                <button onclick="speakText('${targetSentence.replace(/'/g, "\\'")}')" style="background: none; border: none; font-size: 16px; cursor: pointer; vertical-align: middle;" title="Phát âm">🔊</button>
+              </div>
+              ${item.basicIpa ? `<div style="font-size: 12px; font-family: monospace; color: #a5f3fc; margin-bottom: 6px;">IPA: ${item.basicIpa}</div>` : ''}
+              ${item.proNote ? `<div style="font-size: 12px; color: #cbd5e1; margin-top: 4px; background: rgba(0,0,0,0.3); padding: 8px 12px; border-radius: 6px; border-left: 3px solid #10b981;">💡 <strong>Kinh nghiệm AV Consultant:</strong> ${item.proNote}</div>` : ''}
+              ${item.frame ? `<div style="font-size: 12px; color: #94a3b8; margin-top: 6px;">📐 <strong>Khung câu mẫu:</strong> ${item.frame}</div>` : ''}
+            </div>
+          </div>
+        `;
       } else {
         playSound('error');
-        showToast('Chưa khớp hoàn toàn với câu mẫu: "' + item.en + '"');
+        showToast('Chưa khớp hoàn toàn. Hãy kiểm tra lại thứ tự các từ!');
+
+        feedbackBox.style.background = 'rgba(239, 68, 68, 0.1)';
+        feedbackBox.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+        feedbackBox.innerHTML = `
+          <div style="display: flex; align-items: flex-start; gap: 10px;">
+            <div style="font-size: 20px;">⚠️</div>
+            <div style="flex: 1;">
+              <div style="font-size: 13px; font-weight: 800; color: #f87171; margin-bottom: 4px;">CHƯA KHỚP HOÀN TOÀN</div>
+              <div style="font-size: 13px; color: #cbd5e1; margin-bottom: 6px;">
+                Bạn đã ghép được ${drillUserTokens.length} / ${targetWords.length} từ. Hãy thử sắp xếp lại hoặc dùng nút <strong>Gợi Ý 1 Từ</strong>.
+              </div>
+            </div>
+          </div>
+        `;
       }
+    }
+
+    function hintDrillWord() {
+      const list = getFilteredDrillList();
+      const item = list[currentDrillIdx];
+      const rawWords = tokenizeSentence(getDrillTargetSentence(item));
+
+      // Find the first index where user token differs from target
+      let nextWordNeeded = null;
+      for (let i = 0; i < rawWords.length; i++) {
+        if (!drillUserTokens[i] || drillUserTokens[i].toLowerCase() !== rawWords[i].toLowerCase()) {
+          nextWordNeeded = rawWords[i];
+          // Truncate user tokens up to i
+          drillUserTokens = drillUserTokens.slice(0, i);
+          drillUserTokens.push(nextWordNeeded);
+          break;
+        }
+      }
+
+      if (!nextWordNeeded && drillUserTokens.length < rawWords.length) {
+        nextWordNeeded = rawWords[drillUserTokens.length];
+        drillUserTokens.push(nextWordNeeded);
+      }
+
+      resetDrillBankUsed();
+      updateDrillDropZone();
+      playSound('click');
+      showToast('Đã gợi ý từ: "' + nextWordNeeded + '"');
+    }
+
+    function revealDrillAnswer() {
+      const list = getFilteredDrillList();
+      const item = list[currentDrillIdx];
+      const targetSentence = getDrillTargetSentence(item);
+      const rawWords = tokenizeSentence(targetSentence);
+
+      drillUserTokens = [...rawWords];
+      resetDrillBankUsed();
+      updateDrillDropZone();
+      checkDrillAnswer();
     }
 
     function resetDrillCurrent() {
       drillUserTokens = [];
       updateDrillDropZone();
       resetDrillBankUsed();
+      const feedbackBox = document.getElementById('drillFeedbackBox');
+      if (feedbackBox) feedbackBox.style.display = 'none';
+      playSound('click');
     }
 
     function nextDrillItem() {
-      currentDrillIdx = (currentDrillIdx + 1) % DRILL_DATA.length;
+      const list = getFilteredDrillList();
+      currentDrillIdx = (currentDrillIdx + 1) % list.length;
+      renderDrillItem();
+      playSound('click');
+    }
+
+    function prevDrillItem() {
+      const list = getFilteredDrillList();
+      currentDrillIdx = (currentDrillIdx - 1 + list.length) % list.length;
       renderDrillItem();
       playSound('click');
     }
